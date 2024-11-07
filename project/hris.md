@@ -12,7 +12,7 @@ Human Resource Information System is a web application designed to support the m
 
 Repository: [HRIS](https://github.com/programinglive/hris)
 
-## How to use
+## Initial Setup
 
 - go to a register company link
 - fill up the form

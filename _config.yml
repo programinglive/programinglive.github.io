@@ -72,6 +72,10 @@ mermaid:
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
   version: "11.4.0"
 
+back_to_top: true
+back_to_top_text: "Back to top"
+
+enable_copy_code_button: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
