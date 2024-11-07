@@ -10,14 +10,36 @@ A Human Resource Information System.
 
 Human Resource Information System is a web application designed to support the management of human resources in a company. HRIS will make it easier for companies to manage their employees, including managing employee data, managing attendance, managing salary, and managing employee training.
 
+Repository: [HRIS](https://github.com/programinglive/hris)
+
 ## How to use
-You can use this application as a reference for your company.
+
+- go to a register company link
+- fill up the form
+- create a user admin
+
+```mermaid
+graph TD
+    A[Start] --> B[Create Company Data]
+    B --> C[Create User Admin]
+```
+
+## Attendance
+
+- create employee
+- create a working time schedule
+- setting fingerprint
+
+```mermaid
+graph TD
+    A[Start] --> B[Create Employee]
+    B --> C[Create Working Time Schedule]
+    C --> D[Setting Fingerprint]
+```
 
 ## Feature
 - Employee data
-- Employee attendance
-- Employee salary
-- Employee training
+- Attendance
 
 ---
 
