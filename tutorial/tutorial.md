@@ -2,7 +2,7 @@
 title: Tutorial
 layout: home
 nav_order: 5
-description: "Tutorial"
+description: "Tutorial Collection ProgramingLive"
 permalink: /tutorial/
 ---
 
