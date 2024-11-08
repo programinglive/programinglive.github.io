@@ -6,7 +6,6 @@ description: "Human Resource Information System MVP"
 ---
 
 # MVP
-
 Human Resource Information System MVP is a web application designed to support the management of human resources in a company. HRIS MVP will make it easier for companies to manage their employees, including managing employee data, managing attendance, managing salary, and managing employee training.
 
 ## Initial Setup
@@ -46,8 +45,8 @@ sequenceDiagram
     deactivate Server
     deactivate Browser
 ```
-- A new user can create a user admin.
 
+- A new user can create a user admin. 
 
 ---
 <div style="display: flex; flex-direction: column; align-items: center;">
