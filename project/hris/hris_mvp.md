@@ -1,5 +1,5 @@
 ---
-title: MVP
+title: MVP (HRIS)
 parent: HRIS
 nav_order: 1
 description: "Human Resource Information System MVP"
