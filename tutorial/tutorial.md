@@ -29,5 +29,3 @@ The Web Development roadmap aims to provide a structured learning path for aspir
     - **TikTok**: Short, concise videos for quick learning.
 
 By following our Web Development Roadmap, you'll gain the skills and knowledge needed to become proficient in web development using HTML, CSS, JavaScript, and PHP.
-
----
