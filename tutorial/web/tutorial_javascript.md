@@ -1,7 +1,7 @@
 ---
 title: Javascript
 layout: home
-parent: Tutorial
+parent: Web Development
 nav_order: 3
 description: "Tutorial Javascript"
 ---

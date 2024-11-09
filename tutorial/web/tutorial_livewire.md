@@ -1,7 +1,7 @@
 ---
 title: Livewire
 layout: home
-parent: Tutorial
+parent: Web Development
 nav_order: 5
 description: "Tutorial Livewire"
 ---
