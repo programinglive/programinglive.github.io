@@ -1,7 +1,7 @@
 ---
 title: Git
 layout: home
-parent: Tutorial
+parent: Version Control System
 description: "Tutorial Git"
 ---
 
