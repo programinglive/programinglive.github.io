@@ -9,6 +9,41 @@ description: "A new user can register a company"
 
 Creating a Minimum Viable Product (MVP) for the feature "A new user can register a company" involves developing the essential functionalities required to allow users to register their companies through a specific API endpoint. This MVP will focus on establishing the core aspects of the registration process, ensuring that it is functional, secure, and user-friendly.
 
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant Browser
+    participant Server
+
+    User->>Browser: Clicks "Register Company" link
+    activate Browser
+    Browser->>Server: GET /register_company
+    activate Server
+    Server-->>Browser: Registration form
+    deactivate Server
+    Browser->>User: Displays registration form
+    deactivate Browser
+
+    User->>Browser: Inputs company name
+    activate Browser
+    User->>Browser: Inputs company address
+    User->>Browser: Inputs company phone
+    Browser->>Server: POST /register_company with data
+    activate Server
+    Server-->>Server: Validates data
+    alt Valid data
+        Server-->>Server: Creates company record
+        Server-->>Browser: Success message
+        Browser->>User: Displays success message
+    else Invalid data
+        Server-->>Browser: Error message
+        Browser->>User: Displays error message
+    end
+    deactivate Server
+    deactivate Browser
+```
+
 ### Table of Contents
 
 1. [Overview](#overview)
