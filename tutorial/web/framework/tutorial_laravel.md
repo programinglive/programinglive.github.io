@@ -1,7 +1,7 @@
 ---
 title: Laravel
 layout: home
-parent: Web Development
+parent: Web Framework
 nav_order: 5
 description: "Tutorial Laravel"
 ---
