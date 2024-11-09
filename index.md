@@ -11,8 +11,7 @@ A professional community of software developers based in Indonesia,
 committed to contributing to the advancement of computer science in Indonesia.
 
 ## What We Do?
-We develop open-source applications that can inspire new programmers to be creative.
-
+We develop open-source applications that inspire new programmers to be creative. Additionally, we create programming tutorials to help individuals learn and grow in their coding journey.
 ## What Problem We Solve?
 We help newcomers get started and stay motivated to keep coding.
 
