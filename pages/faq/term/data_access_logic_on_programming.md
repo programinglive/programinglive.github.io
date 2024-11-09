@@ -1,7 +1,8 @@
 ---
 layout: page
 title: What is Data Access Logic in Programming?
-parent: FAQ
+parent: Term
+grand_parent: FAQ
 description: "What is Data Access Logic in Programming?"
 ---
 

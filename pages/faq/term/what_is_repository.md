@@ -1,7 +1,8 @@
 ---
 layout: page
 title: What is Repository?
-parent: FAQ
+parent: Term
+grand_parent: FAQ
 description: "What is Repository?"
 ---
 
