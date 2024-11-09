@@ -17,3 +17,6 @@ We help newcomers get started and stay motivated to keep coding.
 
 ## Our Team
 Programinglive is made up of people who love to code and incorporate programming into their lives.
+
+## Sponsored by:
+- [JetBrains](https://www.jetbrains.com/)
