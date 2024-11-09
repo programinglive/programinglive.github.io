@@ -1,7 +1,7 @@
 ---
 title: CSS
 layout: home
-parent: Tutorial
+parent: Web Development
 nav_order: 2
 description: "Tutorial CSS"
 ---
