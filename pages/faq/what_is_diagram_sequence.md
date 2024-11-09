@@ -1,8 +1,8 @@
 ---
 layout: page
-title: What is Diagram Sequence
+title: What is Diagram Sequence?
 parent: FAQ
-description: "What is Diagram Sequence"
+description: "What is Diagram Sequence?"
 ---
 
 
