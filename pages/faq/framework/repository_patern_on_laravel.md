@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Repository Pattern On Laravel
-parent: FAQ
+parent: Framework
+grand_parent: FAQ
 description: "Repository Pattern On Laravel"
 ---
 
