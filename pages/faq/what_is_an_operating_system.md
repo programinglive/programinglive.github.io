@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Operating System
+title: What is Operating System?
 parent: FAQ
-description: "Operating System"
+description: "What is Operating System?"
 ---
 
 # What is an Operating System?

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: What is MVP
+title: What is MVP?
 parent: FAQ
-description: "What is MVP"
+description: "What is MVP?"
 ---
 
 # What is MVP
