@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Mission
 description: "Mission"
 nav_order: 4

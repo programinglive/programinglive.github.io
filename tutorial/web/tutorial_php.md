@@ -1,6 +1,6 @@
 ---
 title: PHP
-layout: home
+layout: default
 parent: Web Development
 nav_order: 4
 description: "Tutorial PHP"

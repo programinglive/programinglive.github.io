@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: home
+layout: default
 nav_order: 1
 description: "Programinglive adalah sebuah komunitas profesional pengembang perangkat lunak yang berdomisili di Indonesia, berkomitmen untuk berkontribusi pada kemajuan ilmu komputer di Indonesia."
 permalink: /

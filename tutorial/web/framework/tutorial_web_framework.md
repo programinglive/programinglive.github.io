@@ -1,6 +1,6 @@
 ---
 title: Web Framework
-layout: home
+layout: default
 parent: Web Development
 description: "Web Framework Tutorial Collection"
 ---

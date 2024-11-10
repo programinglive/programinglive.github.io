@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: What is Queue?
 parent: Term
 grand_parent: FAQ

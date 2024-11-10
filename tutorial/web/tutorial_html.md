@@ -1,6 +1,6 @@
 ---
 title: HTML
-layout: home
+layout: default
 parent: Web Development
 nav_order: 1
 description: "Tutorial HTML"

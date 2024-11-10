@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Repository Pattern On Laravel
 parent: Laravel
 grand_parent: Framework

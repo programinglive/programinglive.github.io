@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: What is Data Access Logic in Programming?
 parent: Term
 grand_parent: FAQ

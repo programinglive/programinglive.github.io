@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: default
 title: What is Operating System?
 parent: FAQ
 description: "What is Operating System?"
+has_toc: true
 ---
 
 # What is an Operating System?

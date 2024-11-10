@@ -1,6 +1,6 @@
 ---
 title: Operating System
-layout: home
+layout: default
 parent: Tutorial
 description: "Tutorial Operating System"
 ---

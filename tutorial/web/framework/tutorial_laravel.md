@@ -1,6 +1,6 @@
 ---
 title: Laravel
-layout: home
+layout: default
 parent: Web Framework
 nav_order: 5
 description: "Tutorial Laravel"

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Queue On Laravel
 parent: Laravel
 grand_parent: Framework

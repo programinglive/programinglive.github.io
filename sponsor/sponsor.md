@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: default
 title: Sponsor
 description: "Sponsor"
-permalink: /sponsor/
+permalink: /Sponsor/
 ---
 
 # Sponsor

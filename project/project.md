@@ -1,6 +1,6 @@
 ---
 title: Project
-layout: home
+layout: default
 nav_order: 2
 description: "Working Project"
 permalink: /project/

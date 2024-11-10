@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Vision
 nav_order: 3
 description: "Vision"
