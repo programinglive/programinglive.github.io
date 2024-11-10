@@ -1,11 +1,11 @@
 ---
-title: Web Framework
+title: Framework
 layout: default
 parent: Web Development
 description: "Web Framework Tutorial Collection"
 ---
 
-# **Web Development Frameworks Tutorial Collection**
+# **Frameworks Tutorial Collection**
 
 The **Web Development Frameworks Tutorial Collection** is your complete guide to mastering modern web frameworks, essential for building dynamic, efficient, and scalable web applications. Web frameworks streamline development by providing tools and libraries that simplify complex coding tasks, allowing developers to focus on functionality and design.
 
