@@ -101,8 +101,8 @@ Create an email template in `resources/views/emails/orders/shipped.blade.php` to
 </head>
 <body>
     <h1>Order Shipped</h1>
-    <p>Hello {{ $order->user->name }},</p>
-    <p>Your order #{{ $order->id }} has been shipped and is on its way to you!</p>
+    <p>Hello {{ '{{' }} $order->user->name }},</p>
+    <p>Your order #{{ '{{' }} $order->id }} has been shipped and is on its way to you!</p>
     <p>Thank you for shopping with us.</p>
 </body>
 </html>
