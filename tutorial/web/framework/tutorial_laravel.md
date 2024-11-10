@@ -1,7 +1,8 @@
 ---
 title: Laravel
 layout: default
-parent: Web Framework
+parent: Framework
+grand_parent: Web Development
 nav_order: 5
 description: "Tutorial Laravel"
 ---
