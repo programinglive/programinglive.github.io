@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Queue On Laravel
-parent: Framework
-grand_parent: FAQ
+parent: Laravel
+grand_parent: Framework
 description: "Queue On Laravel"
 ---
 

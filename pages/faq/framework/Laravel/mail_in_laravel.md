@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Mail In Laravel
-parent: Framework
-grand_parent: FAQ
+parent: Laravel
+grand_parent: Framework
 description: "Mail In Laravel"
 ---
 

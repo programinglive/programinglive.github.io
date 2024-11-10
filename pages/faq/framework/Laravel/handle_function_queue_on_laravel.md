@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Handle Function Queue On Laravel
-parent: Framework
-grand_parent: FAQ
+parent: Laravel
+grand_parent: Framework
 description: "Handle Function Queue On Laravel"
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Envelop Mail In Laravel
-parent: Framework
-grand_parent: FAQ
+parent: Laravel
+grand_parent: Framework
 description: "Envelop Mail In Laravel"
 ---
 
