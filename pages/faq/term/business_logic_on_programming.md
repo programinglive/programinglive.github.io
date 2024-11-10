@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: What is Business Logic in Programming?
 parent: Term
 grand_parent: FAQ

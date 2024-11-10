@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Diagram
 parent: FAQ
 description: "FAQ Diagram"

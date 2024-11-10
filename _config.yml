@@ -32,6 +32,8 @@ theme: just-the-docs
 
 plugins:
   - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 permalink: pretty
 
@@ -76,6 +78,15 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 enable_copy_code_button: true
+
+gh_edit_link: false # show or hide edit this page link
+
+# Google Analytics Tracking (optional)
+# Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
+ga_tracking: G-Y70MG67HZ3
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

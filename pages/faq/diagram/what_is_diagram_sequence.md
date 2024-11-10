@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: What is Diagram Sequence?
 parent: Diagram
 grand_parent: FAQ

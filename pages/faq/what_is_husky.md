@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: What is Husky?
 parent: FAQ
 description: "What is Husky?"

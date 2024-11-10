@@ -1,6 +1,6 @@
 ---
 title: CSS
-layout: home
+layout: default
 parent: Web Development
 nav_order: 2
 description: "Tutorial CSS"

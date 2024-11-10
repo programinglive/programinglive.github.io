@@ -1,6 +1,6 @@
 ---
 title: How to Create a Navigation Bar
-layout: home
+layout: default
 parent: CSS
 grand_parent: Web Development
 nav_order: 2
@@ -278,3 +278,5 @@ Copy the JavaScript code from the previous section, adding it to this file.
 ## Conclusion
 
 Creating a responsive navigation bar involves HTML for structure, CSS for styling and responsiveness, and JavaScript for toggle functionality in mobile view. Following this approach, you can create a versatile navigation bar that adapts well to various screen sizes, providing a seamless experience for users on both desktop and mobile devices.
+
+{:toc}

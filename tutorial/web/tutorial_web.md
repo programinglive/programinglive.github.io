@@ -1,6 +1,6 @@
 ---
 title: Web Development
-layout: home
+layout: default
 parent: Tutorial
 nav_order: 2
 description: "Web Development Tutorial Collection"

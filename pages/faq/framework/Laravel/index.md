@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Laravel
 parent: Framework
 grand_parent: FAQ

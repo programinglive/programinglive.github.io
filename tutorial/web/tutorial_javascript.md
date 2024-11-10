@@ -1,6 +1,6 @@
 ---
 title: Javascript
-layout: home
+layout: default
 parent: Web Development
 nav_order: 3
 description: "Tutorial Javascript"

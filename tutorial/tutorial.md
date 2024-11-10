@@ -1,6 +1,6 @@
 ---
 title: Tutorial
-layout: home
+layout: default
 nav_order: 5
 description: "Tutorial Collection ProgramingLive"
 permalink: /tutorial/

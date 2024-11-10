@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: What is MVP?
 parent: FAQ
 description: "What is MVP?"

@@ -1,6 +1,6 @@
 ---
 title: Version Control System
-layout: home
+layout: default
 parent: Tutorial
 description: "Tutorial Version Control System"
 ---

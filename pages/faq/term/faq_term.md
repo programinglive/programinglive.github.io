@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Term
 parent: FAQ
 description: "Term"

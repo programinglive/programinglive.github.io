@@ -1,6 +1,6 @@
 ---
 title: Git
-layout: home
+layout: default
 parent: Version Control System
 description: "Tutorial Git"
 ---

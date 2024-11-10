@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Envelop Mail In Laravel
 parent: Laravel
 grand_parent: Framework
