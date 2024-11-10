@@ -130,6 +130,14 @@ body {
     transition: 0.4s;
 }
 
+.section {
+    display: none; /* Hide all sections by default */
+}
+
+.section.active {
+    display: block; /* Show only the active section */
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
     .navbar-links {
@@ -153,13 +161,6 @@ body {
 
     .navbar-links.active {
         display: flex;
-    }
-    .section {
-        display: none; /* Hide all sections by default */
-    }
-
-    .section.active {
-        display: block; /* Show only the active section */
     }
 
 }
@@ -249,6 +250,7 @@ Now, when a user clicks on a link, the page scrolls smoothly to the relevant sec
         </div>
     </nav>
 
+    <!-- Placeholder Content -->
     <div id="home" class="section active"><h2>Home Section</h2></div>
     <div id="about" class="section"><h2>About Section</h2></div>
     <div id="services" class="section"><h2>Services Section</h2></div>
