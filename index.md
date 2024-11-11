@@ -8,21 +8,23 @@ permalink: /
 
 # Home
 
-A professional community of software developers based in Indonesia,
-committed to contributing to the advancement of computer science in Indonesia.
+A vibrant community of software developers in Indonesia, united by a mission to advance computer science and foster innovation within the tech industry.
 
-## What We Do?
+## Our Mission
 
-We develop open-source applications that inspire new programmers to be creative. Additionally, we create programming tutorials to help individuals learn and grow in their coding journey.
+We create open-source applications that spark creativity and innovation among budding developers. Through engaging tutorials and practical resources, we guide individuals along their coding journeys, helping them grow and thrive.
 
-## What Problem We Solve?
+## Solving Real-World Challenges
 
-**For Programmers:** We help newcomers get started and stay motivated to keep coding.
+**For Developers:** We offer a supportive space for beginners to start coding with confidence, stay inspired, and reach new milestones.
 
-**For Business:** We have dedicated and skilled programmers, ready to support and enhance your business operations.
+**For Businesses:** Our talented and driven developers are ready to power your business solutions, optimize operations, and drive digital transformation.
 
 ## Our Team
-Programinglive is made up of people who love to code and incorporate programming into their lives.
+
+Programinglive is a collective of passionate programmers who live and breathe code, committed to making a positive impact through technology.
+
+---
 
 ## Sponsored by:
 
