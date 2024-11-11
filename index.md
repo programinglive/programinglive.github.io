@@ -16,6 +16,8 @@ We create open-source applications that spark creativity and innovation among bu
 
 ## Solving Real-World Challenges
 
+Our mission is guided by two core objectives:
+
 **For Developers:** We offer a supportive space for beginners to start coding with confidence, stay inspired, and reach new milestones.
 
 **For Businesses:** Our talented and driven developers are ready to power your business solutions, optimize operations, and drive digital transformation.
