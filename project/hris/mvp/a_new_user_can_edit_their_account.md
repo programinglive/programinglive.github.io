@@ -11,7 +11,7 @@ The ability to edit their account is a critical feature for users in the HRIS sy
 
 ```mermaid
 sequenceDiagram
-    participant User
+    Actor User
     participant ClientApp
     participant Server
     participant Database
