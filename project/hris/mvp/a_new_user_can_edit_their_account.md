@@ -28,14 +28,14 @@ sequenceDiagram
 ```
 
 ## Table of Contents
-1. Overview
-2. Features
-3. API Endpoint Specification
-4. Data Models
-5. Implementation Steps
-6. Example Code
-7. Testing
-8. Conclusion
+1. [Overview](#overview)
+2. [Features](#features)
+3. [API Endpoint Specification](#api-endpoint-specification)
+4. [Data Models](#data-models)
+5. [Implementation Steps](#implementation-steps)
+6. [Example Code](#example-code)
+7. [Testing](#testing)
+8. [Conclusion](#conclusion)
 
 ---
 
