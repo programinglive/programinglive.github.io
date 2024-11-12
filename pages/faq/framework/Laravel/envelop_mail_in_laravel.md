@@ -3,6 +3,7 @@ layout: default
 title: Envelop Mail In Laravel
 parent: Laravel
 grand_parent: Framework
+ancestor: FAQ
 description: "Envelop Mail In Laravel"
 ---
 

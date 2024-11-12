@@ -3,6 +3,7 @@ layout: default
 title: Mail In Laravel
 parent: Laravel
 grand_parent: Framework
+ancestor: FAQ
 description: "Mail In Laravel"
 ---
 
