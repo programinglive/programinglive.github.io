@@ -1,7 +1,8 @@
 ---
 layout: default
 title: What is MVP?
-parent: FAQ
+parent: Software Development
+grand_parent: FAQ
 description: "What is MVP?"
 ---
 
