@@ -3,6 +3,7 @@ layout: default
 title: Repository Pattern On Laravel
 parent: Laravel
 grand_parent: Framework
+ancestor: FAQ
 description: "Repository Pattern On Laravel"
 ---
 

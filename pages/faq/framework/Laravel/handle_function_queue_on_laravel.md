@@ -3,6 +3,7 @@ layout: default
 title: Handle Function Queue On Laravel
 parent: Laravel
 grand_parent: Framework
+ancestor: FAQ
 description: "Handle Function Queue On Laravel"
 ---
 

@@ -3,6 +3,7 @@ layout: default
 title: Middleware in Laravel
 parent: Laravel
 grand_parent: Framework
+ancestor: FAQ
 description: "Middleware in Laravel"
 ---
 
