@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is Husky?
-parent: Javascript
+parent: JavaScript
 grand_parent: FAQ
 description: "What is Husky?"
 ---

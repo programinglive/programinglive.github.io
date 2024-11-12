@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is Node.js?
-parent: Javascript
+parent: JavaScript
 grand_parent: FAQ
 description: "What is Node.js?"
 ---
