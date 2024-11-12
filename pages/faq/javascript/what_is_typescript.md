@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is Typescript?
-parent: Javascript
+parent: JavaScript
 grand_parent: FAQ
 description: "What is Typescript?"
 ---

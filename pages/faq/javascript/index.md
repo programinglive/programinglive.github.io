@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Javascript
+title: JavaScript
 parent: FAQ
-description: "Javascript FAQ"
+description: "JavaScript FAQ"
 ---
 
 ### JavaScript FAQ Collection
