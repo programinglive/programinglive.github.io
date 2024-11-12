@@ -1,11 +1,12 @@
 ---
 layout: default
 title: What is Husky?
-parent: FAQ
+parent: Javascript
+grand_parent: FAQ
 description: "What is Husky?"
 ---
 
-# What is Husky?
+# Introduction
 
 When working on software projects, especially in teams, it’s essential to maintain high-quality code and ensure consistent practices across the team. This is where **Husky** comes in. Husky is a popular tool in the development community that allows developers to easily manage and run Git hooks for their projects. By integrating Husky into your workflow, you can automate common tasks like code formatting, linting, and testing, making it easier to maintain code quality and catch issues before they reach the repository.
 
