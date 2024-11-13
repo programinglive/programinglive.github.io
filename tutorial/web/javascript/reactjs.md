@@ -1,12 +1,12 @@
 ---
-title: ReactJs Tutorial
+title: ReactJS
 layout: default
 parent: JavaScript
 grand_parent: Web Development
-description: "ReactJs Tutorial"
+description: "ReactJS"
 ---
 
-### Getting Started with ReactJS
+# Getting Started with ReactJS
 
 ReactJS is one of the most popular JavaScript libraries for building dynamic and interactive web applications. Created by Facebook, React lets you build components that make up the user interface, manage data and states, and re-render efficiently whenever the data changes. This tutorial will guide you through the basics of React, how to set up your environment, and create a simple app.
 
@@ -153,5 +153,3 @@ Let’s enhance the app by adding a button that counts the number of clicks. We�
 ReactJS simplifies the process of building dynamic and interactive UIs by letting you work with components, props, state, and events. This basic example demonstrates the power of React’s component-based approach. With this foundation, you can explore more advanced features like routing, context, and hooks, allowing you to create sophisticated and high-performance applications.
 
 React’s ecosystem is vast, so as you get comfortable with these basics, you’ll find a range of libraries and tools to help you build out any functionality you need.
-
-
