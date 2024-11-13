@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Queue On Laravel
+title: Queue In Laravel
 parent: Laravel
 grand_parent: Framework
 ancestor: FAQ
-description: "Queue On Laravel"
+description: "Queue In Laravel"
 ---
 
 # Queue in Laravel
