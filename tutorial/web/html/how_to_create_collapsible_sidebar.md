@@ -3,13 +3,19 @@ title: How to Create a Collapsible Sidebar
 layout: default
 parent: HTML
 grand_parent: Web Development
-nav_order: 1
 description: "How to Create a Collapsible Sidebar"
 ---
 
 # How to Create a Collapsible Sidebar
 
 A collapsible sidebar is a popular UI element that allows users to toggle the sidebar's visibility to gain more screen space. In this tutorial, we’ll create a simple, collapsible sidebar using HTML, CSS, and JavaScript, with a minimal and responsive design.
+
+<a href="https://codepen.io/moszes/pen/QWRXVPr?editors=1111" target="_blank" style="text-decoration: none;">
+  <button style="background: none; border: none; cursor: pointer;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V13"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+  </button>
+  <span style="margin-left: 5px;">Open in CodePen</span>
+</a>
 
 ## Prerequisites
 
