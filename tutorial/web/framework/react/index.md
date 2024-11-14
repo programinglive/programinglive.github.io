@@ -1,7 +1,7 @@
 ---
 title: ReactJS
 layout: default
-parent: JavaScript
+parent: Framework
 grand_parent: Web Development
 description: "ReactJS"
 ---
