@@ -1,10 +1,10 @@
 ---
-title: Attribute in HTML
+title: How to Create a Collapsible Sidebar
 layout: default
 parent: HTML
 grand_parent: Web Development
 nav_order: 1
-description: "Attribute in HTML"
+description: "How to Create a Collapsible Sidebar"
 ---
 
 # How to Create a Collapsible Sidebar
