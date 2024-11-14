@@ -1,9 +1,8 @@
 ---
 title: How to Create a Navigation Bar
 layout: default
-parent: CSS
+parent: HTML
 grand_parent: Web Development
-nav_order: 2
 description: "How to Create a Navigation Bar"
 ---
 

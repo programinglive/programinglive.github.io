@@ -3,7 +3,6 @@ title: Attribute in HTML
 layout: default
 parent: HTML
 grand_parent: Web Development
-nav_order: 1
 description: "Attribute in HTML"
 ---
 
