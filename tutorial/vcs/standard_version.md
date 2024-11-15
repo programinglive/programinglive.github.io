@@ -1,7 +1,8 @@
 ---
 title: Standard Version
 layout: default
-parent: Tutorial
+parent: Git
+grand_parent: Version Control System
 description: "Standard Version"
 ---
 
