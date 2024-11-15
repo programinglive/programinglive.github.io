@@ -14,7 +14,8 @@ This FAQ answers frequently asked questions about diagrams, covering:
   Understand how diagrams help visualize system architectures, workflows, and data flows, making it easier to plan, build, and communicate software solutions.
 
 - **What types of diagrams are common in software design?**  
-  Learn about different types of diagrams, including UML (Unified Modeling Language) diagrams like class, sequence, and activity diagrams, as well as ER (Entity-Relationship) diagrams and flowcharts.
+  Learn about different types of diagrams, including UML (Unified Modeling Language) diagrams like class,
+  [sequence](./what_is_diagram_sequence.md), and activity diagrams, as well as ER (Entity-Relationship) diagrams and flowcharts.
 
 - **How do I choose the right type of diagram?**  
   Discover tips for selecting the most effective diagram based on the type of information you need to convey, from data relationships to process flows.
