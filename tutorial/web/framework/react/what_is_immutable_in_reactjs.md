@@ -12,7 +12,7 @@ In ReactJS, **immutability** refers to the principle of creating new objects or 
 
 ---
 
-#### Understanding Immutability
+## Understanding Immutability
 
 When data is **immutable**, it cannot be changed after it is created. Instead, any modification to the data results in the creation of a new instance. This contrasts with **mutable** data, where the original object or structure can be directly altered.
 
@@ -35,7 +35,7 @@ console.log(newArray); // Output: [1, 2, 3, 4]
 
 ---
 
-#### Why is Immutability Important in React?
+## Why is Immutability Important in React?
 
 1. **Efficient Re-rendering**
     - React uses a **virtual DOM** to determine what parts of the UI need to be updated. By comparing the old and new states (or props), React can efficiently re-render components. Immutability simplifies this comparison because it’s easy to check if the reference of an object has changed.
@@ -51,7 +51,7 @@ console.log(newArray); // Output: [1, 2, 3, 4]
 
 ---
 
-#### Immutability in React State
+## Immutability in React State
 
 React's state is designed to follow the principle of immutability. Directly modifying state is considered a bad practice. For example:
 
@@ -68,7 +68,7 @@ this.setState({ items: [...this.state.items, newItem] }); // Creates a new array
 
 ---
 
-#### Tools for Managing Immutability
+## Tools for Managing Immutability
 
 1. **JavaScript Methods**
     - Use methods like `map()`, `filter()`, and `concat()` that return new arrays instead of modifying the original.
@@ -101,7 +101,7 @@ this.setState({ items: [...this.state.items, newItem] }); // Creates a new array
 
 ---
 
-#### Common Scenarios Requiring Immutability
+## Common Scenarios Requiring Immutability
 
 1. **Updating Arrays**
     - Adding an item:
