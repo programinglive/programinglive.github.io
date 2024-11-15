@@ -1,7 +1,8 @@
 ---
 title: Git Hook
 layout: default
-parent: Version Control System
+parent: Git
+grand_parent: Version Control System
 description: "Git Hook"
 ---
 
