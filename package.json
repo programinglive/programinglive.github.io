@@ -1,11 +1,16 @@
 {
+  "name": "programinglive-blog",
+  "version": "1.0.0",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "husky": "^9.1.6"
+    "husky": "^9.1.6",
+    "standard-version": "^9.5.0"
   },
   "scripts": {
     "prepare": "husky",
-    "test": "echo \"No tests specified\""
+    "test": "echo \"No tests specified\"",
+    "release": "standard-version"
   }
 }
