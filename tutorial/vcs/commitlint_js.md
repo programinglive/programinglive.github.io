@@ -6,7 +6,7 @@ grand_parent: Version Control System
 description: "Commitlint JS"
 ---
 
-## Commitlint JS: Enforcing Consistent Commit Messages in Your Project
+## Commitlint JS
 
 In collaborative software projects, consistent commit messages play a key role in code readability and project organization. However, maintaining this consistency can be challenging, especially in larger teams. **Commitlint JS** is a powerful tool that helps enforce commit message conventions, ensuring that every commit follows the same structure and standards.
 
