@@ -2,7 +2,7 @@
 title: Version Control System
 layout: default
 parent: Tutorial
-description: "Tutorial Version Control System"
+description: "Version Control System"
 ---
 
 # **Version Control System Tutorial Collection**

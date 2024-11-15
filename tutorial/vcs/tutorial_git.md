@@ -2,7 +2,7 @@
 title: Git
 layout: default
 parent: Version Control System
-description: "Tutorial Git"
+description: "Git"
 ---
 
 # Git
