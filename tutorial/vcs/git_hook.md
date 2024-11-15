@@ -6,7 +6,7 @@ grand_parent: Version Control System
 description: "Git Hook"
 ---
 
-## Git Hook: Automate Tasks with Git
+## Git Hook
 
 Git is a widely popular version control system among developers. However, one feature often overlooked is **Git Hooks**. Git Hooks are scripts that can be automatically triggered by specific Git events. By using Git Hooks, you can automate repetitive tasks or ensure code standards are met before pushing to a repository.
 
