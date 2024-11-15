@@ -25,11 +25,11 @@ Web development refers to the process of creating and maintaining websites. It i
 
 To dive into web development, you’ll need to familiarize yourself with some essential tools and technologies:
 
-- **HTML (HyperText Markup Language)**: The backbone of any website, defining its structure.
-- **CSS (Cascading Style Sheets)**: Adds style to your HTML, making websites visually appealing.
-- **JavaScript**: Brings interactivity and dynamic features to websites.
-- **Frameworks and Libraries**: Tools like React, Angular, and Bootstrap simplify and enhance web development.
-- **Version Control**: Git helps track changes in your code and collaborate with others.
+- **[HTML (HyperText Markup Language)](./html/index.md)**: The backbone of any website, defining its structure.
+- **[CSS (Cascading Style Sheets)](./css/index.md)**: Adds style to your HTML, making websites visually appealing.
+- **[JavaScript](./javascript/index.md)**: Brings interactivity and dynamic features to websites.
+- **[Frameworks and Libraries](./framework/index.md)**: Tools like React, Angular, and Bootstrap simplify and enhance web development.
+- **[Version Control](./../vcs/index.md)**: Git helps track changes in your code and collaborate with others.
 - **Code Editors**: Tools like Visual Studio Code provide a comfortable environment to write and test your code.
 
 ---
