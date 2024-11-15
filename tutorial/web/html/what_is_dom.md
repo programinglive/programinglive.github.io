@@ -110,7 +110,7 @@ JavaScript is the primary language used to interact with the DOM. Using JavaScri
     - The DOM provides a standardized way for browsers to interact with documents. Although there might be slight differences between browsers, the DOM provides a consistent interface for JavaScript to manipulate the structure and behavior of web pages across all browsers.
 
 4. **Foundation for Modern Web Frameworks**
-    - Popular web frameworks like React, Angular, and Vue.js build on the concepts of the DOM to create fast and efficient web applications. These frameworks abstract away direct DOM manipulation to improve performance, but they still rely on the DOM to render UI updates.
+    - Popular web frameworks like [React](./../framework/react/index.md), Angular, and Vue.js build on the concepts of the DOM to create fast and efficient web applications. These frameworks abstract away direct DOM manipulation to improve performance, but they still rely on the DOM to render UI updates.
 
 ---
 
