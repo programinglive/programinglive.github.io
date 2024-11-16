@@ -20,13 +20,13 @@ This tutorial provides an overview of web development and the three essential co
 
 ---
 
-## **2. HTML Basics**
+## **[2. HTML Basics](./html/html_basic.md)**
 
 HTML (Hypertext Markup Language) is the foundation of any web page. This tutorial walks you through HTML syntax, tags, and elements, covering everything from text formatting and images to links and lists. By the end, you’ll be able to structure content on a webpage effectively.
 
 ---
 
-## **3. CSS Fundamentals**
+## **[3. CSS Fundamentals](./css/css_fundamental.md)**
 
 CSS (Cascading Style Sheets) allows you to style and format your web pages. This tutorial covers CSS selectors, properties, and values. You’ll learn how to apply styles to HTML elements, work with colors, fonts, and layout techniques, and build visually appealing websites.
 
