@@ -5,7 +5,6 @@ description: "Mission"
 nav_order: 4
 permalink: /mission/
 ---
-Here’s an updated mission statement:
 
 # Mission:  
 To emphasize and realize our vision, we have a clear plan to inspire new programmers and encourage creativity:
