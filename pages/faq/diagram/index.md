@@ -2,8 +2,9 @@
 layout: default
 title: Diagram
 parent: FAQ
-description: "FAQ Diagram"
+description: "Diagram"
 ---
+
 # **Diagram**
 
 Welcome to the **Diagram** guide—a resource designed to address common questions about diagrams in software and system design. Diagrams are powerful tools for visually representing complex information, processes, and architectures. They help communicate ideas clearly, ensure team alignment, and simplify problem-solving.
