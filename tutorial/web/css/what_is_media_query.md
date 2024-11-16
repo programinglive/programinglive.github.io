@@ -3,7 +3,6 @@ title: What is a Media Query?
 layout: default
 parent: CSS
 grand_parent: Web Development
-nav_order: 2
 description: "What is a Media Query?"
 ---
 
