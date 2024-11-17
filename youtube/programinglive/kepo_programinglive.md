@@ -1,7 +1,8 @@
 ---
 title: Kepo ProgramingLive?
 layout: default
-parent: YouTube
+parent: ProgramingLive
+grand_parent: YouTube
 description: "Kepo ProgramingLive?"
 ---
 
