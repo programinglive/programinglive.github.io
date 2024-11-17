@@ -36,10 +36,17 @@ I understand it’s still early to officially announce this movement, but we are
 ### **Connect with Us**
 
 Stay updated with our latest activities and resources through our social media platforms:
-
-- [![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@programinglive)
-- [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/programinglive)
-- [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/programinglive)
-- [![TikTok](https://img.shields.io/badge/TikTok-black?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@mahatma.mahardhika)
-- [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/moszesaeschylus)
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mahatmamahardhika)
+<table>
+  <tr>
+    <td><a href="https://www.youtube.com/@programinglive"><img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a></td>
+    <td><a href="https://www.instagram.com/programinglive"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a></td>
+    <td><a href="https://github.com/programinglive"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a></td>
+    <td><a href="https://www.tiktok.com/@mahatma.mahardhika"><img src="https://img.shields.io/badge/TikTok-black?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok"></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://x.com/moszesaeschylus"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a></td>
+    <td><a href="https://www.facebook.com/programinglive"><img src="https://img.shields.io/badge/Facebook-4267B2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"></a></td>
+    <td><a href="https://medium.com/@moszes"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"></a></td>
+    <td><a href="https://www.linkedin.com/in/mahatmamahardhika"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a></td>
+  </tr>
+</table>
