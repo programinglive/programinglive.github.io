@@ -11,7 +11,7 @@ A professional software developer community based in Indonesia, committed to con
 
 ### **About Us**
 
-Hello, my name is **Mahatma Mahardhika**.
+Hello, my name is **[Mahatma Mahardhika](https://github.com/mahatmamahardhikach)**.
 
 Currently, I am working to build a community for programmers in Indonesia. I know it's a challenging journey, but I believe this effort is worth pursuing. With Indonesia experiencing a demographic bonus, the demand for skilled programmers will continue to grow in the future. That's why this community exists—to support and empower the next generation of programmers.
 
