@@ -32,7 +32,7 @@ CSS (Cascading Style Sheets) allows you to style and format your web pages. This
 
 ---
 
-## **4. Introduction to JavaScript**
+## **4. [Introduction to JavaScript](./javascript/introducing_javascript.md)**
 
 JavaScript is a powerful scripting language that adds interactivity to websites. This tutorial introduces JavaScript basics, including variables, data types, functions, and event handling. You’ll also learn how to manipulate the DOM (Document Object Model) to create dynamic, interactive web pages.
 
