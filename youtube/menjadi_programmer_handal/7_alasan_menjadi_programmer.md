@@ -1,7 +1,8 @@
 ---
 title: 7 Alasan Menjadi Programmer
 layout: default
-parent: YouTube
+parent: Menjadi Programmer Handal
+grand_parent: YouTube
 description: "7 Alasan Menjadi Programmer"
 ---
 
