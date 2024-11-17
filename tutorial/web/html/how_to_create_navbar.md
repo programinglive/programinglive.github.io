@@ -1,9 +1,9 @@
 ---
-title: How to Create a Navigation Bar
+title: How to Create a Navigation Bar?
 layout: default
 parent: HTML
 grand_parent: Web Development
-description: "How to Create a Navigation Bar"
+description: "How to Create a Navigation Bar?"
 ---
 
 # How to Create a Navigation Bar

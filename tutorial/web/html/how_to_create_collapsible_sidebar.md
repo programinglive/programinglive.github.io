@@ -1,9 +1,9 @@
 ---
-title: How to Create a Collapsible Sidebar
+title: How to Create a Collapsible Sidebar?
 layout: default
 parent: HTML
 grand_parent: Web Development
-description: "How to Create a Collapsible Sidebar"
+description: "How to Create a Collapsible Sidebar?"
 ---
 
 # How to Create a Collapsible Sidebar
