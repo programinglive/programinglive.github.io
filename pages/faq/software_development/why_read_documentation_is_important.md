@@ -78,5 +78,3 @@ Reading documentation might feel daunting at first—technical jargon and length
 ## Final Thoughts
 
 Reading documentation is an investment in your growth as a programmer. It’s not just about solving immediate problems but about understanding the tools that power your projects and enhancing your technical expertise. The next time you’re stuck, don’t shy away from the docs—they’re there to help you.
-
-So, have you read the documentation yet?
