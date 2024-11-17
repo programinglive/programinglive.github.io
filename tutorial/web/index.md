@@ -2,7 +2,7 @@
 title: Web Development
 layout: default
 parent: Tutorial
-nav_order: 2
+nav_order: 6
 description: "Web Development Tutorial Collection"
 ---
 

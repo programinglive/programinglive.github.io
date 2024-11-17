@@ -2,6 +2,7 @@
 layout: default
 title: Sponsor
 description: "Sponsor"
+nav_order: 9
 permalink: /sponsor/
 ---
 

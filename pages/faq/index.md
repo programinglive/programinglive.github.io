@@ -2,6 +2,7 @@
 layout: default
 title: FAQ
 description: "FAQ"
+nav_oder: 8
 permalink: /faq/
 ---
 
