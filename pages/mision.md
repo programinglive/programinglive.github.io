@@ -2,7 +2,7 @@
 layout: default
 title: Mission
 description: "Mission"
-nav_order: 5
+nav_order: 3
 permalink: /mission/
 ---
 
