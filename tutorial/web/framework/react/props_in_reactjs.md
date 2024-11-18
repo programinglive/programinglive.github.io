@@ -6,108 +6,144 @@ grand_parent: Framework
 description: "Props in ReactJS"
 ---
 
-# What are Props in React?
+# Props in React
 
-**Props** (short for *properties*) are a fundamental concept in React that allow data to be passed from a parent component to a child component. They are immutable, meaning the child component receiving props cannot modify them. Props enable the creation of dynamic and reusable components by allowing components to render based on data or settings provided by their parent.
-
----
-
-## Key Characteristics of Props
-
-1. **Read-Only**  
-   Props are immutable, meaning once a parent passes them to a child, the child cannot change their value. This ensures a unidirectional data flow from parent to child.
-
-2. **Used for Customization**  
-   Props allow components to be configured with different data or behaviors, making components more reusable.
-
-3. **Passed as Attributes**  
-   Props are passed to components similarly to HTML attributes.
-
-   **Example:**
-   ```jsx
-   <Button color="blue" label="Click Me" />
-   ```
-
-4. **Accessible via `props` Object**  
-   In the receiving component, props can be accessed via the `props` object in class components or directly in function components.
+**Table of Contents**
+1. [Introduction](#introduction)
+2. [What Are Props in React?](#what-are-props-in-react)
+3. [How Props Work](#how-props-work)
+4. [Passing Props to Components](#passing-props-to-components)
+   - [Passing Basic Data](#1-passing-basic-data)
+   - [Passing Functions as Props](#2-passing-functions-as-props)
+   - [Passing Objects as Props](#3-passing-objects-as-props)
+5. [Props vs State](#props-vs-state)
+6. [Default Props](#default-props)
+7. [Prop Validation with PropTypes](#prop-validation-with-proptypes)
+8. [Conclusion](#conclusion)
 
 ---
 
-## How to Use Props
-
-1. **Passing Props**  
-   In the parent component, you pass props by adding attributes to the child component.
-
-   ```jsx
-   function App() {
-     return (
-       <Greeting name="Alice" />
-     );
-   }
-   ```
-
-2. **Receiving Props**  
-   In the child component, props can be accessed as a parameter (in functional components) or through `this.props` (in class components).
-
-   **Functional Component Example:**
-   ```jsx
-   function Greeting(props) {
-     return <h1>Hello, {props.name}!</h1>;
-   }
-   ```
-
-   **Class Component Example:**
-   ```jsx
-   class Greeting extends React.Component {
-     render() {
-       return <h1>Hello, {this.props.name}!</h1>;
-     }
-   }
-   ```
+## Introduction
+Props, short for "properties," are a core concept in React that enable components to be dynamic and reusable. Props allow you to pass data from a parent component to its child components, making your application modular and maintainable.
 
 ---
 
-## Props vs. State
+## What Are Props in React?
+Props are read-only inputs passed to a component. They are immutable and are primarily used for rendering dynamic content or controlling a child component's behavior. Think of props as arguments passed to a function, but in this case, the function is a React component.
 
-While both **props** and **state** hold information to control a component’s behavior, they serve different purposes:
+---
 
-| **Aspect**       | **Props**                                | **State**                              |
-|-------------------|------------------------------------------|----------------------------------------|
-| **Definition**    | Passed from parent to child components   | Internal to a component                |
-| **Mutability**    | Immutable                               | Mutable                                |
-| **Usage**         | Configure a component                   | Manage a component's internal data     |
-| **Control**       | Controlled by parent components          | Controlled by the component itself     |
+## How Props Work
+1. Props are passed from a parent component to a child component.
+2. A child component can access props using the `props` object or destructuring.
+3. Props are immutable, meaning a child component cannot modify them.
+
+---
+
+## Passing Props to Components
+
+### 1. Passing Basic Data
+You can pass strings, numbers, or boolean values as props:
+
+**Example:**
+```javascript
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+function App() {
+  return <Greeting name="John" />;
+}
+```
+
+---
+
+### 2. Passing Functions as Props
+You can pass functions to child components to handle events or share logic:
+
+**Example:**
+```javascript
+function Button({ onClick }) {
+  return <button onClick={onClick}>Click Me</button>;
+}
+
+function App() {
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
+
+  return <Button onClick={handleClick} />;
+}
+```
+
+---
+
+### 3. Passing Objects as Props
+Instead of passing multiple props, you can bundle them into an object and pass that object as a single prop:
+
+**Example:**
+```javascript
+function UserProfile({ user }) {
+  return (
+    <div>
+      <h2>{user.name}</h2>
+      <p>Age: {user.age}</p>
+    </div>
+  );
+}
+
+function App() {
+  const user = { name: 'Jane Doe', age: 28 };
+  return <UserProfile user={user} />;
+}
+```
+
+---
+
+## Props vs State
+| **Props**             | **State**              |  
+|------------------------|------------------------|  
+| Passed from parent to child | Managed locally within a component |  
+| Immutable             | Mutable               |  
+| Used for component communication | Used for dynamic, interactive data |  
 
 ---
 
 ## Default Props
-
-React allows you to define default props for components in case no value is provided by the parent.
+Default props allow you to set default values for props that are not passed by the parent component.
 
 **Example:**
-```jsx
-function Button({ label = "Default Label" }) {
-  return <button>{label}</button>;
+```javascript
+function Greeting({ name }) {
+  return <h1>Hello, {name}!</h1>;
 }
 
-// OR using defaultProps:
-Button.defaultProps = {
-  label: "Default Label",
+Greeting.defaultProps = {
+  name: 'Guest',
 };
 ```
 
 ---
 
-## Prop Types
+## Prop Validation with PropTypes
+React provides a library called `prop-types` to validate the types of props passed to components.
 
-Prop validation is essential for ensuring that components receive the correct data types. React provides the `prop-types` package to define and validate the types of props.
+**Installation:**
+```bash
+npm install prop-types
+```
 
 **Example:**
-```jsx
+```javascript
 import PropTypes from 'prop-types';
 
 function Greeting({ name, age }) {
-  return <h1>Hello, {name}! You are {age} years old.</h1>;
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>
+      <p>Age: {age}</p>
+    </div>
+  );
 }
 
 Greeting.propTypes = {
@@ -118,48 +154,7 @@ Greeting.propTypes = {
 
 ---
 
-## Passing Functions as Props
-
-Props can also be used to pass functions from a parent component to a child. This is often used for handling events or managing shared state.
-
-**Example:**
-```jsx
-function Parent() {
-  const handleClick = () => {
-    alert('Button clicked!');
-  };
-
-  return <Child onClick={handleClick} />;
-}
-
-function Child({ onClick }) {
-  return <button onClick={onClick}>Click Me</button>;
-}
-```
-
----
-
-## Best Practices for Props
-
-1. **Keep Components Pure**  
-   Avoid modifying props within a child component. Use props as inputs to render output.
-
-2. **Use PropTypes for Validation**  
-   Validate prop types to catch errors and improve code reliability.
-
-3. **Name Props Clearly**  
-   Use descriptive names for props to make components easier to understand.
-
-4. **Deconstruct Props**  
-   Deconstruct props for cleaner code:
-   ```jsx
-   function Greeting({ name }) {
-     return <h1>Hello, {name}!</h1>;
-   }
-   ```
-
----
-
 ## Conclusion
+Props are a vital part of React, allowing you to build flexible and reusable components. By passing data, functions, or objects to child components, you can create dynamic UIs while maintaining a clean and modular structure.
 
-Props are a powerful tool in React that enable components to be dynamic, reusable, and easy to maintain. By passing data from parent to child components, they establish a clear, one-way data flow that aligns with React's design principles. Mastering props is essential for creating flexible and maintainable React applications.
+Understanding how to use props effectively is a fundamental skill for any React developer. Start experimenting with props in your projects to see how they can enhance your applications!
