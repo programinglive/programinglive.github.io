@@ -1,9 +1,9 @@
 ---
 layout: default
-title: What is HTTP Response
+title: What is HTTP Response?
 parent: Software Development
 grand_parent: FAQ
-description: "What is HTTP Response"
+description: "What is HTTP Response?"
 ---
 
 # Understanding HTTP Response
