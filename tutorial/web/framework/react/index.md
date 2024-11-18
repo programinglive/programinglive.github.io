@@ -145,7 +145,7 @@ Let’s build a simple "Hello, World" app with React:
 ## ReactJS Ecosystem
 React has a rich ecosystem of tools and libraries that extend its capabilities:
 
-- **State Management:** Redux, MobX, or React Context API.
+- **[State Management](./state_in_react.md):** Redux, MobX, or React Context API.
 - **Routing:** React Router for handling navigation.
 - **Styling:** Styled-components, Emotion, or Tailwind CSS.
 - **Testing:** Jest, React Testing Library, or Cypress.
