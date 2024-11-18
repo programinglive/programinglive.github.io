@@ -17,7 +17,7 @@ This collection covers popular front-end and back-end frameworks, offering step-
 
 1. **Introduction to Web Frameworks** – Understand the purpose of frameworks, the differences between front-end and back-end frameworks, and how they fit into the development process.
 
-2. **Getting Started with React** – Learn the basics of React, including components, props, state management, and hooks, with a focus on building reusable, efficient front-end components.
+2. **[Getting Started with React](./react/index.md)** – Learn the basics of React, including components, props, state management, and hooks, with a focus on building reusable, efficient front-end components.
 
 3. **Vue.js Essentials** – Discover Vue.js's reactive framework, focusing on its component-based architecture, directives, and data binding to create dynamic, responsive applications.
 
