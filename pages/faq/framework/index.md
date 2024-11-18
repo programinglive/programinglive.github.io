@@ -24,7 +24,7 @@ This FAQ covers frequently asked questions about frameworks, including:
   Get insights into selecting the right framework for your project, based on language preference, project size, and functionality.
 
 - **How do I get started with a framework?**  
-  Explore resources and tutorials to help you set up popular frameworks like React, Vue.js, Angular, Django, and Laravel.
+  Explore resources and tutorials to help you set up popular frameworks like [React](./../../../tutorial/web/framework/react/index.md), Vue.js, Angular, Django, and Laravel.
 
 - **How can I integrate multiple frameworks?**  
   Find out how to combine front-end and back-end frameworks to create a cohesive, full-stack application.
