@@ -6,94 +6,77 @@ grand_parent: Framework
 description: "Tanstack React Table"
 ---
 
-# Tanstack React Table
+### TanStack Table with V8 - Complete Guide
 
-**Table of Contents**
-1. [Introduction](#introduction)
-2. [What is Tanstack React Table?](#what-is-tanstack-react-table)
-3. [Key Features of Tanstack React Table](#key-features-of-tanstack-react-table)
-4. [Implementation Steps](#implementation-steps)
-    - [Install the Library](#1-install-the-library)
-    - [Define Data and Columns](#2-define-data-and-columns)
-    - [Create the Table](#3-create-the-table)
-    - [Add Advanced Features](#4-add-advanced-features)
-5. [When to Use Tanstack React Table](#when-to-use-tanstack-react-table)
-6. [Conclusion](#conclusion)
-
----
-
-## Introduction
-When working with data in web applications, tables are a go-to component for presenting information. However, managing dynamic tables with features like pagination, filtering, and sorting can be challenging. **Tanstack React Table**, formerly known as **React Table**, is a high-performance and flexible library designed to tackle this challenge.
+#### Table of Contents
+1. [What is TanStack Table?](#what-is-tanstack-table)
+2. [Why Choose TanStack Table?](#why-choose-tanstack-table)
+3. [Key Features of TanStack Table V8](#key-features-of-tanstack-table-v8)
+4. [Getting Started with TanStack Table V8](#getting-started-with-tanstack-table-v8)
+   - [Installation](#installation)
+   - [Basic Setup](#basic-setup)
+5. [Advanced Usage](#advanced-usage)
+   - [Sorting and Filtering](#sorting-and-filtering)
+   - [Pagination](#pagination)
+   - [Custom Cell Rendering](#custom-cell-rendering)
+6. [Tips and Best Practices](#tips-and-best-practices)
+7. [Conclusion](#conclusion)
 
 ---
 
-## What is Tanstack React Table?
-Tanstack React Table is a lightweight and highly customizable table library for React. While it doesn’t provide a user interface (UI) out of the box, it offers a robust API that you can pair with any UI library or framework, such as Material-UI, Bootstrap, or Tailwind CSS.
-
-As a **headless library**, it gives you complete freedom to design and manage your table's appearance without being restricted by built-in styles.
+### What is TanStack Table?
+TanStack Table is a highly flexible and powerful table library used for building tables in JavaScript frameworks like React. Version 8 (V8) of TanStack Table brings new optimizations, enhanced features, and an improved developer experience.
 
 ---
 
-## Key Features of Tanstack React Table
-
-1. **Headless and Flexible**  
-   Tanstack React Table provides only the logic for tables, leaving the UI implementation entirely up to you.
-
-2. **High Performance**  
-   It’s designed to handle large datasets efficiently without compromising application performance.
-
-3. **Deep Customization**  
-   It supports complex features like column grouping, data virtualization, and nested sorting.
-
-4. **Client-side and Server-side Rendering**  
-   You can choose to process data on the client-side or server-side, depending on your application’s needs.
+### Why Choose TanStack Table?
+TanStack Table V8 excels because it offers:
+- **Enhanced Performance:** Optimized rendering for massive datasets.
+- **Improved API Design:** More intuitive and flexible hook-based APIs.
+- **Framework Independence:** Supports React, Vue, Solid, and Svelte.
+- **Full Customization:** Gives you complete control over table rendering and behavior.
 
 ---
 
-## Implementation Steps
+### Key Features of TanStack Table V8
+1. **Headless Implementation:** A lightweight, unopinionated design allowing custom rendering.
+2. **Data Management Hooks:** Clean APIs for handling state like sorting, filtering, and grouping.
+3. **Column Pinning and Visibility:** Create highly interactive tables.
+4. **Server-Side Rendering (SSR):** Optimized for server-side rendered applications.
+5. **TypeScript Support:** Seamless integration with TypeScript.
 
-### 1. Install the Library
-Use npm or yarn to install Tanstack React Table:
+---
+
+### Getting Started with TanStack Table V8
+#### Installation
+To install TanStack Table V8 for React:
 ```bash
 npm install @tanstack/react-table
 ```
 
-### 2. Define Data and Columns
-You need two main elements to create a table: **data** and **columns**. Here’s an example:
-
-```javascript
-import { useTable } from '@tanstack/react-table';
+#### Basic Setup
+Create a basic table using TanStack Table V8:
+```jsx
+import React from 'react';
+import { useReactTable, flexRender } from '@tanstack/react-table';
 
 const data = [
-  { id: 1, name: 'John Doe', age: 25 },
-  { id: 2, name: 'Jane Smith', age: 30 },
-  { id: 3, name: 'Sam Brown', age: 22 },
+  { name: 'Alice', age: 25, role: 'Developer' },
+  { name: 'Bob', age: 30, role: 'Designer' },
 ];
 
 const columns = [
-  {
-    accessorKey: 'id', // key for the data
-    header: 'ID',      // column name
-  },
-  {
-    accessorKey: 'name',
-    header: 'Name',
-  },
-  {
-    accessorKey: 'age',
-    header: 'Age',
-  },
+  { accessorKey: 'name', header: 'Name' },
+  { accessorKey: 'age', header: 'Age' },
+  { accessorKey: 'role', header: 'Role' },
 ];
-```
-
-### 3. Create the Table
-Use the `useTable` hook to connect the data and columns to the table:
-
-```javascript
-import { useTable } from '@tanstack/react-table';
 
 function MyTable() {
-  const table = useTable({ data, columns });
+  const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: () => {}, // V8 requires you to specify a row model
+  });
 
   return (
     <table>
@@ -101,7 +84,9 @@ function MyTable() {
         {table.getHeaderGroups().map(headerGroup => (
           <tr key={headerGroup.id}>
             {headerGroup.headers.map(header => (
-              <th key={header.id}>{header.renderHeader()}</th>
+              <th key={header.id}>
+                {flexRender(header.column.columnDef.header, header.getContext())}
+              </th>
             ))}
           </tr>
         ))}
@@ -110,7 +95,9 @@ function MyTable() {
         {table.getRowModel().rows.map(row => (
           <tr key={row.id}>
             {row.getVisibleCells().map(cell => (
-              <td key={cell.id}>{cell.renderCell()}</td>
+              <td key={cell.id}>
+                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+              </td>
             ))}
           </tr>
         ))}
@@ -118,24 +105,58 @@ function MyTable() {
     </table>
   );
 }
+
+export default MyTable;
 ```
 
-### 4. Add Advanced Features
-Features like pagination, filtering, or column grouping can be added by customizing the `useTable` configuration.
+---
+
+### Advanced Usage
+
+#### Sorting and Filtering
+Enable sorting and filtering with minimal configuration:
+```jsx
+const table = useReactTable({
+  data,
+  columns,
+  state: { sorting: [{ id: 'name', desc: false }] },
+  onSortingChange: setSorting,
+  getCoreRowModel: () => {},
+});
+```
+
+#### Pagination
+Handle pagination for large datasets:
+```jsx
+const table = useReactTable({
+  data,
+  columns,
+  state: { pagination: { pageIndex: 0, pageSize: 10 } },
+  onPaginationChange: setPagination,
+  getPaginationRowModel: () => {},
+});
+```
+
+#### Custom Cell Rendering
+Customize cell rendering to fit specific use cases:
+```jsx
+const columns = [
+  {
+    accessorKey: 'name',
+    header: 'Name',
+    cell: info => <strong>{info.getValue()}</strong>,
+  },
+];
+```
 
 ---
 
-## When to Use Tanstack React Table?
-Use this library if you:
-- Need full control over your table's design.
-- Are working with large datasets requiring optimal performance.
-- Need advanced features such as data virtualization or grouping.
-
-However, if you need a simple table with pre-styled components, libraries like Material-UI DataGrid might be more suitable.
+### Tips and Best Practices
+- **Memoization:** Use `React.useMemo` for data and column definitions to prevent unnecessary re-renders.
+- **Server-Side Integration:** Leverage hooks for server-side data fetching.
+- **Plugin Usage:** Extend functionalities with plugins like grouping or row selection.
 
 ---
 
-## Conclusion
-Tanstack React Table is a powerful solution for managing data tables in React applications. Its high flexibility lets you create dynamic and optimal user experiences, even though it requires some extra effort to design the UI.
-
-Try Tanstack React Table in your next project and experience the difference!
+### Conclusion
+TanStack Table V8 is a game-changer for creating highly interactive and customizable tables in modern applications. Its modularity and headless design provide maximum flexibility, making it suitable for a wide range of use cases.
