@@ -8,7 +8,9 @@ description: "How to Add Light and Dark Mode to Your Website?"
 
 # How to Add Light and Dark Mode to Your Website?
 
-Light and dark modes are essential features in modern web design. They enhance user experience by offering flexibility for different lighting conditions and personal preferences. In this tutorial, you’ll learn how to add a light/dark mode toggle to your website using HTML, CSS, and JavaScript. Let’s dive in!
+Light and dark modes are essential features in modern web design. They enhance user experience by offering flexibility
+for different lighting conditions and personal preferences. In this tutorial, you’ll learn how to add a light/dark mode
+toggle to your website using HTML, CSS, and JavaScript. Let’s dive in!
 
 <a href="https://codepen.io/moszes/pen/LYovrEL" target="_blank" style="text-decoration: none;">
   <button style="background: none; border: none; cursor: pointer;">
@@ -16,6 +18,18 @@ Light and dark modes are essential features in modern web design. They enhance u
   </button>
   <span style="margin-left: 5px;">Open in CodePen</span>
 </a>
+
+---
+
+## Table of Contents
+
+1. [Step 1: Setting Up Your Project](#step-1-setting-up-your-project)
+2. [Step 2: Styling Light and Dark Modes in CSS](#step-2-styling-light-and-dark-modes-in-css)
+3. [Step 3: Adding JavaScript for Theme Switching](#step-3-adding-javascript-for-theme-switching)
+4. [Step 4: Enhancing the User Experience](#step-4-enhancing-the-user-experience)
+5. [Step 5: Testing Your Implementation](#step-5-testing-your-implementation)
+6. [Step 6: Optional Improvements](#step-6-optional-improvements)
+7. [Conclusion](#conclusion)
 
 ---
 
@@ -28,6 +42,7 @@ First, create the basic structure of your project. You’ll need three files:
 - `script.js`: The JavaScript file for functionality.
 
 Here’s the folder structure:
+
 ```
 /project-folder
     index.html
@@ -36,23 +51,25 @@ Here’s the folder structure:
 ```
 
 ### `index.html`
+
 Add the following code to your HTML file:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light & Dark Mode</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light & Dark Mode</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Light and Dark Mode</h1>
-        <button id="theme-toggle">Switch Mode</button>
-    </header>
-    <p>Toggle between light and dark themes to see the difference!</p>
-    <script src="script.js"></script>
+<header>
+  <h1>Light and Dark Mode</h1>
+  <button id="theme-toggle">Switch Mode</button>
+</header>
+<p>Toggle between light and dark themes to see the difference!</p>
+<script src="script.js"></script>
 </body>
 </html>
 ```
@@ -64,6 +81,7 @@ Add the following code to your HTML file:
 Now, define the styles for both light and dark modes.
 
 ### `style.css`
+
 ```css
 /* Default light mode */
 body {
@@ -118,6 +136,7 @@ body.dark-mode button {
 Now, create the JavaScript logic to toggle themes and save user preferences.
 
 ### `script.js`
+
 ```javascript
 // Select the toggle button and body element
 const toggleButton = document.getElementById('theme-toggle');
@@ -126,19 +145,19 @@ const body = document.body;
 // Load the saved theme from localStorage
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
-    body.classList.add(savedTheme);
-    toggleButton.textContent = savedTheme === 'dark-mode' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+	body.classList.add(savedTheme);
+	toggleButton.textContent = savedTheme === 'dark-mode' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
 }
 
 // Event listener for the button
 toggleButton.addEventListener('click', () => {
-    // Toggle the dark-mode class
-    const isDarkMode = body.classList.toggle('dark-mode');
-    // Save the current theme in localStorage
-    const theme = isDarkMode ? 'dark-mode' : '';
-    localStorage.setItem('theme', theme);
-    // Update button text
-    toggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+	// Toggle the dark-mode class
+	const isDarkMode = body.classList.toggle('dark-mode');
+	// Save the current theme in localStorage
+	const theme = isDarkMode ? 'dark-mode' : '';
+	localStorage.setItem('theme', theme);
+	// Update button text
+	toggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
 });
 ```
 
@@ -147,7 +166,9 @@ toggleButton.addEventListener('click', () => {
 ## Step 4: Enhancing the User Experience
 
 ### Adding Smooth Transitions
+
 Ensure smooth transitions when switching between modes using the `transition` property in CSS:
+
 ```css
 body {
     transition: background-color 0.3s, color 0.3s;
@@ -155,7 +176,9 @@ body {
 ```
 
 ### Auto-Detect System Preferences
+
 Use the `prefers-color-scheme` media query to automatically set the theme based on the user’s system preference:
+
 ```css
 @media (prefers-color-scheme: dark) {
     body {
@@ -185,6 +208,8 @@ Use the `prefers-color-scheme` media query to automatically set the theme based 
 
 ## Conclusion
 
-By following this tutorial, you’ve created a functional light/dark mode toggle for your website. This feature not only enhances usability but also demonstrates your attention to user preferences.
+By following this tutorial, you’ve created a functional light/dark mode toggle for your website. This feature not only
+enhances usability but also demonstrates your attention to user preferences.
 
-What’s next? Experiment with more advanced theme-switching techniques or integrate this functionality into a real project.
+What’s next? Experiment with more advanced theme-switching techniques or integrate this functionality into a real
+project.

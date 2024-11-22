@@ -8,19 +8,42 @@ description: "Attribute in HTML"
 
 # Understanding Attributes in HTML
 
-HTML, or HyperText Markup Language, is the standard language for creating web pages. It provides a set of elements, each with specific meanings and purposes, to structure content. However, these elements alone are not always enough to provide detailed instructions or define the behavior of content. This is where **attributes** come into play. Attributes allow you to modify HTML elements, giving them additional functionality or meaning.
+HTML, or HyperText Markup Language, is the standard language for creating web pages. It provides a set of elements, each
+with specific meanings and purposes, to structure content. However, these elements alone are not always enough to
+provide detailed instructions or define the behavior of content. This is where **attributes** come into play. Attributes
+allow you to modify HTML elements, giving them additional functionality or meaning.
 
-In this article, we’ll explore what HTML attributes are, how they work, and some of the most common attributes you’ll encounter.
+In this article, we’ll explore what HTML attributes are, how they work, and some of the most common attributes you’ll
+encounter.
+
+## Table of Contents
+
+1. [What is an Attribute in HTML?](#what-is-an-attribute-in-html)
+2. [General Rules for Using Attributes](#general-rules-for-using-attributes)
+3. [Types of HTML Attributes](#types-of-html-attributes)
+1. [Global Attributes](#global-attributes)
+2. [Event Attributes](#event-attributes)
+3. [Form Attributes](#form-attributes)
+4. [Anchor Attributes](#anchor-attributes)
+5. [Image Attributes](#image-attributes)
+4. [Custom Data Attributes](#custom-data-attributes)
+5. [Conclusion](#conclusion)
+
+---
 
 ## What is an Attribute in HTML?
 
-An attribute is a modifier of an HTML element that provides additional information about that element. Attributes are always included within the opening tag of an element and are written as `name="value"` pairs. For example:
+An attribute is a modifier of an HTML element that provides additional information about that element. Attributes are
+always included within the opening tag of an element and are written as `name="value"` pairs. For example:
 
 ```html
 <a href="https://example.com">Visit Example</a>
 ```
 
-In this example, `href` is an attribute of the `<a>` (anchor) element, with `"https://example.com"` as its value, defining the link's destination.
+In this example, `href` is an attribute of the `<a>` (anchor) element, with `"https://example.com"` as its value,
+defining the link's destination.
+
+---
 
 ## General Rules for Using Attributes
 
@@ -29,11 +52,14 @@ In this example, `href` is an attribute of the `<a>` (anchor) element, with `"ht
 - **Attribute names are case-insensitive** (but lowercase is recommended for consistency).
 - **Attribute values should be enclosed in quotes** (either single or double quotes are acceptable).
 
+---
+
 ## Types of HTML Attributes
 
 ### 1. **Global Attributes**
 
-Global attributes can be used with any HTML element. They are widely applicable and provide universal functionality across different elements. Some common global attributes include:
+Global attributes can be used with any HTML element. They are widely applicable and provide universal functionality
+across different elements. Some common global attributes include:
 
 - **`id`**: Assigns a unique identifier to an element, allowing it to be easily targeted by CSS and JavaScript.
 
@@ -61,7 +87,8 @@ Global attributes can be used with any HTML element. They are widely applicable 
 
 ### 2. **Event Attributes**
 
-Event attributes are used to define JavaScript functions that execute in response to certain events on an element. These attributes add interactivity to HTML elements. Some examples include:
+Event attributes are used to define JavaScript functions that execute in response to certain events on an element. These
+attributes add interactivity to HTML elements. Some examples include:
 
 - **`onclick`**: Executes a script when the element is clicked.
 
@@ -83,7 +110,8 @@ Event attributes are used to define JavaScript functions that execute in respons
 
 ### 3. **Form Attributes**
 
-Form attributes control the behavior of form elements like `<input>`, `<form>`, `<textarea>`, and `<button>`. These attributes help in defining how data is handled in a form.
+Form attributes control the behavior of form elements like `<input>`, `<form>`, `<textarea>`, and `<button>`. These
+attributes help in defining how data is handled in a form.
 
 - **`type`**: Specifies the type of `<input>` element (e.g., text, password, email, etc.).
 
@@ -133,7 +161,8 @@ The `<a>` tag, or anchor tag, is used to create links in HTML. It has specific a
 
 ### 5. **Image Attributes**
 
-The `<img>` tag is used for embedding images, and it has specific attributes to control image behavior and accessibility.
+The `<img>` tag is used for embedding images, and it has specific attributes to control image behavior and
+accessibility.
 
 - **`src`**: Specifies the path to the image file.
 
@@ -153,13 +182,19 @@ The `<img>` tag is used for embedding images, and it has specific attributes to 
   <img src="photo.jpg" width="300" height="200">
   ```
 
+---
+
 ## Custom Data Attributes
 
-In addition to built-in attributes, HTML5 introduced **data attributes**. These are custom attributes prefixed with `data-`, allowing developers to store additional information directly within HTML elements. These attributes are useful for adding metadata without affecting layout or style and are commonly used in JavaScript to dynamically access and manipulate data.
+In addition to built-in attributes, HTML5 introduced **data attributes**. These are custom attributes prefixed with
+`data-`, allowing developers to store additional information directly within HTML elements. These attributes are useful
+for adding metadata without affecting layout or style and are commonly used in JavaScript to dynamically access and
+manipulate data.
 
 Example:
 
 ```html
+
 <div data-product-id="12345" data-category="electronics">Product Info</div>
 ```
 
@@ -171,6 +206,11 @@ console.log(product.dataset.productId); // Output: 12345
 console.log(product.dataset.category); // Output: electronics
 ```
 
+---
+
 ## Conclusion
 
-Attributes in HTML provide a powerful way to enhance the functionality of HTML elements, making them more dynamic, interactive, and accessible. Whether you're adding styles, enabling JavaScript events, or controlling form behavior, attributes help to define how elements behave and interact on the page. Familiarizing yourself with these attributes will empower you to create more feature-rich, responsive web pages and applications.
+Attributes in HTML provide a powerful way to enhance the functionality of HTML elements, making them more dynamic,
+interactive, and accessible. Whether you're adding styles, enabling JavaScript events, or controlling form behavior,
+attributes help to define how elements behave and interact on the page. Familiarizing yourself with these attributes
+will empower you to create more feature-rich, responsive web pages and applications.

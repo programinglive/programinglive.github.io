@@ -27,7 +27,7 @@ presence for businesses, organizations, and individuals.
 
 ---
 
-## 1. What is Web Development?
+## [1. What is Web Development?](./../web/index.md)
 
 Web development refers to the activities involved in the creation of websites and web applications. It is more than just
 building a site; it includes designing the layout, developing the features, writing the code, managing databases,
@@ -61,7 +61,7 @@ website:
 
 1. **Front-End Development (Client-Side)**:
     - This involves the visual aspect of the website that users interact with, such as layout, design, and interactive
-      elements. Front-end development typically uses **HTML**, **CSS**, and **JavaScript**.
+      elements. Front-end development typically uses **[HTML](./html/index.md)**, **CSS**, and **JavaScript**.
 
 2. **Back-End Development (Server-Side)**:
     - This focuses on the server-side functionality of a website, including databases, server configuration, and
