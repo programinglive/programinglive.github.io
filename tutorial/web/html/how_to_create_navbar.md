@@ -8,7 +8,8 @@ description: "How to Create a Navigation Bar?"
 
 # How to Create a Navigation Bar
 
-A **navigation bar** is an essential component of any website, allowing users to navigate different sections with ease. In this article, we’ll go through creating a responsive and modern navigation bar using HTML, CSS, and JavaScript.
+A **navigation bar** is an essential component of any website, allowing users to navigate different sections with ease.
+In this article, we’ll go through creating a responsive and modern navigation bar using HTML, CSS, and JavaScript.
 
 <a href="https://codepen.io/moszes/pen/QWXVrmz?editors=1111" target="_blank" style="text-decoration: none;">
   <button style="background: none; border: none; cursor: pointer;">
@@ -17,54 +18,69 @@ A **navigation bar** is an essential component of any website, allowing users to
   <span style="margin-left: 5px;">Open in CodePen</span>
 </a>
 
+## Table of Contents
+
+1. [Step 1: Setting Up HTML Structure](#step-1-setting-up-html-structure)
+2. [Step 2: Styling the Navigation Bar with CSS](#step-2-styling-the-navigation-bar-with-css)
+3. [Step 3: Adding JavaScript for the Mobile Toggle](#step-3-adding-javascript-for-the-mobile-toggle)
+4. [Final Touches: Adding Smooth Scroll and Hover Effects](#final-touches-adding-smooth-scroll-and-hover-effects)
+5. [Complete Code](#complete-code)
+6. [Conclusion](#conclusion)
+
+---
+
 ## Step 1: Setting Up HTML Structure
 
-To start, let’s create the basic structure of our navigation bar in HTML. This includes setting up links to different pages or sections and organizing them into a menu.
+To start, let’s create the basic structure of our navigation bar in HTML. This includes setting up links to different
+pages or sections and organizing them into a menu.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navigation Bar</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="#">MyWebsite</a>
-        </div>
-        <ul class="navbar-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <!-- Hamburger Icon for Mobile View -->
-        <div class="navbar-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="#">MyWebsite</a>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <!-- Hamburger Icon for Mobile View -->
+  <div class="navbar-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
 
-    <!-- Placeholder Content -->
-    <div id="home"><h2>Home Section</h2></div>
-    <div id="about"><h2>About Section</h2></div>
-    <div id="services"><h2>Services Section</h2></div>
-    <div id="contact"><h2>Contact Section</h2></div>
+<!-- Placeholder Content -->
+<div id="home"><h2>Home Section</h2></div>
+<div id="about"><h2>About Section</h2></div>
+<div id="services"><h2>Services Section</h2></div>
+<div id="contact"><h2>Contact Section</h2></div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 ```
 
 In this HTML, the `navbar` is the main container. Inside it, we have:
+
 - **Logo** link that acts as the home button.
 - **Links** to various sections (Home, About, Services, Contact).
 - A **hamburger icon** that will appear on smaller screens.
+
+---
 
 ## Step 2: Styling the Navigation Bar with CSS
 
@@ -174,12 +190,18 @@ body {
 
 ### Explanation of CSS Styling:
 
-1. **Desktop View**: In larger screens, the navigation bar displays the logo, links horizontally, and hides the hamburger menu.
-2. **Responsive View**: For screens narrower than 768px, the links are hidden initially and shown when the `active` class is added (we'll handle this in JavaScript). The hamburger icon appears, and the links are styled to take up the entire width of the screen.
+1. **Desktop View**: In larger screens, the navigation bar displays the logo, links horizontally, and hides the
+   hamburger menu.
+2. **Responsive View**: For screens narrower than 768px, the links are hidden initially and shown when the `active`
+   class is added (we'll handle this in JavaScript). The hamburger icon appears, and the links are styled to take up the
+   entire width of the screen.
+
+---
 
 ## Step 3: Adding JavaScript for the Mobile Toggle
 
-To make the navigation bar responsive, we need to add JavaScript that toggles the display of the links when the hamburger icon is clicked.
+To make the navigation bar responsive, we need to add JavaScript that toggles the display of the links when the
+hamburger icon is clicked.
 
 Create a `script.js` file and add the following code:
 
@@ -209,7 +231,10 @@ navLinks.forEach((link) => {
 ### Explanation of JavaScript Code:
 
 1. **Selecting Elements**: We select the hamburger menu (`mobileMenu`) and the navigation links (`navbarLinks`).
-2. **Event Listener**: We add an event listener on the `mobileMenu` element that toggles the `active` class on `navbarLinks`. This triggers the display of the links in mobile view.
+2. **Event Listener**: We add an event listener on the `mobileMenu` element that toggles the `active` class on
+   `navbarLinks`. This triggers the display of the links in mobile view.
+
+---
 
 ## Final Touches: Adding Smooth Scroll and Hover Effects
 
@@ -225,6 +250,8 @@ html {
 
 Now, when a user clicks on a link, the page scrolls smoothly to the relevant section.
 
+---
+
 ## Complete Code
 
 ### `index.html`
@@ -233,36 +260,38 @@ Now, when a user clicks on a link, the page scrolls smoothly to the relevant sec
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navigation Bar</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="#">MyWebsite</a>
-        </div>
-        <ul class="navbar-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="navbar-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="#">MyWebsite</a>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="navbar-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
 
-    <!-- Placeholder Content -->
-    <div id="home" class="section active"><h2>Home Section</h2></div>
-    <div id="about" class="section"><h2>About Section</h2></div>
-    <div id="services" class="section"><h2>Services Section</h2></div>
-    <div id="contact" class="section"><h2>Contact Section</h2></div>
+<!-- Placeholder Content -->
+<div id="home" class="section active"><h2>Home Section</h2></div>
+<
 
-    <script src="script.js"></script>
+div id="about" class="section"><h2>About Section</h2></div>
+<div id="services" class="section"><h2>Services Section</h2></div>
+<div id="contact" class="section"><h2>Contact Section</h2></div>
+
+<script src="script.js"></script>
 </body>
 </html>
 ```
@@ -279,6 +308,6 @@ Copy the JavaScript code from the previous section, adding it to this file.
 
 ## Conclusion
 
-Creating a responsive navigation bar involves HTML for structure, CSS for styling and responsiveness, and JavaScript for toggle functionality in mobile view. Following this approach, you can create a versatile navigation bar that adapts well to various screen sizes, providing a seamless experience for users on both desktop and mobile devices.
-
-{:toc}
+Creating a responsive navigation bar involves HTML for structure, CSS for styling and responsiveness, and JavaScript for
+toggle functionality in mobile view. Following this approach, you can create a versatile navigation bar that adapts well
+to various screen sizes, providing a seamless experience for users on both desktop and mobile devices.
