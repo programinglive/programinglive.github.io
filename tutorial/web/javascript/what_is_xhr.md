@@ -6,84 +6,178 @@ grand_parent: Web Development
 description: "What is XHR?"
 ---
 
-# What is XHR?
+# What is XHR (XMLHttpRequest)?
 
-XHR, or **XMLHttpRequest**, is a JavaScript API that allows web developers to interact with servers asynchronously. Introduced in the early 2000s, XHR revolutionized the way web applications were built, enabling the rise of dynamic, responsive web pages. Let’s break down what XHR is and why it’s essential in modern web development.
+**XMLHttpRequest** (XHR) is an API in JavaScript that allows web pages to make asynchronous HTTP requests to a server
+and receive data without reloading the entire page. This is a fundamental feature of **AJAX** (Asynchronous JavaScript
+and XML), enabling the development of more dynamic, responsive web applications.
 
 ---
 
-## Understanding XHR
-XMLHttpRequest is a built-in browser object that lets you send HTTP or HTTPS requests to a server and process the response without reloading the web page. This ability is at the core of **AJAX (Asynchronous JavaScript and XML)**, a technique used to create seamless user experiences.
+## Table of Contents
 
-While the term includes "XML," you can send and receive other data formats like **JSON**, **HTML**, and plain text, making it versatile for many use cases.
+- [What is XHR?](#what-is-xhr)
+- [How XHR Works](#how-xhr-works)
+- [Creating an XHR Request](#creating-an-xhr-request)
+- [XHR Methods and Properties](#xhr-methods-and-properties)
+- [XHR Example: Simple Request](#xhr-example-simple-request)
+- [When to Use XHR](#when-to-use-xhr)
+- [XHR vs Fetch API](#xhr-vs-fetch-api)
+- [Conclusion](#conclusion)
+
+---
+
+## What is XHR?
+
+XMLHttpRequest (XHR) is an object used to create and send HTTP requests from a client to a server asynchronously. It
+allows web applications to fetch data from a server or send data to a server without needing to reload the entire web
+page. XHR was originally designed to fetch XML data, but it can handle various types of data formats, such as JSON,
+HTML, or plain text.
 
 ---
 
 ## How XHR Works
-The XHR workflow can be summarized in these steps:
-1. **Create an XHR Object**  
-   Use `new XMLHttpRequest()` to create an XHR instance.
-2. **Configure the Request**  
-   Specify the HTTP method (`GET`, `POST`, etc.) and the URL endpoint using `xhr.open()`.
-3. **Send the Request**  
-   Call `xhr.send()` with or without data, depending on the request type.
-4. **Handle the Response**  
-   Listen for the `onreadystatechange` event or the newer `load` event to process the response.
+
+The `XMLHttpRequest` object works by sending HTTP requests to the server in the background, receiving the response, and
+then processing it without needing to reload the page. This allows for the dynamic updating of a webpage's content.
+
+### Key Steps in XHR Workflow:
+
+1. **Create an XMLHttpRequest object**: This object is used to send requests to the server.
+2. **Set up the request**: Define the type of request (e.g., GET, POST), the target URL, and other parameters.
+3. **Send the request**: Call the `send()` method to send the request to the server.
+4. **Handle the response**: When the server responds, use event handlers or callback functions to process the response
+   and update the webpage.
 
 ---
 
-## Example of XHR in Action
+## Creating an XHR Request
 
-Here’s a simple example of using XHR to fetch data:
+### Basic Syntax:
 
 ```javascript
-const xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://api.example.com/data', true); // true for asynchronous
-xhr.onload = function () {
-  if (xhr.status === 200) {
-    console.log('Response:', JSON.parse(xhr.responseText));
-  } else {
-    console.error('Error:', xhr.statusText);
-  }
+let xhr = new XMLHttpRequest();  // Create a new XMLHttpRequest object
+xhr.open('GET', 'https://api.example.com/data', true);  // Initialize the request
+xhr.onreadystatechange = function () {
+	if (xhr.readyState === 4 && xhr.status === 200) {  // Check if the request is complete and successful
+		let response = xhr.responseText;  // Get the response text
+		console.log(response);  // Process the response
+	}
 };
-xhr.onerror = function () {
-  console.error('Network Error');
+xhr.send();  // Send the request
+```
+
+### `open()` Method
+
+The `open()` method is used to configure the request. It requires three arguments:
+
+- **Method**: The HTTP method (e.g., GET, POST).
+- **URL**: The URL to which the request is sent.
+- **Asynchronous**: A boolean value (`true` for asynchronous requests, `false` for synchronous).
+
+### `send()` Method
+
+The `send()` method sends the request to the server. If you're making a GET request, this method is called with no
+arguments. For POST requests, you can include data in the body of the request.
+
+---
+
+## XHR Methods and Properties
+
+### Methods:
+
+- **open(method, url, async, user, password)**: Initializes the request.
+- **send(data)**: Sends the request to the server.
+- **setRequestHeader(header, value)**: Sets the value of an HTTP request header.
+
+### Properties:
+
+- **readyState**: Holds the current state of the request (0–4).
+- **status**: The HTTP status code returned by the server (e.g., 200 for success).
+- **responseText**: Contains the response data in text format.
+- **responseXML**: Contains the response data as an XML document (if applicable).
+
+### Example of `setRequestHeader()`:
+
+```javascript
+xhr.setRequestHeader("Content-Type", "application/json");  // Set headers for POST requests
+```
+
+---
+
+## XHR Example: Simple Request
+
+```javascript
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+
+xhr.onreadystatechange = function () {
+	if (xhr.readyState === 4 && xhr.status === 200) {
+		let post = JSON.parse(xhr.responseText);  // Parse JSON response
+		document.getElementById('post-title').innerText = post.title;
+		document.getElementById('post-body').innerText = post.body;
+	}
 };
+
 xhr.send();
 ```
 
-In this example:
-- A `GET` request is sent to `https://api.example.com/data`.
-- When the server responds, the data is logged or an error message is displayed.
-
----
-
-## Advantages of XHR
-- **Asynchronous Communication**: Allows parts of a web page to update without refreshing the whole page.
-- **Wide Support**: Works across most modern browsers.
-- **Flexible Data Formats**: Supports JSON, XML, text, and more.
-
----
-
-## Limitations of XHR
-While powerful, XHR is considered somewhat outdated due to newer alternatives like **Fetch API** and **Axios**. These newer tools provide simpler syntax and better error handling, reducing the boilerplate code often required with XHR.
-
-For example, the same `GET` request using Fetch API looks like this:
-```javascript
-fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log('Response:', data))
-  .catch(error => console.error('Error:', error));
-```
+In this example, an XHR request is sent to fetch a post from the JSONPlaceholder API. The response is parsed as JSON,
+and the page content is dynamically updated.
 
 ---
 
 ## When to Use XHR
-In most modern projects, XHR is rarely the first choice due to its verbosity. However, it might still be relevant in:
-- Legacy systems requiring backward compatibility.
-- Environments where the Fetch API or libraries like Axios are unavailable.
+
+- **Asynchronous requests**: XHR is useful when you need to send data to or receive data from a server without blocking
+  the user interface (UI).
+- **Dynamic content updates**: It’s commonly used in web applications to fetch new data or submit data to a server
+  without reloading the page.
+- **Legacy support**: Although `fetch()` is the modern alternative, XHR is still widely used in legacy applications and
+  older browsers.
+
+---
+
+## XHR vs Fetch API
+
+While `XMLHttpRequest` has been around for a long time, the newer **Fetch API** offers a more modern and flexible
+approach to making asynchronous requests. Some of the key differences between XHR and Fetch include:
+
+- **Syntax**: The Fetch API uses Promises, which makes it easier to work with asynchronous operations.
+- **Return Value**: `XMLHttpRequest` returns a raw response, while the `fetch()` API returns a `Response` object, which
+  can be used to handle different data formats like JSON or text.
+- **Error Handling**: Fetch simplifies error handling with better support for catching and chaining errors.
+
+### Example Comparison:
+
+#### XHR Example:
+
+```javascript
+let xhr = new XMLHttpRequest();
+xhr.open('GET', '/data', true);
+xhr.onreadystatechange = function () {
+	if (xhr.readyState === 4 && xhr.status === 200) {
+		console.log(xhr.responseText);
+	}
+};
+xhr.send();
+```
+
+#### Fetch Example:
+
+```javascript
+fetch('/data')
+	.then(response => response.json())
+	.then(data => console.log(data))
+	.catch(error => console.error('Error:', error));
+```
 
 ---
 
 ## Conclusion
-XMLHttpRequest paved the way for the interactive web we enjoy today. While newer tools like Fetch and Axios have largely replaced it, understanding XHR helps developers appreciate the evolution of web technologies and troubleshoot legacy codebases. Whether you use XHR directly or prefer modern alternatives, its impact on web development remains undeniable.
+
+**XMLHttpRequest (XHR)** is a fundamental technology that enables web pages to send and receive data asynchronously. It
+is the core of the **AJAX** technique, allowing for dynamic and interactive web applications. Although `XMLHttpRequest`
+is still widely used, the **Fetch API** has become the preferred modern solution due to its simplicity and promise-based
+syntax. Regardless, understanding XHR is important for working with legacy code and improving your overall understanding
+of web development.
