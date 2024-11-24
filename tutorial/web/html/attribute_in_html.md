@@ -21,13 +21,13 @@ encounter.
 1. [What is an Attribute in HTML?](#what-is-an-attribute-in-html)
 2. [General Rules for Using Attributes](#general-rules-for-using-attributes)
 3. [Types of HTML Attributes](#types-of-html-attributes)
-1. [Global Attributes](#global-attributes)
-2. [Event Attributes](#event-attributes)
-3. [Form Attributes](#form-attributes)
-4. [Anchor Attributes](#anchor-attributes)
-5. [Image Attributes](#image-attributes)
-4. [Custom Data Attributes](#custom-data-attributes)
-5. [Conclusion](#conclusion)
+1. [Global Attributes](#1-global-attributes)
+2. [Event Attributes](#2-event-attributes)
+3. [Form Attributes](#3-form-attributes)
+4. [Anchor Attributes](#4-anchor-attributes)
+5. [Image Attributes](#5-image-attributes)
+6. [Custom Data Attributes](#custom-data-attributes)
+7. [Conclusion](#conclusion)
 
 ---
 

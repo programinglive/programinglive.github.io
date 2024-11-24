@@ -17,12 +17,12 @@ for anyone looking to create websites or web applications.
 
 ## Table of Contents
 
-1. [What is HTML?](#what-is-html)
-2. [Basic Structure of an HTML Document](#basic-structure-of-an-html-document)
-3. [Common HTML Tags](#common-html-tags)
-4. [HTML Elements and Attributes](#html-elements-and-attributes)
-5. [How to Create a Simple Web Page](#how-to-create-a-simple-web-page)
-6. [Conclusion](#conclusion)
+1. [What is HTML?](#1-what-is-html)
+2. [Basic Structure of an HTML Document](#2-basic-structure-of-an-html-document)
+3. [Common HTML Tags](#3-common-html-tags)
+4. [HTML Elements and Attributes](#4-html-elements-and-attributes)
+5. [How to Create a Simple Web Page](#5-how-to-create-a-simple-web-page)
+6. [Conclusion](#6-conclusion)
 
 ---
 
@@ -42,9 +42,9 @@ An HTML document is composed of various elements. The basic structure of an HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
 </head>
 <body>
 <h1>Welcome to My Website</h1>
@@ -153,9 +153,9 @@ Let’s combine the basic HTML structure and tags to create a simple webpage. Be
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
 </head>
 <body>
 <h1>Welcome to My Website</h1>
