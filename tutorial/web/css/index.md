@@ -6,308 +6,179 @@ nav_order: 2
 description: "Tutorial CSS"
 ---
 
-# What is CSS?
+# CSS: A Beginner's Guide to Styling Your Web Pages
 
-CSS, or **Cascading Style Sheets**, is a stylesheet language used to describe the presentation of a document written in HTML. CSS allows you to control the layout, colors, fonts, and overall look of your web pages, helping you create visually appealing and user-friendly websites.
-
----
-
-## **How CSS Works**
-
-CSS works by selecting HTML elements and applying styles to them. A CSS file or CSS rules are usually linked to HTML documents so that browsers know how to display the content.
+CSS (Cascading Style Sheets) is a powerful tool that lets you style and lay out your web pages effectively. Whether
+you're creating your first website or improving an existing one, understanding CSS is essential.
 
 ---
 
-## **Basic Syntax of CSS**
+## Table of Contents
 
-CSS has a simple syntax:
-```css
-selector {
-  property: value;
-}
-```
+1. [What is CSS?](#1-what-is-css)
+2. [How to Add CSS to Your Website](#2-how-to-add-css-to-your-website)
 
-### **Explanation:**
-- **Selector**: Specifies the HTML element(s) to style.
-- **Property**: Defines the style attribute you want to change (like `color`, `font-size`, etc.).
-- **Value**: Specifies the value of the property.
+- [Inline CSS](#inline-css)
+- [Internal CSS](#internal-css)
+- [External CSS](#external-css)
 
-For example:
-```css
-h1 {
-  color: blue;
-  font-size: 24px;
-}
-```
-This rule changes the color of `<h1>` elements to blue and sets their font size to 24 pixels.
+3. [Selectors in CSS](#3-selectors-in-css)
+4. [CSS Properties](#4-css-properties)
 
----
+- [Colors and Backgrounds](#4-1-colors-and-backgrounds)
+- [Fonts and Text](#4-2-fonts-and-text)
+- [Box Model](#4-3-box-model)
 
-## **Ways to Add CSS**
+5. [Advanced CSS Features](#5-advanced-css-features)
 
-There are three main ways to apply CSS to HTML:
+- [Media Queries](#5-1-media-queries)
+- [CSS Variables](#5-2-css-variables)
 
-### 1. **Inline CSS**
-Add styles directly to an HTML element using the `style` attribute:
-   ```html
-   <p style="color: red;">This is a red paragraph.</p>
-   ```
-
-### 2. **Internal CSS**
-Add a `<style>` block within the `<head>` section of your HTML document:
-   ```html
-   <head>
-     <style>
-       p {
-         color: red;
-       }
-     </style>
-   </head>
-   ```
-
-### 3. **External CSS**
-Link an external CSS file to your HTML document:
-   ```html
-   <link rel="stylesheet" href="styles.css">
-   ```
-Then, in `styles.css`:
-   ```css
-   p {
-     color: red;
-   }
-   ```
+6. [Conclusion](#6-conclusion)
 
 ---
 
-## **CSS Selectors**
+## 1. What is CSS?
 
-CSS selectors are used to "select" HTML elements for styling. Here are a few basic selectors:
-
-### 1. **Type Selector**
-Selects all elements of a specific type.
-   ```css
-   h1 {
-     color: green;
-   }
-   ```
-
-### 2. **Class Selector**
-Selects elements with a specific class. Add a period (`.`) before the class name.
-   ```css
-   .example {
-     color: blue;
-   }
-   ```
-In HTML:
-   ```html
-   <p class="example">This is blue text.</p>
-   ```
-
-### 3. **ID Selector**
-Selects an element with a specific ID. Add a hashtag (`#`) before the ID name.
-   ```css
-   #unique {
-     color: purple;
-   }
-   ```
-In HTML:
-   ```html
-   <p id="unique">This is purple text.</p>
-   ```
-
-### 4. **Universal Selector**
-Selects all elements.
-   ```css
-   * {
-     margin: 0;
-     padding: 0;
-   }
-   ```
-
-### 5. **Attribute Selector**
-Selects elements with a specific attribute.
-   ```css
-   input[type="text"] {
-     background-color: lightyellow;
-   }
-   ```
+CSS (Cascading Style Sheets) is a stylesheet language that controls the appearance of HTML elements on a web page. It
+allows you to change colors, fonts, layouts, and more, making your web page visually appealing and user-friendly.
 
 ---
 
-## **CSS Properties**
+## 2. How to Add CSS to Your Website
 
-There are hundreds of CSS properties available. Here are some of the most commonly used:
+There are three main ways to apply CSS to your HTML document:
 
-### 1. **Color**
-   ```css
-   color: red; /* Text color */
-   background-color: yellow; /* Background color */
-   ```
+### Inline CSS
 
-### 2. **Font and Text**
-   ```css
-   font-size: 20px; /* Font size */
-   font-family: Arial, sans-serif; /* Font family */
-   text-align: center; /* Text alignment */
-   ```
+Add CSS directly to an HTML element using the `style` attribute.
 
-### 3. **Margin and Padding**
-- **Margin**: Creates space outside an element.
-- **Padding**: Creates space inside an element, between the content and its border.
-   ```css
-   margin: 10px;
-   padding: 20px;
-   ```
+```html
+<p style="color: blue;">This text is blue.</p>
+```  
 
-### 4. **Border**
-   ```css
-   border: 2px solid black; /* Sets border width, style, and color */
-   border-radius: 10px; /* Rounds the corners */
-   ```
+### Internal CSS
 
-### 5. **Width and Height**
-   ```css
-   width: 300px;
-   height: 200px;
-   ```
+Use the `<style>` tag within the `<head>` section of your HTML document.
 
----
-
-## **CSS Layout: Flexbox and Grid**
-
-### 1. **Flexbox**
-Flexbox is useful for arranging items in a row or column. Here's a basic example:
-   ```css
-   .container {
-     display: flex;
-     justify-content: center; /* Aligns items horizontally */
-     align-items: center; /* Aligns items vertically */
-   }
-   ```
-   ```html
-   <div class="container">
-     <div>Box 1</div>
-     <div>Box 2</div>
-   </div>
-   ```
-
-### 2. **Grid**
-CSS Grid is a two-dimensional layout system, allowing control over both rows and columns.
-   ```css
-   .grid-container {
-     display: grid;
-     grid-template-columns: auto auto auto; /* Creates three columns */
-     gap: 10px;
-   }
-   ```
-   ```html
-   <div class="grid-container">
-     <div>Box 1</div>
-     <div>Box 2</div>
-     <div>Box 3</div>
-   </div>
-   ```
-
----
-
-## **Responsive Design with Media Queries**
-
-Media queries allow you to apply styles based on the device's screen size.
-```css
-/* Styles for screens 600px wide or less */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-}
-```
-
----
-
-## **Example: Putting It All Together**
-
-Let’s create a simple CSS file for an HTML structure:
-
-**HTML:**
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>CSS Tutorial</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to CSS Basics</h1>
-  </header>
-  <section class="content">
-    <p class="intro">Learn how to style your website using CSS!</p>
-    <button class="cta-button">Get Started</button>
-  </section>
+<p>This text is red.</p>
 </body>
 </html>
-```
+```  
 
-**CSS (`styles.css`):**
-```css
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+### External CSS
 
-/* Styling header */
-header {
-  background-color: #4CAF50;
-  padding: 20px;
-  text-align: center;
-}
+Link an external CSS file using the `<link>` tag.
 
-header h1 {
-  color: white;
-  font-size: 2em;
-}
-
-/* Styling the content section */
-.content {
-  margin: 20px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-}
-
-/* Styling the intro paragraph */
-.intro {
-  font-size: 1.2em;
-  color: #333;
-}
-
-/* Button styling */
-.cta-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.cta-button:hover {
-  background-color: #45a049;
-}
-```
-
-### **Explanation of CSS Example:**
-- **Header Styling**: The header has a green background, centered text, and a white font color.
-- **Content Section**: The content has a light gray background with padding and rounded corners.
-- **Button**: The button has a green background, white text, and changes color on hover.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<p>This text is styled from an external file.</p>
+</body>
+</html>
+```  
 
 ---
 
-## **Conclusion**
+## 3. Selectors in CSS
 
-This CSS tutorial provides a foundation for styling web pages. By learning how to apply CSS rules, use selectors, and utilize layout tools like Flexbox and Grid, you’ll be able to create more visually appealing and functional websites. Start experimenting, and soon CSS will become a powerful tool in your web development toolkit!
+CSS selectors are used to "select" HTML elements to style them.
+
+Examples:
+
+- Element selector: `p { color: green; }`
+- Class selector: `.className { font-size: 16px; }`
+- ID selector: `#idName { margin: 10px; }`
+
+---
+
+## 4. CSS Properties
+
+### Colors and Backgrounds
+
+Set text color and background styles.
+
+```css
+body {
+    background-color: lightgray;
+    color: darkblue;
+}
+```  
+
+### Fonts and Text
+
+Customize font style, size, and alignment.
+
+```css
+h1 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+```  
+
+### Box Model
+
+Define margins, borders, padding, and content.
+
+```css
+div {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+```  
+
+---
+
+## 5. Advanced CSS Features
+
+### Media Queries
+
+Adapt styles to different screen sizes.
+
+```css
+@media (max-width: 600px) {
+    body {
+        background-color: yellow;
+    }
+}
+```  
+
+### CSS Variables
+
+Reuse values throughout your stylesheet.
+
+```css
+:root {
+    --main-color: teal;
+}
+
+h1 {
+    color: var(--main-color);
+}
+```  
+
+---
+
+## 6. Conclusion
+
+CSS is an essential part of modern web development. By mastering its basics and advanced features, you can create
+visually stunning and responsive websites. Keep experimenting with different properties and layouts to find what works
+best for your projects.
+
+Happy coding!
