@@ -6,152 +6,149 @@ grand_parent: FAQ
 description: "What is Husky?"
 ---
 
-# What is Husky?
+## What is Husky?
 
-**Husky** is a popular tool in the JavaScript ecosystem that helps developers manage **Git hooks**. Git hooks are custom scripts that are executed automatically at specific stages of the Git workflow, such as before commits, after pushes, or before merging. Husky simplifies the process of integrating Git hooks into a project, allowing teams to enforce code quality standards, run tests, or automate tasks efficiently.
+**Husky** is a tool used in JavaScript projects to manage Git hooks, which are scripts that Git runs at certain points
+in the development process (such as before committing or pushing code). Husky makes it easy to add and configure these
+Git hooks directly from your project, improving the quality and consistency of your codebase by automating tasks like
+linting, testing, and formatting.
 
----
+By using Husky, you can ensure that developers follow certain rules (like passing tests or meeting code style
+guidelines) before they commit or push their changes. This helps prevent issues from being introduced into the codebase,
+improves collaboration, and maintains high code quality throughout the development lifecycle.
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [What Are Git Hooks?](#what-are-git-hooks)
-3. [Key Features of Husky](#key-features-of-husky)
-4. [Why Use Husky?](#why-use-husky)
-5. [How to Install and Use Husky](#how-to-install-and-use-husky)
-   - [Installation](#installation)
-   - [Configuring Hooks](#configuring-hooks)
-6. [Examples of Husky in Action](#examples-of-husky-in-action)
-7. [Benefits of Husky](#benefits-of-husky)
-8. [Conclusion](#conclusion)
+### Table of Contents
 
----
-
-## 1. Introduction
-
-Managing code quality and workflow consistency is crucial in collaborative projects. Git hooks are a powerful way to automate such tasks, but setting them up manually can be complex and error-prone. Husky provides a simple way to manage Git hooks in JavaScript projects, leveraging **npm** or **yarn** for configuration and execution.
+- [Key Features of Husky](#key-features-of-husky)
+- [How Husky Works](#how-husky-works)
+- [Common Use Cases for Husky](#common-use-cases-for-husky)
+- [Setting Up Husky in a Project](#setting-up-husky-in-a-project)
+- [Conclusion](#conclusion)
 
 ---
 
-## 2. What Are Git Hooks?
+## Key Features of Husky:
 
-Git hooks are **scripts** triggered by specific events in the Git lifecycle. Examples include:
-- **`pre-commit`**: Runs before a commit is finalized.
-- **`pre-push`**: Executes before code is pushed to a remote repository.
-- **`commit-msg`**: Validates commit messages.
-
-These hooks can be used for tasks such as:
-1. Running linters (e.g., ESLint).
-2. Executing tests before commits or pushes.
-3. Enforcing commit message conventions.
-
----
-
-## 3. Key Features of Husky
-
-1. **Simplifies Git Hook Management**  
-   Eliminates the need for manual configuration of Git hooks.
-
-2. **Integrates with JavaScript Ecosystem**  
-   Works seamlessly with tools like ESLint, Prettier, and testing libraries.
-
-3. **Lightweight and Flexible**  
-   Hooks are defined in the project’s configuration file, allowing easy customization.
-
-4. **Cross-Platform Compatibility**  
-   Husky works on all major operating systems.
+1. **Git Hook Integration**: Husky allows you to easily configure Git hooks like `pre-commit`, `pre-push`,
+   and `commit-msg` to enforce rules before changes are committed to the repository.
+2. **Easy to Use**: It provides simple configuration options and integrates seamlessly with modern JavaScript tools like
+   ESLint, Prettier, and testing frameworks.
+3. **Prevents Bad Commits**: Husky can automatically run tasks such as linting and testing before code is committed,
+   ensuring that only code that meets the standards is pushed to the repository.
+4. **Customizable**: You can define custom Git hook behaviors for various stages of the Git workflow, from committing to
+   pushing and beyond.
+5. **Works with Other Tools**: Husky integrates well with tools like lint-staged, which only runs tasks on staged files,
+   making it more efficient.
 
 ---
 
-## 4. Why Use Husky?
+## How Husky Works:
 
-Husky ensures a consistent workflow across a team by automating repetitive tasks, reducing human error, and enforcing best practices. It’s particularly useful for:
-- Preventing poorly formatted or failing code from being committed.
-- Enforcing team coding standards through automated checks.
-- Running pre-push tests to avoid breaking changes in shared branches.
+Husky works by using Git hooks. Git hooks are scripts that Git executes during certain actions, such as when a commit is
+made (`pre-commit`), before a push (`pre-push`), or before a commit message is written (`commit-msg`). These hooks are
+typically set up in the `.git/hooks` directory.
+
+Husky simplifies the process of adding and managing Git hooks. Once installed, it allows you to define commands to run
+at each stage of the Git process using a configuration file or `package.json`. For example, Husky can run linting or
+testing scripts before a commit is finalized, ensuring that only quality code is committed to the repository.
 
 ---
 
-## 5. How to Install and Use Husky
+## Common Use Cases for Husky:
 
-### Installation
-Husky requires Node.js and npm (or yarn) to be installed.
+1. **Linting Code**: Run ESLint or Prettier before commits to enforce coding standards and automatically fix issues
+   before the code is committed.
 
-1. Install Husky via npm:
+   Example:
    ```bash
-   npm install husky --save-dev
+   "lint-staged": {
+     "*.js": "eslint --fix"
+   }
    ```
 
-2. Enable Husky in your project:
-   ```bash
-   npx husky install
-   ```
+2. **Running Tests**: Ensure that all tests pass before code is pushed to the repository.
 
-3. Add a script to your `package.json` to ensure Husky gets installed automatically after dependencies:
-   ```json
-   {
-     "scripts": {
-       "prepare": "husky install"
+   Example:
+   ```bash
+   "scripts": {
+     "test": "jest"
+   },
+   "husky": {
+     "hooks": {
+       "pre-push": "npm test"
      }
    }
    ```
 
-### Configuring Hooks
-Husky hooks can be created using the `husky add` command.
+3. **Commit Message Validation**: Ensure that commit messages follow a specific format, such as using conventional
+   commit conventions.
 
-1. Create a pre-commit hook to run a linter:
+   Example:
    ```bash
-   npx husky add .husky/pre-commit "npm run lint"
+   "husky": {
+     "hooks": {
+       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+     }
+   }
    ```
 
-2. Create a pre-push hook to run tests:
-   ```bash
-   npx husky add .husky/pre-push "npm test"
-   ```
-
-3. Validate commit messages with a commit-msg hook:
-   ```bash
-   npx husky add .husky/commit-msg "npx commitlint --edit $1"
-   ```
+4. **Preventing Dangerous Commands**: Restrict or block certain Git commands from being executed unless specific
+   conditions are met, such as preventing force pushes.
 
 ---
 
-## 6. Examples of Husky in Action
+## Setting Up Husky in a Project:
 
-### Running ESLint Before Committing
-Add a `pre-commit` hook:
-```bash
-npx husky add .husky/pre-commit "npx eslint ."
-```
+To get started with Husky, follow these steps:
 
-### Enforcing Commit Message Standards
-Install **commitlint**:
-```bash
-npm install @commitlint/config-conventional @commitlint/cli --save-dev
-```
+1. **Install Husky**: Install Husky as a dev dependency in your project.
 
-Create a `commit-msg` hook:
-```bash
-npx husky add .husky/commit-msg "npx commitlint --edit $1"
-```
+   ```bash
+   npm install husky --save-dev
+   ```
+
+2. **Enable Git Hooks**: Husky can automatically add Git hooks for your project. To enable Git hooks, run the following
+   command:
+
+   ```bash
+   npx husky install
+   ```
+
+3. **Add Hooks to `package.json`**: Configure the hooks you want to use in the `husky` section of your `package.json` or
+   via dedicated hook scripts.
+
+   Example (using `pre-commit` hook to run linting):
+   ```json
+   "husky": {
+     "hooks": {
+       "pre-commit": "npm run lint"
+     }
+   }
+   ```
+
+4. **Set Up `lint-staged` (optional)**: If you want to run commands only on staged files (such as linting or
+   formatting), install `lint-staged`.
+
+   ```bash
+   npm install lint-staged --save-dev
+   ```
+
+   Then, configure `lint-staged` in `package.json`:
+   ```json
+   "lint-staged": {
+     "*.js": "eslint --fix"
+   }
+   ```
+
+5. **Commit the Changes**: Once the hooks are set up, Husky will run automatically at the specified stages (e.g., before
+   each commit).
 
 ---
 
-## 7. Benefits of Husky
+## Conclusion:
 
-1. **Improved Code Quality**  
-   Automates the enforcement of standards and practices.
-
-2. **Team Consistency**  
-   Ensures all contributors follow the same workflow.
-
-3. **Error Prevention**  
-   Catches issues early, before code is pushed to the repository.
-
-4. **Integration-Friendly**  
-   Works well with existing tools like linters, formatters, and test suites.
-
----
-
-## 8. Conclusion
-
-Husky is a powerful and easy-to-use tool for managing Git hooks in JavaScript projects. By automating common tasks like linting, testing, and commit validation, it improves workflow consistency and code quality. Whether you’re working solo or in a team, Husky simplifies your development process and ensures best practices are followed seamlessly.  
+Husky is a powerful tool for managing Git hooks, helping developers automate workflows such as linting, testing, and
+commit message validation. By integrating Husky into your project, you can enforce quality standards, catch errors
+early, and ensure that only properly formatted, tested, and linted code is committed to the repository. It is simple to
+set up and highly customizable, making it an essential tool for teams looking to improve code quality and automate
+repetitive tasks.  
