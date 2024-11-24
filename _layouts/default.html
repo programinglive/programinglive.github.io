@@ -43,5 +43,17 @@ layout: table_wrappers
   {% if site.mermaid %}
     {% include components/mermaid.html %}
   {% endif %}
+
+  <style>
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+    }
+  </style>
+  <a href="#top" id="back-to-top" style="display: flex; align-items: center; justify-content: center; background-color: #fff; color: #000; border-radius: 50%; width: 40px; height: 40px;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </a>
 </body>
 </html>
