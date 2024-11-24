@@ -6,115 +6,229 @@ grand_parent: Version Control System
 description: "Standard Version"
 ---
 
-## Standard Version
+# Standard Version
 
-Managing software versions and creating changelogs can be time-consuming, especially when done manually. **Standard Version** is a powerful tool that simplifies versioning and changelog management by automating the release process. By using a set of clear commit message conventions, Standard Version can automatically determine version numbers, generate changelogs, and create Git tags — all without needing you to manage these steps manually.
+**Standard Version** is a tool used to automate versioning and changelog generation based on **Semantic Versioning**
+principles. It helps manage software versions by automatically determining whether the version should be bumped (MAJOR,
+MINOR, PATCH) based on commit messages. Standard Version helps ensure that the project follows the Semantic Versioning
+rules without requiring manual intervention for version management, making it particularly useful for teams and
+open-source projects.
 
-### What is Standard Version?
+---
 
-**Standard Version** is a JavaScript tool that automates semantic versioning and changelog generation. It uses commit messages to determine whether a release should be a major, minor, or patch update based on [Semantic Versioning](https://semver.org) (also known as "semver") principles. With Standard Version, releases are more predictable, and your changelogs are consistently structured, helping both your team and users understand changes in each release.
+## Table of Contents
 
-### Why Use Standard Version?
+- [What is Standard Version?](#what-is-standard-version)
+- [How Does Standard Version Work?](#how-does-standard-version-work)
+- [Setting Up Standard Version](#setting-up-standard-version)
+- [How to Use Standard Version](#how-to-use-standard-version)
+- [Commit Message Conventions](#commit-message-conventions)
+- [Customizing Standard Version](#customizing-standard-version)
+- [Benefits of Using Standard Version](#benefits-of-using-standard-version)
+- [Conclusion](#conclusion)
 
-Standard Version offers several benefits:
-- **Automated Versioning**: Reduces manual work by automatically calculating version updates.
-- **Clear Changelogs**: Generates changelogs based on commit messages, making it easy to track changes.
-- **Consistent Releases**: Encourages structured commit messages (e.g., Conventional Commits) to streamline release management.
-- **Improved Collaboration**: Keeps teams and users informed of updates, improving transparency and communication.
+---
 
-### Setting Up Standard Version
+## What is Standard Version?
 
-Let’s walk through how to set up Standard Version in your project.
+Standard Version is a utility that automates versioning and changelog generation based on commit messages. It follows
+the rules of **Semantic Versioning (SemVer)** and uses commit messages to determine how the version number should
+change. By analyzing commits, Standard Version determines whether to increment the **MAJOR**, **MINOR**, or **PATCH**
+version, and it also generates a changelog for each release.
 
-#### 1. Install Standard Version
+The main features of Standard Version are:
 
-You can install Standard Version in your JavaScript project via npm:
+- Automatic version bumping based on commit history.
+- Changelog generation based on commits.
+- Easy integration into CI/CD pipelines.
+
+---
+
+## How Does Standard Version Work?
+
+Standard Version operates by inspecting commit messages that follow a specific convention. The most common convention
+used is **Conventional Commits**, a standardized format for writing commit messages that includes types
+like `feat`, `fix`, `docs`, and others. By analyzing these commit types, Standard Version can determine how to bump the
+version number:
+
+- **MAJOR** version bump for breaking changes (`BREAKING CHANGE` in commit messages).
+- **MINOR** version bump for new features that are backward-compatible.
+- **PATCH** version bump for bug fixes and minor improvements.
+
+For example:
+
+- A commit like `feat: add new login feature` would result in a MINOR bump.
+- A commit like `fix: resolve login bug` would result in a PATCH bump.
+- A commit like `BREAKING CHANGE: remove deprecated login method` would result in a MAJOR bump.
+
+Standard Version also generates a changelog based on these commits, making it easier to track changes and releases.
+
+---
+
+## Setting Up Standard Version
+
+To use Standard Version in your project, follow these steps:
+
+### 1. **Install Standard Version**
+
+You can install Standard Version as a development dependency using npm or yarn:
 
 ```bash
 npm install --save-dev standard-version
 ```
 
-#### 2. Configure Your Project for Standard Version
+or
 
-Add a release script to your project’s `package.json` file. This script will run Standard Version to handle versioning and changelog generation.
+```bash
+yarn add --dev standard-version
+```
+
+### 2. **Add a Versioning Script to `package.json`**
+
+Add a script in your `package.json` to run Standard Version. This script will automate the process of bumping versions
+and generating changelogs.
 
 ```json
-// package.json
+"scripts": {
+"release": "standard-version"
+}
+```
+
+### 3. **Configure Commit Message Convention (Optional)**
+
+Standard Version works best with commit messages following the **Conventional Commits** format. If you are not already
+using this format, you can enforce it by installing **Commitizen** and using **cz-conventional-changelog** to guide your
+commits.
+
+Install Commitizen:
+
+```bash
+npm install --save-dev commitizen
+```
+
+Then configure Commitizen in `package.json`:
+
+```json
+"config": {
+"commitizen": {
+"path": "./node_modules/cz-conventional-changelog"
+}
+}
+```
+
+---
+
+## How to Use Standard Version
+
+Once Standard Version is installed and configured, you can use it by running the following command:
+
+```bash
+npm run release
+```
+
+This will trigger Standard Version to:
+
+1. Analyze your commit history.
+2. Bump the version according to Semantic Versioning.
+3. Generate or update the changelog.
+4. Create a new commit and tag the release.
+
+For example, if there have been bug fixes and minor features, it might bump the PATCH version. If there are breaking
+changes, it will bump the MAJOR version, and so on.
+
+---
+
+## Commit Message Conventions
+
+Standard Version relies on **Conventional Commits** for determining version bumps. Conventional commits use a structured
+format that makes it easy for tools like Standard Version to automatically determine the type of change. A typical
+commit message looks like this:
+
+```
+<type>(<scope>): <message>
+```
+
+- **type**: Describes the type of change, such as `feat` (new feature), `fix` (bug fix), `docs` (
+  documentation), `chore` (maintenance), etc.
+- **scope**: Optional. Specifies the area of the code affected (e.g., `ui`, `api`, `auth`).
+- **message**: A brief, descriptive message explaining the change.
+
+### Common Commit Types
+
+- **feat**: A new feature.
+- **fix**: A bug fix.
+- **docs**: Documentation changes.
+- **chore**: Routine tasks or changes not affecting code functionality.
+- **style**: Changes that do not affect the meaning of the code (e.g., formatting).
+- **refactor**: Code changes that neither fix a bug nor add a feature but improve the code structure.
+- **test**: Adding or modifying tests.
+- **BREAKING CHANGE**: Indicates a breaking change when included in the commit message body.
+
+### Example Commit Messages
+
+- `feat(auth): add OAuth login`
+- `fix(ui): correct button alignment`
+- `chore: update build dependencies`
+- `BREAKING CHANGE: remove deprecated login API`
+
+By following this commit message format, Standard Version can automatically figure out which type of version bump is
+appropriate.
+
+---
+
+## Customizing Standard Version
+
+While Standard Version comes with sensible defaults, you can configure it to fit your needs by creating a `.versionrc`
+file or adding configuration to your `package.json`. Here are some configuration options:
+
+- **releaseAs**: Override the default version bump (MAJOR, MINOR, PATCH).
+- **skip?**: Skip certain parts of the release process, such as skipping changelog generation or version bump.
+- **scripts**: Run custom scripts before or after versioning tasks.
+
+Example `.versionrc`:
+
+```json
 {
+  "releaseAs": "minor",
   "scripts": {
-    "release": "standard-version"
+    "postrelease": "npm run deploy"
   }
 }
 ```
 
-With this setup, you can run `npm run release` to automate your versioning and changelog updates.
+This configuration forces a MINOR version bump regardless of the commit history and runs a custom deployment script
+after the release.
 
-#### 3. Make Sure You’re Using Conventional Commits
+---
 
-Standard Version relies on commit message conventions to determine version updates. The **Conventional Commits** standard is commonly used, which categorizes commit messages with types like `feat`, `fix`, and `docs`.
+## Benefits of Using Standard Version
 
-For example:
-- **`fix`**: Indicates a bug fix, triggering a patch version bump (e.g., 1.0.1).
-- **`feat`**: Represents a new feature, triggering a minor version bump (e.g., 1.1.0).
-- **`BREAKING CHANGE`**: Indicates a significant change, triggering a major version bump (e.g., 2.0.0).
+1. **Automates Versioning and Changelog Generation**  
+   Standard Version automates the process of versioning, ensuring that the right version number is applied based on your
+   commit history. It also generates changelogs, saving time on manual tracking of changes.
 
-### Using Standard Version to Release
+2. **Enforces Consistent Commit Messages**  
+   By encouraging or enforcing the use of **Conventional Commits**, Standard Version helps maintain consistency in
+   commit messages, making it easier to understand changes in the codebase.
 
-Once set up, Standard Version automates the release process. Here’s how to use it:
+3. **Improved Collaboration**  
+   Automated versioning and changelog generation ensure that all team members, including CI/CD pipelines, stay in sync
+   with project versions and release notes.
 
-1. **Commit Your Changes**: Make sure you’re committing changes with clear, Conventional Commit messages.
-2. **Run the Release Script**: Execute `npm run release`. Standard Version will:
-    - Update your project’s version number in `package.json`.
-    - Generate or update a `CHANGELOG.md` file based on commit messages.
-    - Commit these changes and create a Git tag for the new version.
-3. **Push the Changes and Tags**: After running the release script, push your changes to the remote repository:
+4. **Reduces Human Error**  
+   By automating versioning, you eliminate the risk of human error when manually bumping versions or generating
+   changelogs.
 
-    ```bash
-    git push --follow-tags origin main
-    ```
+5. **Easy Integration with CI/CD**  
+   Standard Version can be easily integrated into your continuous integration and delivery (CI/CD) pipeline, ensuring
+   that version bumps and changelogs are generated automatically during the release process.
 
-With these simple steps, you’ve created a new release complete with a version bump, changelog, and Git tag.
+---
 
-### Customizing Standard Version
+## Conclusion
 
-Standard Version is configurable to suit specific project needs. Here are a few ways to customize it:
-
-- **Skip Certain Steps**: If you don’t want Standard Version to handle certain steps, like creating a Git tag, you can modify the command:
-
-    ```bash
-    npm run release -- --skip.tag
-    ```
-
-- **Prereleases**: To create prerelease versions (e.g., beta, alpha), use the `--prerelease` flag:
-
-    ```bash
-    npm run release -- --prerelease beta
-    ```
-
-This command will generate a version like `1.1.0-beta.0`.
-
-- **Customize Changelog Header**: To change the header text in the generated changelog, configure the `changelogHeader` option in `package.json`:
-
-    ```json
-    "standard-version": {
-      "changelogHeader": "# Project Changelog"
-    }
-    ```
-
-### Integrating Standard Version with CI/CD
-
-Standard Version integrates smoothly with CI/CD pipelines, making it possible to automate releases entirely. A CI/CD setup can:
-- Run tests and ensure code quality.
-- Automatically execute `npm run release` when changes are merged to the main branch.
-- Push new tags and changelog updates to the repository.
-
-### Benefits of Standard Version
-
-Using Standard Version provides numerous advantages for managing software releases:
-- **Time Savings**: Automated versioning and changelog generation save time, especially in large projects.
-- **Predictability**: Consistent commit messages and automated version bumps ensure that each release is predictable and standardized.
-- **Transparency**: Changelogs generated from commit messages improve transparency, making it easier for users and contributors to track changes.
-
-### Conclusion
-
-Standard Version is an excellent tool for any project that values structured releases, predictable versioning, and clear changelogs. By adopting Standard Version, you can simplify the release process, ensure that all changes are properly documented, and create a more transparent and organized workflow. Whether for an open-source library or an internal project, Standard Version makes releases more manageable and professional.
+Standard Version is a powerful tool for automating version management and changelog generation, helping developers
+follow **Semantic Versioning** principles without the hassle of manual versioning. By integrating **Conventional Commits
+**, it ensures consistent commit messages and makes version bumps predictable. Whether you’re working on an open-source
+project or an internal tool, Standard Version can streamline your release process, improve collaboration, and reduce
+errors in version management.
