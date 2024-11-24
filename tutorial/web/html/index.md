@@ -16,14 +16,14 @@ elements like headings, paragraphs, links, images, forms, and more.
 
 ## Table of Contents
 
-1. [Introduction to HTML](#introduction-to-html)
-2. [Basic Structure of an HTML Document](#basic-structure-of-an-html-document)
-3. [HTML Elements](#html-elements)
-4. [HTML Tags](#html-tags)
-5. [Commonly Used HTML Tags](#commonly-used-html-tags)
-6. [HTML Attributes](#html-attributes)
-7. [HTML Syntax](#html-syntax)
-8. [Conclusion](#conclusion)
+1. [Introduction to HTML](#1-introduction-to-html)
+2. [Basic Structure of an HTML Document](#2-basic-structure-of-an-html-document)
+3. [HTML Elements](#3-html-elements)
+4. [HTML Tags](#4-html-tags)
+5. [Commonly Used HTML Tags](#5-commonly-used-html-tags)
+6. [HTML Attributes](#6-html-attributes)
+7. [HTML Syntax](#7-html-syntax)
+8. [Conclusion](#8-conclusion)
 
 ---
 
@@ -48,9 +48,9 @@ Here’s a simple example of the basic structure of an HTML document:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
 </head>
 <body>
 <h1>Welcome to My Web Page</h1>
