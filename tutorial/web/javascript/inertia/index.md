@@ -6,113 +6,201 @@ grand_parent: Web Development
 description: "InertiaJS"
 ---
 
-# **Inertia.js**
+# InertiaJS
 
-Inertia.js is a framework that bridges the gap between server-side and client-side applications, allowing developers to create modern full-stack apps with a **Single Page Application (SPA)** experience without needing to manage APIs or complex client-side state. It seamlessly connects traditional server-side frameworks like Laravel, Rails, or Django with modern frontend frameworks like React, Vue, or Svelte.
-
----
-
-## **How Does Inertia.js Work?**
-Inertia.js isn’t a framework on its own—it acts as a **glue** between your server and client. Its key features include:
-
-1. **Server-Side Rendering**: Your backend handles routing and data fetching as usual.
-2. **Frontend SPA**: The frontend framework takes care of rendering components and managing smooth transitions between pages.
-
-When a user navigates to a new page, Inertia prevents a full page reload. Instead, it sends only the necessary JSON data to update the frontend dynamically.
+InertiaJS is a modern framework that connects server-side frameworks (like Laravel) with JavaScript-based frontend
+frameworks (like Vue, React, or Svelte). It simplifies the process of building single-page applications (SPAs) without
+the need for a separate API layer.
 
 ---
 
-## **Why Use Inertia.js?**
+## Table of Contents
 
-### **1. No Need for APIs**
-You don’t have to create REST or GraphQL APIs. The backend directly sends data to your frontend components, simplifying the development process.
-
-### **2. SPA Experience Without the Complexity**
-Inertia provides the speed and smoothness of SPAs without requiring state management tools like Redux or Vuex.
-
-### **3. Leverages Familiar Frameworks**
-- **Backend**: Works with Laravel, Rails, and other server-side frameworks.
-- **Frontend**: Compatible with React, Vue, and Svelte.
-
-### **4. Smooth Page Transitions**
-Built-in support for fast navigation and page transitions creates a seamless user experience.
-
-### **5. Low Learning Curve**
-If you’re already familiar with the supported frameworks, learning Inertia is straightforward.
+- [What is InertiaJS?](#what-is-inertiajs)
+- [How InertiaJS Works](#how-inertiajs-works)
+- [Setting Up InertiaJS](#setting-up-inertiajs)
+    - [Server-Side Installation](#server-side-installation)
+    - [Frontend Installation](#frontend-installation)
+- [Basic Usage](#basic-usage)
+    - [Rendering Pages](#rendering-pages)
+    - [Linking Between Pages](#linking-between-pages)
+    - [Sharing Data](#sharing-data)
+- [Benefits of Using InertiaJS](#benefits-of-using-inertiajs)
+- [Conclusion](#conclusion)
 
 ---
 
-## **How Inertia.js Works**
-### **1. Routing**
-Routing is handled on the server side, as usual. However, instead of rendering HTML views, you send data to frontend components.
+## What is InertiaJS?
 
-### **2. Backend Controller**
-For example, in Laravel:
+InertiaJS is a framework for building SPAs without requiring a full API backend. It provides a seamless way to:
+
+- Deliver frontend components from the server.
+- Handle routing on the server while maintaining SPA behavior on the frontend.
+- Use familiar server-side frameworks to build complex SPAs.
+
+---
+
+## How InertiaJS Works
+
+InertiaJS acts as a **glue** between the server and the client.
+
+1. The server delivers views (frontend components) along with data.
+2. The frontend updates dynamically using JavaScript without reloading the page.
+
+This approach eliminates the need for APIs or JSON endpoints, as Inertia handles data transfer in the background.
+
+---
+
+## Setting Up InertiaJS
+
+### Server-Side Installation
+
+For Laravel:
+
+1. Install the Inertia server-side package:
+   ```bash
+   composer require inertiajs/inertia-laravel
+   ```  
+
+2. Add the middleware to your `App\Http\Kernel.php`:
+   ```php
+   protected $middlewareGroups = [
+       'web' => [
+           \Inertia\Middleware::class,
+       ],
+   ];
+   ```  
+
+3. Create a basic route:
+   ```php
+   Route::get('/', function () {
+       return Inertia::render('Home', [
+           'message' => 'Welcome to InertiaJS!'
+       ]);
+   });
+   ```  
+
+### Frontend Installation
+
+For Vue.js:
+
+1. Install the required packages:
+   ```bash
+   npm install @inertiajs/inertia @inertiajs/inertia-vue vue
+   ```  
+
+2. Set up the `app.js` file:
+   ```javascript
+   import { createApp, h } from 'vue';
+   import { createInertiaApp } from '@inertiajs/inertia-vue';
+
+   createInertiaApp({
+       resolve: name => require(`./Pages/${name}`),
+       setup({ el, App, props, plugin }) {
+           createApp({ render: () => h(App, props) })
+               .use(plugin)
+               .mount(el);
+       },
+   });
+   ```  
+
+3. Create a Vue component in `resources/js/Pages/Home.vue`:
+   ```vue
+   <template>
+       <div>
+           <h1>{{ message }}</h1>
+       </div>
+   </template>
+
+   <script>
+   export default {
+       props: {
+           message: String,
+       },
+   };
+   </script>
+   ```  
+
+---
+
+## Basic Usage
+
+### Rendering Pages
+
+In Laravel, use `Inertia::render` to send a frontend component and data:
+
 ```php
-use Inertia\Inertia;
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard', [
-        'users' => User::all(),
+Route::get('/about', function () {
+    return Inertia::render('About', [
+        'title' => 'About Us',
     ]);
 });
-```
+```  
 
-### **3. Frontend Component**
-In React, you’d display this data in a component like this:
-```jsx
-import React from "react";
+### Linking Between Pages
 
-const Dashboard = ({ users }) => {
-    return (
-        <div>
-            <h1>Dashboard</h1>
-            <ul>
-                {users.map((user) => (
-                    <li key={user.id}>{user.name}</li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+In the frontend, use the `<inertia-link>` component to navigate:
 
-export default Dashboard;
-```
+```vue
 
----
+<template>
+  <div>
+    <inertia-link href="/">Home</inertia-link>
+    <inertia-link href="/about">About</inertia-link>
+  </div>
+</template>
+```  
 
-## **Advantages and Disadvantages of Inertia.js**
+### Sharing Data
 
-### **Advantages**:
-1. **Time Efficiency**: No need to create APIs for every endpoint.
-2. **Seamless Integration**: Backend and frontend work together as one unit.
-3. **Improved UX**: Faster navigation without full page reloads.
-4. **Easy to Learn**: Familiarity with supported frameworks makes adoption easier.
+Share data globally using middleware. For example, share authenticated user information:
 
-### **Disadvantages**:
-1. **Framework Dependency**: Works only with specific frameworks like Laravel or Rails.
-2. **Not Suitable for APIs**: If you need a standalone API for other applications, this isn’t ideal.
-3. **Overhead for Simple Apps**: Inertia might feel excessive for very simple applications.
+1. In `AppServiceProvider.php`:
+   ```php
+   use Inertia\Inertia;
 
----
+   public function boot()
+   {
+       Inertia::share('auth', function () {
+           return [
+               'user' => auth()->user(),
+           ];
+       });
+   }
+   ```  
 
-## **When to Use Inertia.js?**
-Inertia.js is perfect for:
-- **Apps with Complex Data Needs**: Dashboards, management systems, or CRUD applications.
-- **Projects where backend and frontend are developed together.**
-- **Small to medium-sized projects** that can benefit from SPA-like behavior without needing a standalone API.
+2. Access the data in your Vue component:
+   ```vue
+   <template>
+       <div v-if="auth.user">
+           Welcome, {{ auth.user.name }}!
+       </div>
+   </template>
 
-However, if your app requires a dedicated API (e.g., for mobile or third-party usage), Inertia might not be the best choice.
-
----
-
-## **How to Get Started**
-1. Set up your backend (e.g., Laravel, Rails).
-2. Install Inertia.js and integrate it with your preferred frontend framework (React, Vue, or Svelte).
-3. Define your routes, controllers, and frontend components.
-4. Enjoy the SPA experience without the hassle of managing APIs or complex state.
+   <script>
+   export default {
+       props: {
+           auth: Object,
+       },
+   };
+   </script>
+   ```  
 
 ---
 
-## **Conclusion**
-Inertia.js is a powerful tool for developers who want to combine the strengths of traditional server-side frameworks with modern frontend SPA frameworks. By simplifying the development process and enhancing the user experience, it’s an excellent choice for building full-stack web applications with minimal complexity.
+## Benefits of Using InertiaJS
+
+- **Simplified SPA Development**: No need for APIs or JSON endpoints.
+- **SEO-Friendly**: Routing is handled on the server side.
+- **Ease of Use**: Developers can use their favorite backend and frontend frameworks together.
+- **Improved Performance**: No full-page reloads, providing a smooth user experience.
+
+---
+
+## Conclusion
+
+InertiaJS bridges the gap between server-side and client-side development, offering the best of both worlds. By
+leveraging InertiaJS, you can build modern SPAs with less complexity, making it an excellent choice for developers
+familiar with frameworks like Laravel and Vue.js.
+
+Start exploring InertiaJS today and simplify your SPA workflow!
