@@ -6,7 +6,7 @@ nav_order: 2
 description: "Tutorial CSS"
 ---
 
-# CSS: A Beginner's Guide to Styling Your Web Pages
+# CSS
 
 CSS (Cascading Style Sheets) is a powerful tool that lets you style and lay out your web pages effectively. Whether
 you're creating your first website or improving an existing one, understanding CSS is essential.
