@@ -18,6 +18,27 @@ practices. Dive in to learn how to create modern, responsive, and interactive we
 
 ---
 
+## Table of Contents
+
+1. [Introduction to Web Development](#1-introduction-to-web-development)
+2. [HTML Basics](#2-html-basics)
+3. [CSS Fundamentals](#3-css-fundamentals)
+4. [Introduction to JavaScript](#4-introduction-to-javascript)
+5. [Responsive Web Design with CSS and Flexbox](#5-responsive-web-design-with-css-and-flexbox)
+6. [CSS Grid for Advanced Layouts](#6-css-grid-for-advanced-layouts)
+7. [JavaScript ES6 and Beyond](#7-javascript-es6-and-beyond)
+8. [Introduction to Front-End Frameworks (React, Vue, Angular)](#8-introduction-to-front-end-frameworks-react-vue-angular)
+9. [Working with APIs and AJAX](#9-working-with-apis-and-ajax)
+10. [Introduction to Back-End Development](#10-introduction-to-back-end-development)
+11. [Database Fundamentals](#11-database-fundamentals)
+12. [Introduction to Git for Web Developers](#12-introduction-to-git-for-web-developers)
+13. [Setting Up a Local Development Environment](#13-setting-up-a-local-development-environment)
+14. [Introduction to Web Hosting and Deployment](#14-introduction-to-web-hosting-and-deployment)
+15. [Best Practices in Web Development](#15-best-practices-in-web-development)
+16. [Conclusion](#conclusion)
+
+---
+
 ## **[1. Introduction to Web Development](./introduction_to_web_development.md)**
 
 This tutorial provides an overview of web development and the three essential components: **HTML (structure)**, **CSS (
