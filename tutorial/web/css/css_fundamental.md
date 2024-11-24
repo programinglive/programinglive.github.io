@@ -7,7 +7,7 @@ nav_order: 1
 description: "CSS Fundamental"
 ---
 
-# CSS Fundamentals: Building Blocks for Web Design
+# CSS Fundamentals
 
 CSS fundamentals are the core principles and techniques every developer needs to know to style web pages effectively.
 This guide covers essential concepts to get you started on mastering CSS.
