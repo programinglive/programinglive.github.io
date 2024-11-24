@@ -6,100 +6,192 @@ grand_parent: Version Control System
 description: "Git Conventional Commit"
 ---
 
-## Git Conventional Commits
+# Git Conventional Commits
 
-Commit messages are an essential part of software development, providing context, history, and insight into code changes. However, when commit messages are inconsistent or vague, understanding the history of a project can become difficult. **Conventional Commits** provide a structured, standardized way to format commit messages, making them clear and useful for everyone involved.
+**Conventional Commits** is a standardized format for commit messages that aims to make version control history more
+structured and machine-readable. By adhering to a set of defined rules for commit message formatting, teams can automate
+tasks such as changelog generation, versioning, and release management. This approach provides clarity about the nature
+of each change made to the codebase and enables automation for tools like semantic versioning.
 
-### What is a Conventional Commit?
+---
 
-A **Conventional Commit** is a standardized commit message format that provides specific structure and meaning. This format helps developers and tools understand the purpose and scope of each commit at a glance. Conventional Commits use a simple structure that consists of a **type**, an optional **scope**, and a **description**:
+## Table of Contents
+
+- [What are Conventional Commits?](#what-are-conventional-commits)
+- [Structure of a Conventional Commit](#structure-of-a-conventional-commit)
+- [Commit Types](#commit-types)
+- [Scope](#scope)
+- [Message Format](#message-format)
+- [Example Commit Messages](#example-commit-messages)
+- [Why Use Conventional Commits?](#why-use-conventional-commits)
+- [Automating Versioning and Changelog with Conventional Commits](#automating-versioning-and-changelog-with-conventional-commits)
+- [Tools for Enforcing Conventional Commits](#tools-for-enforcing-conventional-commits)
+- [Conclusion](#conclusion)
+
+---
+
+## What are Conventional Commits?
+
+Conventional Commits is a specification for writing standardized commit messages. It encourages developers to use a
+consistent format for commit messages, making it easier to understand the purpose of a change, track the evolution of a
+project, and automate tasks like changelog generation and versioning. The goal is to create a clear and structured
+commit history.
+
+---
+
+## Structure of a Conventional Commit
+
+A conventional commit follows this basic structure:
 
 ```
-<type>(<scope>): <description>
+<type>(<scope>): <message>
 ```
 
-An example of a Conventional Commit message might look like this:
+- **type**: A keyword describing the type of change.
+- **scope**: An optional part to specify the area of the codebase affected by the change (e.g., a specific module,
+  feature, or subsystem).
+- **message**: A short, concise description of the change.
+
+### Full Commit Message Example:
 
 ```
-feat(login): add password reset feature
+feat(auth): add login functionality
 ```
 
-In this example:
-- **`feat`** is the type, indicating that this commit adds a new feature.
-- **`login`** is the scope, showing that this feature relates to the login functionality.
-- **`add password reset feature`** is the description, providing a short summary of the change.
+This structure makes it clear that:
 
-### Why Use Conventional Commits?
+- The change is a **feature** (`feat`).
+- The scope is **authentication** (`auth`).
+- The change adds **login functionality**.
 
-Using Conventional Commits has several advantages:
-- **Clarity**: Commit messages follow a predictable structure, making them easier to read and understand.
-- **Automated Releases**: Tools like semantic-release can automatically generate changelogs and release notes based on Conventional Commits.
-- **Improved Collaboration**: Consistent commit messages make it easier for teams to understand each other’s work, whether in code reviews, debugging, or when onboarding new members.
-- **Better Change Logs**: Conventional Commits make it straightforward to categorize commits and generate meaningful changelogs for users and stakeholders.
+---
 
-### Conventional Commit Types
+## Commit Types
 
-Some common types used in Conventional Commits are:
-- **feat**: For new features.
-- **fix**: For bug fixes.
-- **docs**: For changes to documentation only.
-- **style**: For changes that do not affect the meaning of the code (like formatting or whitespace).
-- **refactor**: For code changes that neither fix a bug nor add a feature.
-- **test**: For adding or updating tests.
-- **chore**: For routine tasks or maintenance that don’t directly affect the code.
+The **type** defines the category of the change. The most common types used in Conventional Commits include:
 
-By choosing the appropriate type for each commit, you can immediately convey the intent of your changes to the entire team.
+- **feat**: A new feature.
+- **fix**: A bug fix.
+- **docs**: Documentation changes.
+- **style**: Code style changes (e.g., formatting, missing semi-colons) that do not affect the logic.
+- **refactor**: Code changes that neither fix a bug nor add a feature (e.g., restructuring code).
+- **perf**: Performance improvements.
+- **test**: Adding or modifying tests.
+- **chore**: Routine tasks such as configuration changes or updates to build tools.
+- **ci**: Continuous Integration related changes (e.g., updating CI configuration files).
+- **build**: Changes to the build process (e.g., adding a new build tool).
+- **revert**: Reverts a previous commit.
 
-### Writing Conventional Commits: Examples
+---
 
-Here are some examples of Conventional Commits:
+## Scope
 
-- **Adding a new feature**:
-    ```
-    feat(cart): add discount code functionality
-    ```
+The **scope** is an optional part of the commit message that describes the area of the codebase impacted by the change.
+For example, in the commit:
 
-- **Fixing a bug**:
-    ```
-    fix(api): correct typo in API endpoint URL
-    ```
+```
+feat(auth): add login functionality
+```
 
-- **Updating documentation**:
-    ```
-    docs(readme): update installation instructions
-    ```
+- **auth** is the scope, indicating that the change is related to the authentication system.
 
-- **Refactoring code**:
-    ```
-    refactor(auth): simplify login logic
-    ```
+Scopes are particularly helpful for larger projects where different parts of the application are managed by different
+teams. It helps narrow down what area the commit is related to.
 
-- **Running automated tests**:
-    ```
-    test(user): add unit tests for user authentication
-    ```
+---
 
-Each message is clear, specific, and easy to understand for anyone viewing the project history.
+## Message Format
 
-### Using Scopes in Conventional Commits
+The **message** part of the commit should provide a clear and concise description of what the change is and why it was
+made. This part should be written in the **imperative mood**, which is typically used to describe actions (e.g., "Add
+feature," "Fix bug," "Update docs").
 
-The **scope** in a Conventional Commit message is optional but can be useful for larger projects. It helps to indicate which part of the codebase is affected. For example, in a project with multiple components, using scopes can clarify which feature or module the commit applies to.
+### Good Practices for Commit Messages:
 
-Some example scopes might be:
-- **ui** for changes to the user interface.
-- **auth** for changes to authentication logic.
-- **api** for modifications to the backend API.
+- Be clear and concise.
+- Use the imperative mood.
+- Capitalize the first letter of the message.
+- Avoid using unnecessary punctuation (e.g., no periods at the end of the message).
 
-Including scopes can help your team quickly identify what each commit is related to, which is especially helpful in larger, more complex projects.
+---
 
-### Automating Conventional Commits
+## Example Commit Messages
 
-To ensure commit messages follow the Conventional Commits format, you can use tools like **commitizen** and **commitlint**:
-- **Commitizen**: Helps guide developers to write commits in a standardized format.
-- **Commitlint**: Enforces rules for commit messages and integrates with Git Hooks to check each message.
+Here are some examples of valid commit messages using Conventional Commits:
 
-These tools can make it easier to adopt Conventional Commits across your team, maintaining consistency without much manual effort.
+- `feat(auth): implement login API`
+- `fix(button): resolve issue with button click event`
+- `docs(readme): update installation instructions`
+- `style(css): clean up unused classes`
+- `refactor(code): simplify auth logic`
+- `test(auth): add unit tests for login function`
+- `perf(api): optimize data fetching logic`
+- `chore(config): update build configuration`
+- `ci(cicd): update deployment pipeline`
 
-### Conclusion
+---
 
-Conventional Commits bring structure and clarity to commit messages, turning your Git history into a valuable resource. By using this simple, structured format, you make it easier for team members, tools, and future contributors to understand what each change does and why it was made. Conventional Commits can improve collaboration, automate release management, and create cleaner project histories—benefiting both developers and users.
+## Why Use Conventional Commits?
+
+There are several benefits to using Conventional Commits in your project:
+
+### 1. **Clarity and Consistency**
+
+Commit messages follow a consistent format, making it easy for developers to understand the nature of each change in the
+project history.
+
+### 2. **Automated Versioning**
+
+Conventional Commits are compatible with tools like **semantic versioning**, which automatically adjust version numbers
+based on commit types. For example:
+
+- `feat` (new features) bump the major version.
+- `fix` (bug fixes) bump the patch version.
+- Breaking changes can be detected and bump the major version.
+
+### 3. **Changelog Generation**
+
+By following a consistent commit message format, you can automatically generate a changelog that summarizes the
+project's changes. Tools like **standard-version** or **semantic-release** can automate this process.
+
+### 4. **Improved Collaboration**
+
+Standardized commit messages improve communication within teams and across different teams working on the same project,
+as everyone follows the same guidelines.
+
+---
+
+## Automating Versioning and Changelog with Conventional Commits
+
+Tools like **semantic-release** and **standard-version** can automatically manage versioning and changelog generation
+based on commit messages that follow the Conventional Commit format.
+
+- **semantic-release**: This tool automates the versioning and changelog generation process by analyzing the commit
+  history and determining the correct version bump based on commit types. It can also publish the release to npm and
+  generate release notes.
+
+- **standard-version**: A simpler tool that creates version tags and changelogs based on conventional commits. It helps
+  automate the release process, ensuring the version is incremented according to the rules of semantic versioning.
+
+---
+
+## Tools for Enforcing Conventional Commits
+
+To ensure that all commits follow the Conventional Commit format, you can use tools like **Commitlint** and **Husky**:
+
+- **Commitlint**: A tool that checks if your commit messages follow the specified conventions. It can be configured with
+  a variety of rules.
+- **Husky**: A tool that allows you to run Git hooks, like `commit-msg`, to enforce commit message rules before a commit
+  is made.
+- **Commitizen**: A tool that helps developers format their commit messages according to a specific convention, making
+  it easier to follow the Conventional Commit guidelines.
+
+---
+
+## Conclusion
+
+Conventional Commits provide a clear and standardized format for writing commit messages, which makes it easier to
+understand changes, automate versioning, and generate changelogs. By using these conventions, teams can improve
+collaboration, automate tedious tasks, and ensure a consistent project history. Integrating tools like **Commitlint**, *
+*Husky**, and **semantic-release** makes enforcing this process easy, helping teams maintain a clean and organized
+development workflow.

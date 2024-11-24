@@ -1,105 +1,193 @@
 ---
-title: Commitlint JS
+title: Commitlint in JavaScript
 layout: default
 parent: Git
 grand_parent: Version Control System
-description: "Commitlint JS"
+description: "Commitlint in JavaScript"
 ---
 
-## Commitlint JS
+# Commitlint in JavaScript
 
-In collaborative software projects, consistent commit messages play a key role in code readability and project organization. However, maintaining this consistency can be challenging, especially in larger teams. **Commitlint JS** is a powerful tool that helps enforce commit message conventions, ensuring that every commit follows the same structure and standards.
+**Commitlint** is a tool used to ensure that commit messages in a Git repository adhere to a specific convention or
+style. It checks commit messages for proper formatting according to predefined rules or configurations, ensuring
+consistency in commit messages across a project. This is particularly useful in team projects, where standardizing
+commit messages can help with readability, versioning, and automated changelog generation.
 
-### What is Commitlint JS?
+Commitlint is commonly used alongside **Husky** and **Lint-staged** to enforce commit message rules during the Git
+commit process.
 
-**Commitlint JS** is a JavaScript tool that validates commit messages to ensure they meet predefined conventions. Commonly used with **Conventional Commits**, Commitlint checks whether each commit message adheres to the required structure, such as including specific types, scopes, and descriptions. By setting rules in Commitlint, you can enforce a consistent format, which is particularly useful for generating changelogs, automating release processes, and improving project history.
+---
 
-### Why Use Commitlint?
+## Table of Contents
 
-Here are some key reasons to use Commitlint in your project:
-- **Enforced Standards**: By automatically enforcing rules for commit messages, Commitlint helps maintain consistency across the team.
-- **Clearer Git History**: With standardized commit messages, it’s easier to understand the history and purpose of each change.
-- **Automated Changelogs**: Commitlint works well with tools that generate changelogs or automate releases, which rely on consistent commit formats.
-- **Improved Collaboration**: Commitlint ensures that all contributors, including new team members, follow the same format, improving readability and collaboration.
+- [What is Commitlint?](#what-is-commitlint)
+- [How Does Commitlint Work?](#how-does-commitlint-work)
+- [Setting Up Commitlint](#setting-up-commitlint)
+- [Using Commitlint with Conventional Commits](#using-commitlint-with-conventional-commits)
+- [Commitlint Configuration](#commitlint-configuration)
+- [Example Commit Messages](#example-commit-messages)
+- [Integrating Commitlint with Husky](#integrating-commitlint-with-husky)
+- [Conclusion](#conclusion)
 
-### Getting Started with Commitlint JS
+---
 
-Let’s go through the steps to set up Commitlint in a JavaScript project.
+## What is Commitlint?
 
-#### 1. Install Commitlint
+Commitlint is a tool that validates your commit messages based on a set of rules. The primary goal is to ensure that
+commit messages follow a consistent format, which is especially useful when generating changelogs or creating automated
+tools for versioning.
 
-To begin, install Commitlint and its config-conventional package. The `@commitlint/config-conventional` configuration enforces Conventional Commits format, which is widely used and recognized.
+It typically follows a **Conventional Commit** style, which is a widely adopted standard. Conventional Commits are
+structured messages that include information about the type of change being made and an optional scope.
+
+---
+
+## How Does Commitlint Work?
+
+Commitlint works by inspecting commit messages and ensuring they follow a specific convention. If a commit message
+violates the specified format, it will reject the commit and display an error message. The process can be automated by
+integrating Commitlint into your Git workflow using **Husky**, which runs the commitlint checks before each commit is
+finalized.
+
+---
+
+## Setting Up Commitlint
+
+To set up Commitlint in your JavaScript project, follow these steps:
+
+### 1. Install Commitlint
+
+You need to install `commitlint` and its configuration package:
 
 ```bash
 npm install --save-dev @commitlint/{config-conventional,cli}
 ```
 
-#### 2. Configure Commitlint
+This installs the Commitlint CLI tool and the conventional config that adheres to the **Conventional Commits**
+specification.
 
-After installation, create a `commitlint.config.js` file in the root of your project to define Commitlint’s rules. The following configuration file sets up Commitlint to use Conventional Commits:
+### 2. Create a Commitlint Configuration File
+
+After installing Commitlint, create a configuration file named `commitlint.config.js` in the root of your project.
 
 ```javascript
-// commitlint.config.js
 module.exports = {
-  extends: ['@commitlint/config-conventional'],
+	extends: ['@commitlint/config-conventional']
 };
 ```
 
-This configuration ensures that Commitlint checks for the types and structure defined in Conventional Commits, such as `feat`, `fix`, and `docs`.
+This file tells Commitlint to use the default **Conventional Commits** configuration. You can customize it further if
+needed.
 
-#### 3. Integrate Commitlint with Git Hooks
+---
 
-To automatically validate commit messages, you can integrate Commitlint with a Git Hook. This will check each commit message before it’s recorded, preventing commits that don’t meet the standard.
+## Using Commitlint with Conventional Commits
 
-For easier setup, you can use **Husky**, a tool that simplifies managing Git Hooks in JavaScript projects. Install Husky with:
+**Conventional Commits** is a standard for commit messages, and using Commitlint ensures that all your commit messages
+follow this pattern. A typical commit message follows this format:
+
+```
+<type>(<scope>): <message>
+```
+
+- **type**: Describes the type of change. Common types include:
+    - `feat`: New feature
+    - `fix`: Bug fix
+    - `docs`: Documentation changes
+    - `chore`: Routine tasks like refactoring or build configuration
+    - `style`: Code style changes (no changes to logic)
+    - `refactor`: Code changes that neither fix a bug nor add a feature
+    - `test`: Adding or modifying tests
+    - `perf`: Performance improvements
+- **scope**: Optional, a section to specify the area of the codebase being changed (e.g., `ui`, `api`, `auth`).
+- **message**: A brief description of the change.
+
+### Example of Conventional Commit Messages:
+
+- `feat(auth): add login functionality`
+- `fix(api): handle null values in user data`
+- `docs(readme): update API documentation`
+- `chore(build): update webpack config`
+- `style(ui): fix button alignment`
+
+---
+
+## Commitlint Configuration
+
+You can extend or modify the Commitlint rules by creating a custom configuration. The `@commitlint/config-conventional`
+is a good starting point, but if you need specific rules, you can override them in your `commitlint.config.js` file.
+
+### Example: Customizing Commitlint Configuration
+
+```javascript
+module.exports = {
+	extends: ['@commitlint/config-conventional'],
+	rules: {
+		'type-enum': [
+			2,
+			'always',
+			['feat', 'fix', 'docs', 'chore', 'style', 'refactor', 'test', 'perf']
+		],
+		'subject-min-length': [2, 'always', 10],  // Enforce a minimum length of 10 characters for the subject
+		'subject-case': [2, 'always', 'sentence-case'],  // Enforce sentence case for the subject
+	}
+};
+```
+
+This example overrides the `type-enum` rule to only allow certain commit types, ensures that the commit message subject
+is at least 10 characters long, and forces sentence case for the subject line.
+
+---
+
+## Example Commit Messages
+
+Here are some examples of valid commit messages with the Conventional Commits format:
+
+- `feat(auth): implement two-factor authentication`
+- `fix(api): correct endpoint URL for fetching user data`
+- `chore(tests): add unit tests for validation module`
+- `docs(readme): update instructions for setting up the project`
+- `style(ui): improve layout of the dashboard page`
+
+---
+
+## Integrating Commitlint with Husky
+
+To automate commit message checks, it's common to integrate Commitlint with **Husky**. Husky is a tool that allows you
+to run scripts before certain Git hooks, such as `pre-commit`, `commit-msg`, or `pre-push`. Here's how you can integrate
+Commitlint into your workflow:
+
+### 1. Install Husky
 
 ```bash
 npm install --save-dev husky
 ```
 
-Then, set up Husky to run Commitlint on every commit:
+### 2. Enable Git Hooks with Husky
+
+After installing Husky, you need to enable the Git hooks:
 
 ```bash
 npx husky install
-npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
 ```
 
-This configuration will run Commitlint on each commit message, stopping any commit that doesn’t adhere to the rules.
+### 3. Add a `commit-msg` Hook to Run Commitlint
 
-### Customizing Commitlint Rules
+You can now configure Husky to run Commitlint during the `commit-msg` Git hook, which is triggered when a commit message
+is created:
 
-Commitlint’s default configuration works well for most projects, but you can customize rules to fit your project’s needs. For example, you can specify allowed commit types, limit message length, or enforce scope presence.
-
-To customize rules, update `commitlint.config.js` as shown below:
-
-```javascript
-module.exports = {
-  extends: ['@commitlint/config-conventional'],
-  rules: {
-    'type-enum': [2, 'always', ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore']],
-    'subject-case': [2, 'never', ['sentence-case']], // Restrict case in commit subjects
-    'subject-max-length': [2, 'always', 72], // Limit commit message length to 72 characters
-  },
-};
+```bash
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
 ```
 
-In this example:
-- **`type-enum`** restricts commit types to specific options.
-- **`subject-case`** prevents sentence-case formatting in the commit subject.
-- **`subject-max-length`** limits the commit message length for readability.
+This command tells Husky to run Commitlint on the commit message before allowing the commit to proceed. If the message
+doesn't follow the defined rules, the commit will be rejected.
 
-### Using Commitlint with Other Tools
+---
 
-Commitlint can work alongside other tools for a smooth development process:
-- **Commitizen**: This tool provides prompts to help developers create Conventional Commit messages. Integrate Commitizen with Commitlint for easier commit message formatting.
-- **semantic-release**: A powerful tool for automating releases, semantic-release uses commit messages to determine version updates and generate changelogs, relying on consistent commit formats.
+## Conclusion
 
-### Benefits of Using Commitlint JS
-
-- **Improved Documentation**: Commitlint encourages developers to provide meaningful messages, making Git history a more valuable resource.
-- **Error Prevention**: Validating commit messages reduces mistakes and ensures consistency, especially across larger teams.
-- **Automation Ready**: Tools that depend on commit messages, such as automated release systems, work more effectively with standardized commit logs.
-
-### Conclusion
-
-Commitlint JS is an excellent tool for enforcing commit message consistency and improving project organization. By setting up Commitlint, you can enhance readability, automate changelogs, and create a more collaborative development environment. Consistent commit messages make a world of difference, and with Commitlint, achieving this standard is easy and effective.
+Commitlint is a valuable tool for enforcing consistent commit message conventions, which can help maintain a clean
+project history, improve collaboration, and automate processes like changelog generation. By setting up Commitlint with
+**Conventional Commits** and integrating it with **Husky**, you ensure that all team members follow the same standards
+for commit messages, improving the maintainability of the codebase.
