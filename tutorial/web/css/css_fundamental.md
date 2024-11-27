@@ -54,13 +54,13 @@ Example:
 ```html
 
 <style>
-    p {
-        color: blue; /* Less specific */
-    }
+  p {
+    color: blue; /* Less specific */
+  }
 
-    #special {
-        color: red; /* More specific */
-    }
+  #special {
+    color: red; /* More specific */
+  }
 </style>
 <p id="special">This text is red.</p>
 ```  
@@ -74,12 +74,12 @@ Example:
 ```html
 
 <style>
-    div {
-        color: green;
-    }
+  div {
+    color: green;
+  }
 </style>
 <div>
-    <p>This text is green because it inherits the color.</p>
+  <p>This text is green because it inherits the color.</p>
 </div>
 ```  
 
