@@ -1,9 +1,9 @@
 ---
-title: How to Add Light and Dark Mode to Your Website?
+title: How to Add Light and Dark Mode to Your Website
 layout: default
 parent: HTML
 grand_parent: Web Development
-description: "How to Add Light and Dark Mode to Your Website?"
+description: "How to Add Light and Dark Mode to Your Website"
 ---
 
 # How to Add Light and Dark Mode to Your Website?
