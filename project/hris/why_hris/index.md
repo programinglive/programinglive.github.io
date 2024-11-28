@@ -1,7 +1,7 @@
 ---
 title: Why HRIS?
-parent: Project
-grand_parent: HRIS
+parent: HRIS
+grand_parent: Project
 layout: default
 description: "Why HRIS?"
 ---
