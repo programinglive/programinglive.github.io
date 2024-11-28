@@ -14,9 +14,3 @@ company. HRIS will make it easier for companies to manage their employees, inclu
 attendance, managing salary, and managing employee training.
 
 Repository: [HRIS](https://github.com/programinglive/hris)
-
-# Table of Contents
-
-- [Getting Started](./getting_started.md)
-- [MVP](./mvp/index.md)
-- [Why HRIS](why_hris/index.md)

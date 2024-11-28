@@ -38,7 +38,7 @@ as the backbone of modern HR departments, enabling data-driven decision-making a
 
 ### Key Benefits of HRIS
 
-#### 1. Streamlined Processes
+#### [1. Streamlined Processes](./streatmlined_processes.md)
 
 HRIS automates repetitive tasks like onboarding, leave management, and payroll processing. Automation reduces errors,
 saves time, and allows HR teams to focus on strategic initiatives like talent development and organizational culture.
@@ -76,3 +76,5 @@ HRIS is more than just a software solution; it’s a strategic tool that transfo
 automating routine tasks to empowering employees and ensuring compliance, HRIS is indispensable in today’s digital
 workplace. If your organization seeks efficiency, better decision-making, and happier employees, it’s time to embrace
 HRIS.
+
+---
