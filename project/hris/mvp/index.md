@@ -5,9 +5,11 @@ nav_order: 1
 description: "Human Resource Information System MVP"
 ---
 
-# MVP
-- [A new user can register a company](a_new_user_can_register_company.md).
-- [A new user can edit their account](a_new_user_can_edit_their_account.md).
+# MVP (HRIS)
+
+A Minimum Viable Product (MVP) for the Human Resource Information System (HRIS) project. This MVP will be used to test
+and evaluate the functionality of the HRIS system. It will allow the team to gather feedback and validate the product
+before moving on to more advanced features.
 
 ---
 <div style="display: flex; flex-direction: column; align-items: center;">
