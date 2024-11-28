@@ -2,6 +2,7 @@
 title: Getting Started HRIS
 parent: HRIS
 grand_parent: Project
+nav_order: 1
 layout: default
 description: "Getting Started HRIS"
 ---
