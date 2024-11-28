@@ -1,7 +1,7 @@
 ---
 title: Getting Started HRIS
-parent: Project
-grand_parent: HRIS
+parent: HRIS
+grand_parent: Project
 layout: default
 description: "Getting Started HRIS"
 ---

@@ -19,4 +19,4 @@ Repository: [HRIS](https://github.com/programinglive/hris)
 
 - [Getting Started](./getting_started.md)
 - [MVP](./mvp/index.md)
-- [Why HRIS](why_hris.md)
+- [Why HRIS](why_hris/index.md)
