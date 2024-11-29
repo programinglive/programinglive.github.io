@@ -41,7 +41,7 @@ Each digit in a binary number represents a power of 2, starting from the rightmo
 decimal number represents a power of 10).
 
 For example, the binary number **1011** can be expanded as:  
-\[ 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 = 8 + 0 + 2 + 1 = 11 \ (decimal) \]
+1 × 2³ + 0 × 2² + 1 × 2¹ + 1 × 2⁰ = 8 + 0 + 2 + 1 = 11 (decimal)
 
 ---
 
@@ -78,7 +78,7 @@ Every file on a computer, from documents to executables, is stored as a sequence
 Expand each binary digit using powers of 2. For example:
 
 **Binary:** 1101  
-\[ (1 \times 2^3) + (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) = 13 \ (decimal) \]
+(1 × 2³) + (1 × 2²) + (0 × 2¹) + (1 × 2⁰) = 8 + 4 + 0 + 1 = 13 (decimal)
 
 **Decimal to Binary**  
 Divide the decimal number by 2, recording the remainder, until the quotient is 0. Then reverse the remainders.
