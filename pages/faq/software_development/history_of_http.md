@@ -6,7 +6,7 @@ grand_parent: FAQ
 description: "HTTP History"
 ---
 
-# **HTTP History: The Evolution of Web Communication**
+# **HTTP History**
 
 The Hypertext Transfer Protocol (HTTP) is the backbone of the modern web, enabling seamless communication between
 browsers and servers. From its inception in the early 1990s to the robust version we rely on today, HTTP has undergone a
