@@ -1,9 +1,9 @@
 ---
 layout: default
-title: What is HTTP Response?
+title: What is WebSocket?
 parent: Software Development
 grand_parent: FAQ
-description: "What is HTTP Response?"
+description: "What is WebSocket?"
 ---
 
 # What is WebSocket?
