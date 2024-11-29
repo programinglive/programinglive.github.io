@@ -31,8 +31,9 @@ Each position in a hexadecimal number corresponds to a power of 16, starting fro
 **Example:**  
 Hexadecimal: `2A3`  
 Calculation:  
-\[ 2 \times 16^2 + 10 \times 16^1 + 3 \times 16^0 \]  
-\[ = 512 + 160 + 3 = 675 \ (decimal) \]
+(2 × 16<sup>2</sup>) + (10 × 16<sup>1</sup>) + (3 × 16<sup>0</sup>)  
+= 512 + 160 + 3  
+= 675 (decimal)
 
 In computing, hexadecimal is often used to represent binary values more compactly since one hexadecimal digit
 corresponds to exactly four binary bits.
@@ -66,25 +67,23 @@ Hexadecimal simplifies representing large binary sequences used in assembly and 
 ### **Converting Between Hexadecimal, Decimal, and Binary**
 
 **Hexadecimal to Decimal**  
-Multiply each hex digit by \( 16^n \), where \( n \) is the position from the right (starting at 0).  
-Example: Convert `3E` to decimal.  
-\[ 3 \times 16^1 + 14 \times 16^0 = 48 + 14 = 62 \]
+(3 × 16<sup>1</sup>) + (14 × 16<sup>0</sup>)  
+= 48 + 14  
+= 62 (decimal)
 
 **Hexadecimal to Binary**  
 Replace each hex digit with its 4-bit binary equivalent.  
-Example: Convert `2F` to binary.
-
-- `2 = 0010`
-- `F = 1111`  
-  Result: `2F` in binary is `00101111`.
+Example: Convert `2F` to binary.  
+2 = 0010  
+F = 1111  
+Result: 2F in binary is 00101111
 
 **Binary to Hexadecimal**  
 Group binary digits in sets of four (from right to left) and convert each group to a hex digit.  
-Example: Convert `11011011` to hexadecimal.
-
-- Group: `1101 1011`
-- Convert: `1101 = D`, `1011 = B`  
-  Result: `11011011` in hex is `DB`.
+Example: Convert `11011011` to hexadecimal.  
+Group: 1101 1011  
+Convert: 1101 = D, 1011 = B  
+Result: 11011011 in hex is DB
 
 ### **Conclusion**
 
