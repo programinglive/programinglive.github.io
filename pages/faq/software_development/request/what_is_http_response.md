@@ -1,14 +1,15 @@
 ---
 layout: default
 title: What is HTTP Response?
-parent: Software Development
-grand_parent: FAQ
+parent: What is Request?
+grand_parent: Software Development
 description: "What is HTTP Response?"
 ---
 
-# HTTP Response
+# What is HTTP Response?
 
 **Table of Contents**
+
 1. [Introduction](#introduction)
 2. [What is an HTTP Response?](#what-is-an-http-response)
 3. [HTTP Response Structure](#http-response-structure)
@@ -22,32 +23,45 @@ description: "What is HTTP Response?"
 ---
 
 ## Introduction
-An HTTP response is a crucial part of the client-server communication process in web development. When a client (such as a browser or mobile app) sends an HTTP request to a server, the server processes that request and sends back an HTTP response. This response contains the information the client needs, including the requested resource or data, along with metadata like status codes, headers, and potentially a response body.
 
-Understanding the structure and components of an HTTP response is vital for troubleshooting web applications, optimizing performance, and ensuring secure communication between clients and servers.
+An HTTP response is a crucial part of the client-server communication process in web development. When a client (such as
+a browser or mobile app) sends an HTTP request to a server, the server processes that request and sends back an HTTP
+response. This response contains the information the client needs, including the requested resource or data, along with
+metadata like status codes, headers, and potentially a response body.
+
+Understanding the structure and components of an HTTP response is vital for troubleshooting web applications, optimizing
+performance, and ensuring secure communication between clients and servers.
 
 ---
 
 ## What is an HTTP Response?
-An HTTP response is a message sent by the server to the client in reply to an HTTP request. This response informs the client whether the request was successful, if there was an error, or if further action is required. It contains a status code, headers, and an optional body that delivers the requested content or additional information.
 
-The structure of an HTTP response is defined by the HyperText Transfer Protocol (HTTP), which is the foundation of data communication on the web.
+An HTTP response is a message sent by the server to the client in reply to an HTTP request. This response informs the
+client whether the request was successful, if there was an error, or if further action is required. It contains a status
+code, headers, and an optional body that delivers the requested content or additional information.
+
+The structure of an HTTP response is defined by the HyperText Transfer Protocol (HTTP), which is the foundation of data
+communication on the web.
 
 ---
 
 ## HTTP Response Structure
+
 An HTTP response typically has three main components:
 
 1. **Status Line**:  
-   The status line provides information about the HTTP version, status code, and a brief description of the status code (e.g., "200 OK").
+   The status line provides information about the HTTP version, status code, and a brief description of the status
+   code (e.g., "200 OK").
 
 2. **Headers**:  
    HTTP headers contain metadata about the response, such as content type, server information, and caching instructions.
 
 3. **Body**:  
-   The response body contains the actual content of the response, such as HTML, JSON, an image, or any other data the client requested.
+   The response body contains the actual content of the response, such as HTML, JSON, an image, or any other data the
+   client requested.
 
 ### Basic Structure of an HTTP Response:
+
 ```
 HTTP/1.1 200 OK
 Date: Sat, 18 Nov 2024 14:30:00 GMT
@@ -60,10 +74,13 @@ Content-Length: 123
 ---
 
 ## HTTP Response Status Codes
-The status code in the HTTP response indicates the result of the server's attempt to process the client's request. Status codes are grouped into five categories:
+
+The status code in the HTTP response indicates the result of the server's attempt to process the client's request.
+Status codes are grouped into five categories:
 
 1. **1xx (Informational)**:  
-   These status codes indicate that the request is being processed and that the client should wait for further instructions.  
+   These status codes indicate that the request is being processed and that the client should wait for further
+   instructions.  
    Example: `100 Continue`
 
 2. **2xx (Successful)**:  
@@ -85,7 +102,9 @@ The status code in the HTTP response indicates the result of the server's attemp
 ---
 
 ## HTTP Response Headers
-HTTP response headers contain metadata that helps the client interpret the response properly. Some common response headers include:
+
+HTTP response headers contain metadata that helps the client interpret the response properly. Some common response
+headers include:
 
 1. **Content-Type**:  
    Specifies the type of data in the response body (e.g., `text/html`, `application/json`, `image/png`).
@@ -106,6 +125,7 @@ HTTP response headers contain metadata that helps the client interpret the respo
    Used in redirection responses to indicate the URL to which the client should navigate.
 
 Example of HTTP Response Headers:
+
 ```
 Date: Sat, 18 Nov 2024 14:30:00 GMT
 Content-Type: application/json
@@ -116,6 +136,7 @@ Cache-Control: no-cache
 ---
 
 ## HTTP Response Body
+
 The response body contains the main data that the client requested, such as:
 
 - **HTML content**: A webpage's HTML markup.
@@ -123,9 +144,11 @@ The response body contains the main data that the client requested, such as:
 - **Images, videos, or other media**: Binary content delivered by the server.
 - **Error messages or status information**: Informational content sent when an error occurs.
 
-The format and content of the response body depend on the request type and the server’s configuration. For example, an API might return a JSON object, while a webpage might return HTML markup.
+The format and content of the response body depend on the request type and the server’s configuration. For example, an
+API might return a JSON object, while a webpage might return HTML markup.
 
 Example of an HTTP Response Body (JSON):
+
 ```
 {
   "status": "success",
@@ -139,6 +162,7 @@ Example of an HTTP Response Body (JSON):
 ---
 
 ## Common HTTP Response Codes and Their Meanings
+
 Here are some common HTTP response codes that you might encounter:
 
 1. **200 OK**:  
@@ -168,32 +192,43 @@ Here are some common HTTP response codes that you might encounter:
 ---
 
 ## Handling HTTP Responses in Web Development
-Handling HTTP responses efficiently is key to building a robust web application. Here's how to manage responses in different contexts:
+
+Handling HTTP responses efficiently is key to building a robust web application. Here's how to manage responses in
+different contexts:
 
 1. **In Web Browsers**:  
-   Modern browsers automatically handle HTTP responses, rendering HTML content, displaying error messages, and managing network requests through built-in features like Developer Tools.
+   Modern browsers automatically handle HTTP responses, rendering HTML content, displaying error messages, and managing
+   network requests through built-in features like Developer Tools.
 
 2. **In JavaScript (AJAX/Fetch)**:  
-   When making HTTP requests with JavaScript, such as using the Fetch API, handling responses involves checking the status code, reading headers, and processing the body (e.g., parsing JSON or HTML).
+   When making HTTP requests with JavaScript, such as using the Fetch API, handling responses involves checking the
+   status code, reading headers, and processing the body (e.g., parsing JSON or HTML).
 
 Example with Fetch API:
+
 ```javascript
 fetch('https://api.example.com/data')
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error('Failed to fetch data');
-    }
-  })
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
+	.then(response => {
+		if (response.ok) {
+			return response.json();
+		} else {
+			throw new Error('Failed to fetch data');
+		}
+	})
+	.then(data => console.log(data))
+	.catch(error => console.error('Error:', error));
 ```
 
 3. **In APIs**:  
-   For APIs, the response is typically returned in JSON format. Proper handling involves checking for HTTP status codes (e.g., `200 OK` or `404 Not Found`) and extracting useful data from the response body.
+   For APIs, the response is typically returned in JSON format. Proper handling involves checking for HTTP status
+   codes (e.g., `200 OK` or `404 Not Found`) and extracting useful data from the response body.
 
 ---
 
 ## Conclusion
-HTTP responses are a fundamental part of web communication, containing the status code, headers, and body that inform the client of the request's outcome. Understanding the structure of an HTTP response, how to handle various status codes, and the role of headers and body content will help developers troubleshoot, optimize, and build secure and efficient web applications. Whether you’re building websites or working with APIs, mastering HTTP responses is essential for smooth client-server interactions.  
+
+HTTP responses are a fundamental part of web communication, containing the status code, headers, and body that inform
+the client of the request's outcome. Understanding the structure of an HTTP response, how to handle various status
+codes, and the role of headers and body content will help developers troubleshoot, optimize, and build secure and
+efficient web applications. Whether you’re building websites or working with APIs, mastering HTTP responses is essential
+for smooth client-server interactions.  
