@@ -31,7 +31,8 @@ applications, as they serve as the communication between the user and the web se
 ## What is a Request?
 
 A request is essentially a call made by the client (the browser, for example) to the server to fetch or send data. This
-communication takes place using HTTP (Hypertext Transfer Protocol), which governs how messages are formatted and
+communication takes place using [HTTP (Hypertext Transfer Protocol)](./history_of_http.md), which governs how messages
+are formatted and
 transmitted.
 
 Requests are the starting point for every interaction a user has with a web application. Whether you're fetching a
@@ -41,9 +42,11 @@ webpage, sending form data, or interacting with an API, you're initiating a requ
 
 When a user interacts with a website, they make a request to the server. Here’s a basic flow of how it works:
 
-1. **Client-Side Request**: The client sends a request, typically triggered by actions like clicking a link, submitting
+1. [**Client-Side Request**](./what_is_client_site_rendering.md): The client sends a request, typically triggered by
+   actions like clicking a link, submitting
    a form, or loading a webpage.
-2. **Server-Side Processing**: The server processes the request, handles any necessary business logic, interacts with a
+2. [**Server-Side Processing**](./what_is_server_side_rendering.md): The server processes the request, handles any
+   necessary business logic, interacts with a
    database if required, and then prepares a response.
 3. **Client Receives the Response**: The server sends back a response, which could be an HTML page, JSON data, an image,
    or anything else the client needs.
