@@ -1,8 +1,8 @@
 ---
 layout: default
 title: What is Protocol?
-parent: Software Development
-grand_parent: FAQ
+parent: What is Request?
+grand_parent: Software Development
 description: "What is Protocol?"
 ---
 
