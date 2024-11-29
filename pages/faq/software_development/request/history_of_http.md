@@ -1,8 +1,8 @@
 ---
 layout: default
 title: HTTP History
-parent: Software Development
-grand_parent: FAQ
+parent: What is Request?
+grand_parent: What is Request?
 description: "HTTP History"
 ---
 
