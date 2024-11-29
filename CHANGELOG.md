@@ -1,10 +1,18 @@
----
-nav_exclude: true
----
-
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.0.2](https://github.com/programinglive/programinglive.github.io/compare/v1.0.1...v1.0.2) (2024-11-29)
+
+
+### Features
+
+* add blog into party ([02b62c0](https://github.com/programinglive/programinglive.github.io/commit/02b62c0a582121bc79a9ea3e4bba27b98f01c8a8))
+
+
+### Bug Fixes
+
+* **layout:** add back to top button ([797f457](https://github.com/programinglive/programinglive.github.io/commit/797f457e1a6aa6b267dbc1602b9905b525a1f6a1))
 
 ### [1.0.1](https://github.com/programinglive/programinglive.github.io/compare/v1.0.0...v1.0.1) (2024-11-15)
 
