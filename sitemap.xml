@@ -9,357 +9,597 @@
 
 <url>
   <loc>https://programinglive.com/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://programinglive.com/project/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/project/erp/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/project/hris/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/project/hris/mvp/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/project/hris/mvp/a_new_user_can_edit_their_account/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/project/hris/mvp/a_new_user_can_register_company/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/project/pos/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/project/Portfolio/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://programinglive.com/vision/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/mission/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/youtube/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/youtube/menjadi_programmer_handal/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/youtube/menjadi_programmer_handal/7_alasan_menjadi_programmer/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/youtube/programinglive/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/youtube/programinglive/kepo_programinglive/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/youtube/programinglive/apa_itu_programinglive/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/html/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/html/html_basic/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/html/attribute_in_html/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/html/how_to_add_light_and_dark_mode/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/html/how_to_create_collapsible_sidebar/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/html/how_to_create_drawer/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/html/how_to_create_navbar/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/html/what_is_dom/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/css/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/css/css_fundamental/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/css/understanding_scrollbar/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/css/what_is_media_query/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/javascript/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/javascript/what_is_ajax/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/javascript/inertia/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/javascript/introducing_javascript/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/javascript/let_vs_var/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/javascript/map_in_javascript/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://programinglive.com/tutorial/web/tutorial_php/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <loc>https://programinglive.com/tutorial/web/javascript/what_is_xhr/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/php/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/cms/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/cms/what_is_jekyll/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/framework/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/framework/Livewire/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/framework/laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/laravel/laravel_echo/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/laravel/laravel_event/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/laravel/laravel_reverb/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/framework/react/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/react/props_in_reactjs/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/react/redux/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/framework/react/state_in_react/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/react/tanstack_react_table/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/react/what_is_component_in_reactjs/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/react/what_is_immutable_in_reactjs/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/framework/react/what_is_virtual_dom/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/web/framework/react/what_is_zod/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://programinglive.com/tutorial/web/what_is_web_development/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <loc>https://programinglive.com/tutorial/web/introduction_to_web_development/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/tutorial/web/what_is_url/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/os/tutorial_operating_system/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/vcs/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://programinglive.com/tutorial/vcs/tutorial_git/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <loc>https://programinglive.com/tutorial/vcs/git/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/vcs/commitlint_js/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/vcs/git_conventional_commit/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/vcs/git_hook/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/vcs/semantic_version/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/tutorial/vcs/standard_version/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/erp/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/getting_started/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/mvp/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/mvp/a_new_user_can_edit_their_account/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/mvp/a_new_user_can_register_company/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/roadmap/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/why_hris/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/hris/why_hris/streatmlined_processes/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/pos/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/project/Portfolio/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/about/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/faq/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/diagram/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/diagram/what_is_diagram_sequence/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/envelop_mail_in_laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/handle_function_queue_on_laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/mail_in_laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/midleware_in_laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/queue_in_laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/repository_patern_on_laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/framework/Laravel/slot_in_laravel/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/javascript/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/javascript/what_is_husky/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/javascript/what_is_nodejs/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/javascript/what_is_typescript/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/software_development/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/software_development/what_is_client_site_rendering/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/software_development/what_is_mvp/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/software_development/what_is_server_side_rendering/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/software_development/what_is_single_page_application/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/software_development/what_is_stable_version_in_application/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/term/faq_term/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/term/business_logic_on_programming/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/term/data_access_logic_on_programming/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/term/what_is_queue/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/term/what_is_repository/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/operating_system/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://programinglive.com/pages/faq/operating_system/what_is_runtime/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://programinglive.com/sponsor/</loc>
-  <lastmod>2024-11-15T14:06:03+00:00</lastmod>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/faq/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/browser/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/diagram/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/envelop_mail_in_laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/handle_function_queue_on_laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/mail_in_laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/midleware_in_laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/queue_in_laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/repository_patern_on_laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/framework/Laravel/slot_in_laravel/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/javascript/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/javascript/what_is_alpinejs/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/javascript/what_is_husky/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/javascript/what_is_nodejs/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/javascript/what_is_typescript/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/search_engine/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/search_engine/google/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/search_engine/google/what_is_sitemap/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/history_of_http/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_plugin/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_abstract_class/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_client_site_rendering/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_deprecated/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_event_driven_development/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_http_response/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_websocket/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_json/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_mvp/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_module/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_protocol/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_server_side_rendering/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_single_page_application/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_testing_on_software_development/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_viewport_in_software_development/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_stable_version_in_application/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_interface/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/what_is_the_different_libraries_and_frameworks/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/software_development/why_read_documentation_is_important/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/term/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/term/business_logic_on_programming/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/term/data_access_logic_on_programming/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/term/what_is_queue/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/term/what_is_repository/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://programinglive.com/pages/faq/term/what_is_object_in_programming/</loc>
+  <lastmod>2024-11-28T14:04:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
