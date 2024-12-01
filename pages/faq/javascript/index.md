@@ -2,10 +2,10 @@
 layout: default
 title: JavaScript
 parent: FAQ
-description: "JavaScript FAQ"
+description: "JavaScript"
 ---
 
-### JavaScript FAQ Collection
+### JavaScript Content Collection
 
 This page contains a collection of frequently asked questions (FAQ) about JavaScript. It covers a range of topics from
 basic concepts like data types and the difference between `==` and `===`, to more advanced topics like closures, event
