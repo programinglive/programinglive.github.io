@@ -1,3 +1,10 @@
+---
+layout: default
+title: Project Management
+parent: FAQ
+description: "Project Management"
+---
+
 # Project Management
 
 ---
