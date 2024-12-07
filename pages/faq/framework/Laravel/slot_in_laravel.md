@@ -7,164 +7,174 @@ ancestor: FAQ
 description: "Slot In Laravel"
 ---
 
-# Using Slots in Laravel Blade
+# What is Slot in Laravel Component
 
-Laravel’s Blade templating engine allows developers to build dynamic, reusable views. One powerful feature of Blade is the ability to create *components* with *slots*, which allows developers to define custom, reusable templates with flexible content areas. In this article, we’ll dive into how to create components, use slots effectively, and explore practical examples for web applications.
+## Table of Contents
 
----
+* [Introduction to Slots](#introduction-to-slots)
+* [Basic Slot Usage](#basic-slot-usage)
+* [Named Slots](#named-slots)
+* [Default Slot Content](#default-slot-content)
+* [Slot Attributes](#slot-attributes)
+* [Conditional Slot Rendering](#conditional-slot-rendering)
+* [Slot Scoping](#slot-scoping)
+* [Practical Examples](#practical-examples)
+* [Common Slot Patterns](#common-slot-patterns)
+* [Best Practices](#best-practices)
+* [Conclusion](#conclusion)
 
-### What are Blade Components and Slots?
+## Introduction to Slots
 
-Blade components are reusable UI pieces that help simplify your code by breaking complex templates into smaller parts. Slots are placeholders within these components where custom content can be inserted. They are ideal for cases like cards, alerts, modals, and other UI elements that share a similar structure but may need different content.
+In Laravel Components, slots are a powerful mechanism that allow you to pass and inject content into a component from
+its parent view. They provide a flexible way to create reusable components with customizable content areas.
 
-- **Components**: Blade components are similar to functions that return HTML content. They are stored in the `resources/views/components` directory.
-- **Slots**: Slots allow you to pass different content into different parts of a Blade component. Laravel provides a `slot` directive to define these areas.
+## Basic Slot Usage
 
-### Creating a Blade Component with Slots
+At its core, a slot is a placeholder within a component where parent content can be inserted:
 
-1. **Create a Blade Component**: You can use Artisan commands to generate a component. Let’s create a `Card` component as an example.
+```php
+// Component view (resources/views/components/card.blade.php)
+<div class="card">
+    {{ $slot }}
+</div>
 
-   ```bash
-   php artisan make:component Card
-   ```
+// Usage in a parent view
+<x-card>
+    This content will be rendered inside the slot
+</x-card>
+```
 
-   This command creates two files:
-    - `app/View/Components/Card.php` — the class file for your component.
-    - `resources/views/components/card.blade.php` — the Blade file where you define the component’s template.
+## Named Slots
 
-2. **Define the Component Structure with Slots**:
+Named slots allow you to create multiple content areas within a single component:
 
-   Open `resources/views/components/card.blade.php` and structure your component with slots. Let’s say we want this card to have a `title`, `body`, and `footer`.
+```php
+// Component view
+<div class="card">
+    <div class="card-header">
+        {{ $header }}
+    </div>
+    <div class="card-body">
+        {{ $slot }}
+    </div>
+    <div class="card-footer">
+        {{ $footer }}
+    </div>
+</div>
 
-   ```html
-   <div class="card">
-       <div class="card-header">
-           {{'{{'}} $title }}
-       </div>
-       <div class="card-body">
-           {{'{{'}} $slot }}
-       </div>
-       <div class="card-footer">
-           {{'{{'}} $footer }}
-       </div>
-   </div>
-   ```
+// Usage
+<x-card>
+    <x-slot:header>Card Title</x-slot:header>
+    Main content goes here
+    <x-slot:footer>Footer information</x-slot:footer>
+</x-card>
+```
 
-   Here:
-    - `{{'{{'}} $slot }}` is the main slot, a placeholder for the primary content of the card.
-    - `$title` and `$footer` are *named slots* where custom content can be added.
+## Default Slot Content
 
-3. **Using the Component in a Blade File**:
+You can provide default content for slots that may not always be filled:
 
-   To use this component, you’ll add it to another Blade template, such as `resources/views/welcome.blade.php`. Here’s how you’d pass content into the slots:
+```php
+// Component view
+<div class="alert">
+    {{ $slot ?? 'Default alert message' }}
+</div>
+```
 
-   ```html
-   @component('components.card')
-       @slot('title')
-           Welcome to Laravel
-       @endslot
+## Slot Attributes
 
-       This is the main content inside the card. You can customize it to fit your needs.
+Slots can have additional attributes for more dynamic rendering:
 
-       @slot('footer')
-           Thank you for visiting!
-       @endslot
-   @endcomponent
-   ```
+```php
+// Component view
+<div {{ $attributes->merge(['class' => 'default-class']) }}>
+    {{ $slot }}
+</div>
+```
 
-    - `@slot('title')` and `@slot('footer')` insert content into the respective slots in the `Card` component.
-    - Any content between `@component('components.card')` and `@endcomponent` goes into the default `$slot` (body section).
+## Conditional Slot Rendering
 
-### Practical Example: Creating a Reusable Alert Component
+Implement conditional logic for slot content:
 
-Let’s create a component for displaying alerts, with dynamic content for the alert message and an optional slot for additional information.
+```php
+@if($slot->isNotEmpty())
+    <div class="content">
+        {{ $slot }}
+    </div>
+@endif
+```
 
-1. **Generate the Component**:
+## Slot Scoping
 
-   ```bash
-   php artisan make:component Alert
-   ```
+Advanced slot scoping allows passing data back to the parent:
 
-2. **Define the Alert Structure** in `resources/views/components/alert.blade.php`:
+```php
+// Component
+<div>
+    {{ $slot($user) }}
+</div>
 
-   ```html
-   <div class="alert alert-{{'{{'}} $type }}">
-       {{'{{'}} $slot }}
-       @if(isset($details))
-           <div class="alert-details">
-               {{'{{'}} $details }}
-           </div>
-       @endif
-   </div>
-   ```
+// Usage
+<x-user-list>
+    @foreach($users as $user)
+        <x-slot:default="$user">
+            {{ $user->name }}
+        </x-slot:default>
+    @endforeach
+</x-user-list>
+```
 
-    - Here, `{{'{{'}} $slot }}` is the main alert message.
-    - `{{'{{'}} $type }}` is a variable that controls the alert’s appearance (e.g., `success`, `error`).
-    - `{{'{{'}} $details }}` is an optional slot for extra information, shown only if `$details` is set.
+## Practical Examples
 
-3. **Passing Data to the Component**:
+### Modal Component
 
-   In the `app/View/Components/Alert.php` file, modify the constructor to accept `$type` and `$details`.
+```php
+// resources/views/components/modal.blade.php
+<div class="modal">
+    <div class="modal-header">
+        {{ $title }}
+    </div>
+    <div class="modal-body">
+        {{ $slot }}
+    </div>
+    <div class="modal-footer">
+        {{ $footer }}
+    </div>
+</div>
 
-   ```php
-   <?php
+// Usage
+<x-modal>
+    <x-slot:title>Confirmation</x-slot:title>
+    Are you sure you want to proceed?
+    <x-slot:footer>
+        <button>Confirm</button>
+        <button>Cancel</button>
+    </x-slot:footer>
+</x-modal>
+```
 
-   namespace App\View\Components;
+## Common Slot Patterns
 
-   use Illuminate\View\Component;
+- Flexible layout components
+- Reusable modal dialogs
+- Dynamic form elements
+- Customizable card interfaces
+- Adaptive navigation menus
 
-   class Alert extends Component
-   {
-       public $type;
-       public $details;
+## Best Practices
 
-       public function __construct($type = 'info', $details = null)
-       {
-           $this->type = $type;
-           $this->details = $details;
-       }
+- Keep slot content semantically meaningful
+- Use named slots for complex components
+- Provide default content when appropriate
+- Leverage slot attributes for additional flexibility
+- Avoid overcomplicating component structure
 
-       public function render()
-       {
-           return view('components.alert');
-       }
-   }
-   ```
+## Conclusion
 
-4. **Using the Alert Component in a Blade Template**:
+Slots in Laravel Components are a sophisticated feature that bridges the gap between component reusability and content
+flexibility. They allow developers to create highly adaptable UI components that can be easily customized without
+modifying the component's core structure.
 
-   Now, you can use the `Alert` component with different alert types and optional details.
-
-   ```html
-   <x-alert type="success">
-       This is a success message!
-       <x-slot name="details">
-           You successfully completed the action.
-       </x-slot>
-   </x-alert>
-
-   <x-alert type="warning">
-       This is a warning message!
-   </x-alert>
-   ```
-
-   In this example:
-    - The first alert has a `type` of `success` and additional `details`.
-    - The second alert only provides a main message and omits `details`.
-
-### Default Slot and Named Slots
-
-- **Default Slot** (`{{'{{'}} $slot }}`): Used for the main content inside the component.
-- **Named Slots**: Use `@slot` in traditional Blade components or `<x-slot name="slotName">` in tag-based components. Named slots allow you to specify unique sections of content within a component.
-
-### When to Use Slots
-
-Slots make components more flexible and modular. Here are some cases where slots are particularly useful:
-
-- **Reusable Cards**: Where each card can display a different title, body, and footer.
-- **Alert Boxes**: To display various messages, icons, or call-to-actions within a consistent design.
-- **Layouts and Headers**: Where you want custom content for each page but a common structure.
-
-### Conclusion
-
-Laravel’s slots are a powerful way to enhance the flexibility of your Blade components. By defining reusable components with slots, you can manage layouts more efficiently, reduce code duplication, and create dynamic sections in your web applications. This approach helps you keep your code modular, organized, and maintainable as your application grows.
+By understanding and effectively implementing slots, you can create more modular, maintainable, and intuitive
+component-based interfaces in your Laravel applications. They represent a powerful technique for separating concerns
+while maintaining the ability to inject dynamic content seamlessly.
