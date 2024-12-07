@@ -6,9 +6,11 @@ grand_parent: YouTube
 description: "ProgramingLive Menyambut Indonesia Emas 2045"
 ---
 
+# ProgramingLive Menyambut Indonesia Emas 2045
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Xb8jTYAMzoo?si=2ATZO-VoopLsOda4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Summary
+### Summary
 
 The video outlines the roadmap for Programming Live, including the creation of three websites: a blog, a portfolio, and
 a learning portal, all aimed at supporting Indonesia's vision for 2045.
