@@ -1,9 +1,9 @@
 ---
 layout: default
-title: What is AlpineJS?
+title: What is ES6?
 parent: JavaScript
 grand_parent: FAQ
-description: "What is AlpineJS?"
+description: "What is ES6?"
 ---
 
 # What is ES6?
