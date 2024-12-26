@@ -98,7 +98,7 @@ Create email views in `resources/views/emails`:
 
 ```php
 // Plain text email
-<p>Hello, {{ $user->name }}!</p>
+<p>Hello, {{"{{"}} $user->name }}!</p>
 <p>Welcome to our application.</p>
 
 // HTML email with styling
@@ -111,7 +111,7 @@ Create email views in `resources/views/emails`:
 </head>
 <body>
     <div class="email-content">
-        <h1>Welcome {{ $user->name }}</h1>
+        <h1>Welcome {{"{{"}} $user->name }}</h1>
         <p>Thanks for joining!</p>
     </div>
 </body>
