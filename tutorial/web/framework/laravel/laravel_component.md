@@ -63,10 +63,10 @@ Laravel components support dynamic attribute handling, allowing flexible renderi
 
 ```php
 // Accessing all passed attributes
-{{ $attributes }}
+{{"{{"}} $attributes }}
 
 // Filtering or manipulating attributes
-{{ $attributes->merge(['class' => 'default-class']) }}
+{{"{{"}} $attributes->merge(['class' => 'default-class']) }}
 ```
 
 ## Inline Component Views
@@ -86,8 +86,8 @@ Anonymous components provide a quick way to create one-off UI elements without d
 
 ```php
 // resources/views/components/alert.blade.php
-<div {{ $attributes->merge(['class' => 'alert']) }}>
-    {{ $slot }}
+<div {{"{{"}} $attributes->merge(['class' => 'alert']) }}>
+    {{"{{"}} $slot }}
 </div>
 ```
 
@@ -136,7 +136,7 @@ Manage component classes and styling:
 
 ```php
 // Merging default and dynamic classes
-<div {{ $attributes->class(['base-class', 'dynamic-class']) }}>
+<div {{"{{"}} $attributes->class(['base-class', 'dynamic-class']) }}>
     Content
 </div>
 ```

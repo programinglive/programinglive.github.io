@@ -35,7 +35,7 @@ At its core, a slot is a placeholder within a component where parent content can
 ```php
 // Component view (resources/views/components/card.blade.php)
 <div class="card">
-    {{ $slot }}
+    {{"{{"}} $slot }}
 </div>
 
 // Usage in a parent view
@@ -52,13 +52,13 @@ Named slots allow you to create multiple content areas within a single component
 // Component view
 <div class="card">
     <div class="card-header">
-        {{ $header }}
+        {{"{{"}} $header }}
     </div>
     <div class="card-body">
-        {{ $slot }}
+        {{"{{"}} $slot }}
     </div>
     <div class="card-footer">
-        {{ $footer }}
+        {{"{{"}} $footer }}
     </div>
 </div>
 
@@ -77,7 +77,7 @@ You can provide default content for slots that may not always be filled:
 ```php
 // Component view
 <div class="alert">
-    {{ $slot ?? 'Default alert message' }}
+    {{"{{"}} $slot ?? 'Default alert message' }}
 </div>
 ```
 
@@ -87,8 +87,8 @@ Slots can have additional attributes for more dynamic rendering:
 
 ```php
 // Component view
-<div {{ $attributes->merge(['class' => 'default-class']) }}>
-    {{ $slot }}
+<div {{"{{"}} $attributes->merge(['class' => 'default-class']) }}>
+    {{"{{"}} $slot }}
 </div>
 ```
 
@@ -99,7 +99,7 @@ Implement conditional logic for slot content:
 ```php
 @if($slot->isNotEmpty())
     <div class="content">
-        {{ $slot }}
+        {{"{{"}} $slot }}
     </div>
 @endif
 ```
@@ -111,14 +111,14 @@ Advanced slot scoping allows passing data back to the parent:
 ```php
 // Component
 <div>
-    {{ $slot($user) }}
+    {{"{{"}} $slot($user) }}
 </div>
 
 // Usage
 <x-user-list>
     @foreach($users as $user)
         <x-slot:default="$user">
-            {{ $user->name }}
+            {{"{{"}} $user->name }}
         </x-slot:default>
     @endforeach
 </x-user-list>
@@ -132,13 +132,13 @@ Advanced slot scoping allows passing data back to the parent:
 // resources/views/components/modal.blade.php
 <div class="modal">
     <div class="modal-header">
-        {{ $title }}
+        {{"{{"}} $title }}
     </div>
     <div class="modal-body">
-        {{ $slot }}
+        {{"{{"}} $slot }}
     </div>
     <div class="modal-footer">
-        {{ $footer }}
+        {{"{{"}} $footer }}
     </div>
 </div>
 
