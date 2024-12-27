@@ -21,8 +21,8 @@ description: "What is Continuous Delivery?"
 
 ## Introduction
 
-As software development evolves, the need for faster and more reliable delivery processes becomes essential. *
-*Continuous Delivery (CD)** ensures that code changes are automatically prepared for deployment, streamlining the path
+As software development evolves, the need for faster and more reliable delivery processes becomes essential.
+**Continuous Delivery (CD)** ensures that code changes are automatically prepared for deployment, streamlining the path
 from development to production.
 
 ## Definition of Continuous Delivery
