@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is WebSocket?
-parent: Software Development
+parent: Term
 grand_parent: FAQ
 description: "What is WebSocket?"
 ---

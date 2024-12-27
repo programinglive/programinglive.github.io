@@ -1,7 +1,8 @@
 ---
 layout: default
 title: What is Front End?
-parent: Software Development
+
+parent: Term
 grand_parent: FAQ
 description: "What is Front End?"
 ---

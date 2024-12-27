@@ -11,12 +11,12 @@ description: "What is CI/CD?"
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Definition of CI/CD](#definition-of-ci-cd)
-- [How CI/CD Works](#how-ci-cd-works)
-- [Benefits of CI/CD](#benefits-of-ci-cd)
-- [Key Components of CI/CD Pipelines](#key-components-of-ci-cd-pipelines)
-- [Challenges in CI/CD Implementation](#challenges-in-ci-cd-implementation)
-- [Best Practices for CI/CD](#best-practices-for-ci-cd)
+- [Definition of CI/CD](#definition-of-cicd)
+- [How CI/CD Works](#how-cicd-works)
+- [Benefits of CI/CD](#benefits-of-cicd)
+- [Key Components of CI/CD Pipelines](#key-components-of-cicd-pipelines)
+- [Challenges in CI/CD Implementation](#challenges-in-cicd-implementation)
+- [Best Practices for CI/CD](#best-practices-for-cicd)
 - [Conclusion](#conclusion)
 
 ## Introduction
