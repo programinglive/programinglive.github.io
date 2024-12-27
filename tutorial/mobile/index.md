@@ -69,7 +69,7 @@ Discover the power of Flutter for cross-platform development:
 - Understanding widgets and state management.
 - Testing and deploying Flutter apps.
 
-**[Read More](#)**
+**[Read More](./flutter/cross_platform_development_with_flutter.md)**
 
 ---
 
