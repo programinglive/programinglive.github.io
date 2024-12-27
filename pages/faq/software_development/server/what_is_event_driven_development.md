@@ -1,8 +1,8 @@
 ---
 layout: default
 title: What is Event-Driven Development?
-parent: Software Development
-grand_parent: FAQ
+parent: What is a Server?
+grand_parent: Software Development
 description: "What is Event-Driven Development?"
 ---
 
