@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is Binary?
-parent: Software Development
+parent: Concept
 grand_parent: FAQ
 description: "What is Binary?"
 ---

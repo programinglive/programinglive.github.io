@@ -1,19 +1,21 @@
 ---
 layout: default
 title: What is an Object in Programming?
-parent: Term
+parent: Software Development
 grand_parent: FAQ
 description: "What is an Object in Programming?"
 ---
 
-
 # What is an Object in Programming?
 
-In the world of programming, an object is a fundamental concept that lies at the heart of Object-Oriented Programming (OOP). Simply put, an object is a self-contained entity that bundles together data (attributes or properties) and behaviors (methods or functions). It mirrors real-world objects, making it easier to model and solve complex problems.
+In the world of programming, an object is a fundamental concept that lies at the heart of Object-Oriented Programming (
+OOP). Simply put, an object is a self-contained entity that bundles together data (attributes or properties) and
+behaviors (methods or functions). It mirrors real-world objects, making it easier to model and solve complex problems.
 
 ---
 
 ### Table of Contents
+
 1. [Introduction](#introduction)
 2. [Key Characteristics of an Object](#key-characteristics-of-an-object)
     - [Encapsulation](#encapsulation)
@@ -30,24 +32,32 @@ In the world of programming, an object is a fundamental concept that lies at the
 
 ### 1. Introduction
 
-In the world of programming, **an object** is a fundamental concept that lies at the heart of Object-Oriented Programming (OOP). Simply put, an object is a self-contained entity that bundles together **data** (attributes or properties) and **behaviors** (methods or functions). It mirrors real-world objects, making it easier to model and solve complex problems.
+In the world of programming, **an object** is a fundamental concept that lies at the heart of Object-Oriented
+Programming (OOP). Simply put, an object is a self-contained entity that bundles together **data** (attributes or
+properties) and **behaviors** (methods or functions). It mirrors real-world objects, making it easier to model and solve
+complex problems.
 
 ---
 
 ### 2. Key Characteristics of an Object
 
 #### **Encapsulation**
-An object encapsulates its data and behavior, ensuring they function as a single unit. For example, a car object might have:
+
+An object encapsulates its data and behavior, ensuring they function as a single unit. For example, a car object might
+have:
+
 - Properties: `color`, `make`, `model`, `speed`.
 - Methods: `accelerate()`, `brake()`, `honk()`.
 
 #### **State and Behavior**
+
 - **State** refers to the current values of an object's properties.  
   *Example:* A `lightBulb` object could have `isOn: true`.
 - **Behavior** defines what the object can do.  
   *Example:* The `toggle()` method could change the state of `isOn`.
 
 #### **Identity**
+
 Each object is unique. Even if two objects have the same properties and values, they are distinct instances.
 
 ---
@@ -55,7 +65,9 @@ Each object is unique. Even if two objects have the same properties and values, 
 ### 3. Objects in Popular Programming Languages
 
 #### **Python**
+
 Everything in Python is an object. You can create custom objects using classes.
+
 ```python
 class Car:
     def __init__(self, color, model):
@@ -71,7 +83,9 @@ my_car.drive()       # Output: The car is driving
 ```
 
 #### **Java**
+
 Objects are instances of classes, which serve as blueprints.
+
 ```java
 class Car {
     String color;
@@ -87,14 +101,16 @@ myCar.drive(); // Output: The car is driving
 ```
 
 #### **JavaScript**
+
 Objects are central to the language, created with object literals or classes.
+
 ```javascript
 const car = {
-    color: "green",
-    model: "SUV",
-    drive: function() {
-        console.log("The car is driving");
-    }
+	color: "green",
+	model: "SUV",
+	drive: function () {
+		console.log("The car is driving");
+	}
 };
 console.log(car.color); // Output: green
 car.drive();            // Output: The car is driving
@@ -120,4 +136,6 @@ car.drive();            // Output: The car is driving
 
 ### 5. Conclusion
 
-An object in programming is a powerful abstraction that simplifies problem-solving by modeling real-world entities. Mastering objects and their properties is essential for anyone diving into Object-Oriented Programming, as it forms the foundation for building robust, reusable, and maintainable code.  
+An object in programming is a powerful abstraction that simplifies problem-solving by modeling real-world entities.
+Mastering objects and their properties is essential for anyone diving into Object-Oriented Programming, as it forms the
+foundation for building robust, reusable, and maintainable code.  
