@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is Hexadecimal?
-parent: Software Development
+parent: Concept
 grand_parent: FAQ
 description: "What is Hexadecimal?"
 ---

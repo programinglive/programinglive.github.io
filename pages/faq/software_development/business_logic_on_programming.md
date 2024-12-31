@@ -1,18 +1,21 @@
 ---
 layout: default
 title: What is Business Logic in Programming?
-parent: Term
+parent: Software Development
 grand_parent: FAQ
 description: "What is Business Logic in Programming?"
 ---
 
 # What is Business Logic in Programming?
 
-In software development, **business logic** refers to the core functionality that dictates how a program handles, processes, and enforces business rules, workflows, and data operations. It’s the layer of code that translates real-world business rules into functional software operations, bridging the gap between raw data and meaningful results.
+In software development, **business logic** refers to the core functionality that dictates how a program handles,
+processes, and enforces business rules, workflows, and data operations. It’s the layer of code that translates
+real-world business rules into functional software operations, bridging the gap between raw data and meaningful results.
 
 ---
 
 ### Table of Contents
+
 1. [Introduction](#introduction)
 2. [Why Business Logic is Important](#why-business-logic-is-important)
 3. [Business Logic vs. Other Layers](#business-logic-vs-other-layers)
@@ -27,7 +30,9 @@ In software development, **business logic** refers to the core functionality tha
 
 ### 1. Introduction
 
-Business logic is the backbone of any application. It ensures that the software operates in alignment with the real-world needs of the organization it serves. For example:
+Business logic is the backbone of any application. It ensures that the software operates in alignment with the
+real-world needs of the organization it serves. For example:
+
 - In an e-commerce app, business logic might dictate how discounts are applied to a cart.
 - In a banking app, it ensures transactions follow regulations and business policies.
 
@@ -50,17 +55,20 @@ In most software architectures (like MVC or layered architecture), business logi
 - **Presentation Layer**: Manages user interfaces (e.g., HTML, CSS, front-end frameworks).
 - **Data Layer**: Handles database operations (e.g., SQL queries, data storage).
 
-Business logic resides in the **middle layer**, connecting the presentation and data layers. It processes inputs from users or systems, applies business rules, and outputs results.
+Business logic resides in the **middle layer**, connecting the presentation and data layers. It processes inputs from
+users or systems, applies business rules, and outputs results.
 
 ---
 
 ### 4. Examples of Business Logic
 
 #### **E-Commerce Application**
+
 - Calculating discounts based on customer type (e.g., VIP customers get 20% off).
 - Determining shipping costs based on location and package weight.
 
 #### **Banking System**
+
 - Ensuring sufficient balance before allowing a withdrawal.
 - Applying interest to savings accounts at the end of each month.
 
@@ -69,7 +77,8 @@ Business logic resides in the **middle layer**, connecting the presentation and 
 ### 5. How to Manage Business Logic in Code
 
 1. **Centralize Rules**  
-   Keep all business rules in a dedicated service or class. This avoids duplication and makes the rules easier to maintain.
+   Keep all business rules in a dedicated service or class. This avoids duplication and makes the rules easier to
+   maintain.
 
 2. **Leverage Frameworks**  
    Frameworks like Laravel, Spring, or Django provide layers where business logic can be implemented effectively.
@@ -97,4 +106,7 @@ Business logic resides in the **middle layer**, connecting the presentation and 
 
 ### 7. Conclusion
 
-Business logic is the heart of any application, ensuring that it meets organizational requirements and delivers value. By clearly defining and managing this logic, developers can build software that is reliable, scalable, and aligned with real-world needs. A strong focus on modularity, separation of concerns, and testing can help maintain robust and adaptable business logic over time.  
+Business logic is the heart of any application, ensuring that it meets organizational requirements and delivers value.
+By clearly defining and managing this logic, developers can build software that is reliable, scalable, and aligned with
+real-world needs. A strong focus on modularity, separation of concerns, and testing can help maintain robust and
+adaptable business logic over time.  
