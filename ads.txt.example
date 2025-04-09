@@ -1,0 +1,8 @@
+# Example ads.txt configuration
+# Replace the following values with your actual ad network credentials
+
+# Google AdSense example (replace with your actual publisher ID)
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Add other ad networks here as needed
+# network.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
